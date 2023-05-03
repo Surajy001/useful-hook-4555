@@ -1,0 +1,30 @@
+{
+    "men":[
+        {
+            "id": 1,
+            "title": "Soho Heritage Harrington Jacket",
+            "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+            "price": 1890.00, 
+            "price_c": 2490.00,
+            "discount": 24,
+            "size":"XL",
+            "color":"Black",
+            "label":"RELAXED FIT",
+            "category":"Jacket"
+          }
+    ],
+    "women":[
+        {
+            "id": 51,
+            "title": "Check Nylon Hooded Jacket",
+            "image": "https://assets.burberry.com/is/image/Burberryltd/9D71914D-BC2E-4CC3-8D7B-03E737742992?$BBY_V2_SL_3x4$&wid=1278&hei=1700",
+            "price": 1350.00, 
+            "price_c": 1499.00,
+            "discount": 10,
+            "size":"XL",
+            "color":"Blue",
+            "label":"New in",
+            "category":"Jacket"
+          }
+    ]
+}
