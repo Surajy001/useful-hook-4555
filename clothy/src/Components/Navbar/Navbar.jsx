@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
-  const links =[
-    {to:'/',text:'Home'},
-    {to:'/cart-page',text:'Cart'},
-  ] 
-  return (
-    <div>
-      {links.map(item=>(
-      <Link to={item.to}>{item.text}</Link>
-      ))}
-    </div>
-  )
-=======
 import React from "react";
 import {
   Box,
@@ -199,5 +183,4 @@ export const Navbar = () => {
       </Box>
     </>
   );
->>>>>>> 98b4b3006a4ddd00c88f7a7a907bd2be54512762
 };
