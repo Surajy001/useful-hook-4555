@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .cont-1{
+    /* border: 1px solid black; */
+    width: 50%;
+  }
+  .cont-2{
+    /* border: 1px solid black; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-container{
+    border: 1px solid black;
+    width: 50%;
+    height: 80%;
+    border-radius: 20px;
+  }
+
+  .headingCont{
+    height: 15%;
+    background-image: url(https://img.freepik.com/premium-photo/copy-space-abstract-blur-pastel-violet-with-orange-texture-background_66899-2357.jpg);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+  }
+  .headingCont > p{
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+  .bodyCont{
+    height: 70%;
+    width: 100%;
+  }
+  .bodyCont>img{
+    height: 100%;
+  }
+  .lastCont{
+    height: 15%;
+    background-image: url(https://img.freepik.com/premium-photo/copy-space-abstract-blur-pastel-violet-with-orange-texture-background_66899-2357.jpg);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+  }
+  .lastCont > p{
+    margin: auto;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .lastCont > p > span{
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .container-fluid {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+  }
+  
+  .Main {
+    /* border: 1px solid red; */
+    /* background-color: #ffffff; */
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    background-image: url(https://img.freepik.com/premium-photo/copy-space-abstract-blur-pastel-violet-with-orange-texture-background_66899-2357.jpg);
+  }
+  .ATM-Card {
+    /* border: 1px solid red; */
+    width: 80%;
+    /* height: 210px; */
+    box-shadow: 9px 9px 9px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: "red";
+    background-image: url(https://img.freepik.com/premium-photo/copy-space-abstract-blur-pastel-violet-with-orange-texture-background_66899-2357.jpg);
+    margin-top: 20px;
+    border-radius: 10px;
+    /* box-shadow: 9px 9px 9px gray; */
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    border-radius: 7px;
+    height: 35px;
+    font-weight: bold;
+  }
+  input {
+    text-align: center;
+    font-weight: bold;
+  }
+  #CVV {
+    border-radius: 7px;
+    height: 35px;
+    width: 100px;
+  }
+  
+  input::placeholder {
+    font-weight: bold;
+    opacity: 1;
+  }
+  
+  label {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  select {
+    font-weight: bold;
+    height: 35px;
+    border-radius: 7px;
+    margin: 5px;
+  }
+  option {
+    font-weight: bold;
+  }
+  input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: bold;
+  }
+  .logoOne {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+  }
+  
+  .logoTwo {
+    width: 90px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .card-number {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .card-number > h1 {
+    font-style: italic;
+    width: 80%;
+    font-size: 22px;
+    padding-left: 20px;
+  }
+  .card-info {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    /* font-family: "Shantell Sans", cursive; */
+    padding: 0px 10px 10px 10px;
+  }
+  
+  .card-holder {
+    width: 60%;
+    text-align: left;
+    /* border: 1px solid black; */
+  }
+  
+  /* .card-expiry > h3 {
+    padding-left: 20px;
+  } */
+  .cvv {
+    background-color: white;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 5%;
+    border-radius: 5px;
+  }
+  .blackStrip {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .cvv > h3 {
+    padding-right: 10px;
+    padding-top: 5px;
+    font-weight: bold;
+    font-family: "Shantell Sans", cursive;
+  }
+  .info > p {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .table > tbody {
+    font-weight: 500;
+  }
+  
+  .Form {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    border-radius: 5px;
+  }
+  .ExpiryAndCVV {
+    width: 100%;
+  }
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 0 18px;  
+    width: 100%;
+  }
+  .MYCVV {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+  .btnPayment{
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btnPayment:hover{
+    background-color: #21be2eec;
+  }
