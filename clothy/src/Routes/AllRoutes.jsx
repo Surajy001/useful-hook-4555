@@ -4,15 +4,17 @@ import { HomePage } from "../Pages/HomePage";
 import Payment from "../Pages/Payment";
 import AdminPage from "../Pages/AdminPage";
 
-
 const AllRoutes = () => {
+  const routes = [
+    {path:"/",element:<HomePage/>},
+    {path:"/cart-page",element:<AddToCartPage/>},
+  ]
   return (
     <Routes>
       <Route path={"/"} element={<HomePage />} />
       <Route path={"/payment"} element={<Payment />} />
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="*" element={<h1>404 Page Not Found</h1>}/>
-
     </Routes>
   );
 };
