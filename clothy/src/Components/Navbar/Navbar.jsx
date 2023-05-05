@@ -97,6 +97,18 @@ export const Navbar = () => {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
+                href={"/Admin-login"}
+              >
+                LOGIN
+              </Link>
+              <Link
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={{
+                  textDecoration: "none",
+                  bg: useColorModeValue("gray.200", "gray.700"),
+                }}
                 href={"#"}
               >
                 sale
