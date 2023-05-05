@@ -59,6 +59,7 @@ export const Footer = () => {
             <Link href={'#'}>Women</Link>
             <Link href={'#'}>Accessories</Link>
             <Link href={'#'}>Winter</Link>
+            <Link href={"/admin"}>Admin Page</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>

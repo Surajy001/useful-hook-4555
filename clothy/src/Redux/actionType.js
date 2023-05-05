@@ -4,3 +4,9 @@
 export const PRODUCT_REQUEST = 'PRODCUT_REQUEST'
 export const PRODUCT_FAILURE = 'PRODCUT_FAILURE'
 export const POST_PRODUCT_SUCCESS = 'POST_PRODCUT_SUCCESS'
+
+// Admin Login page
+ 
+export const LOGIN_REQUEST = 'LOGIN_REQUEST'
+export const LOGIN_FAILURE = 'LOGIN_FAILURE'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
