@@ -1,17 +1,20 @@
-import React from "react";
 import {
   Box,
   Flex,
   Avatar,
   HStack,
-  Link,
   IconButton,
+  Link,
   useDisclosure,
   useColorModeValue,
   Stack,
-  Image
+  Image,
 } from "@chakra-ui/react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { green } from "@mui/material/colors";
+import style from "./Navbar.module.css";
+import { LogoDev } from "@mui/icons-material";
 // import logo from "../../logo.svg"
 
 export const Navbar = () => {
@@ -119,6 +122,18 @@ export const Navbar = () => {
                 "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
               }
             />
+            <Link href="/cart-page">
+              <ShoppingCartIcon
+                sx={{
+                  color: "dodgerblue",
+                  fontSize: "38px",
+                  "&:hover": { color: green[600], transform: "scale(1.1)" },
+                  cursor: "pointer",
+                  margin: "20px",
+                }}
+              />
+            </Link>
+            <span className={style.cart_item_total}>{6}</span>
           </Flex>
         </Flex>
 
@@ -177,6 +192,7 @@ export const Navbar = () => {
                 Winter
               </Link>
               <Link
+                to={""}
                 px={2}
                 py={1}
                 rounded={"md"}

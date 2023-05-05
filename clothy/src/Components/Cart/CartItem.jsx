@@ -1,7 +1,12 @@
 import React from 'react'
 import CartItemCard from './CartItemCard'
+import { Box } from '@chakra-ui/react'
+import style from './Cart.module.css'
+import { useSelector } from 'react-redux'
 
 function CartItem() {
+  const total = useSelector(store=>store.CartReducer.CartTotal);
+  console.log(total)
     const data = [
         {"id": 1,
         "title": "Soho Heritage Harrington Jacket",
@@ -27,11 +32,18 @@ function CartItem() {
       }
     ]
   return (
-    <div>
+    <Box style={{display:'flex'}}>
+      <Box className="cardItem">
         {data.map(item=>{
-        return  <CartItemCard {...item}/>
+          return  <CartItemCard key={item.id}{...item}/>
         })}
-    </div>
+        </Box>
+        <Box className={style.cart_total}>
+          <h1 style={{color:'gray',fontWeight:'bold',fontSize:'1.1rem'}}>Price Details</h1>
+          <hr />
+          <h3>Price{} items     <span>{total}</span></h3>
+        </Box>
+    </Box>
   )
 }
 
