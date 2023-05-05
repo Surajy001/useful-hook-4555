@@ -1,0 +1,12 @@
+.cart_item_total{
+    position:relative;
+    top:-20px;
+    right:32px;
+    bottom: 20px;
+    font-weight:bold;
+    color:white;
+    border-radius:100%;
+    width:8px;
+    background:red;
+    font-size: 13px;
+}

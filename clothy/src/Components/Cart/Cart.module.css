@@ -1,0 +1,17 @@
+.ImageInputButton{
+    width: 60%;
+    margin: 10px;
+}
+.CartItemContainer{
+    width: 40%;
+    border: 1px solid ;
+    display: inline-block;
+}
+.CartItemContainer img{
+    width: 50%;
+}
+.cart_total{
+    width: 40%;
+    border: 1px solid;
+    margin: 0 10px;
+}
