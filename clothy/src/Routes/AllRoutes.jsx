@@ -12,6 +12,7 @@ const AllRoutes = () => {
       <Route path={"/"} element={<HomePage />} />
       <Route path={"/payment"} element={<Payment />} />
       <Route path="/admin" element={<AdminPage/>}/>
+      <Route path="/cart-page" element={<AddToCartPage/>}/>
       <Route path="*" element={<h1>404 Page Not Found</h1>}/>
     </Routes>
   );
