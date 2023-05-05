@@ -4,12 +4,16 @@ import { HomePage } from "../Pages/HomePage";
 import Payment from "../Pages/Payment";
 import AdminPage from "../Pages/AdminPage";
 import AddToCartPage from "../Pages/AddToCartPage";
+import Signin from "../Pages/Signin/Signin";
+import Signup from "../Pages/Signup/Signup";
 
 const AllRoutes = () => {
   
   return (
     <Routes>
       <Route path={"/"} element={<HomePage/>} />
+      <Route path={"/signin"} element={<Signin/>} />
+      <Route path={"/signup"} element={<Signup/>} />
       <Route path="/add-to-cart" element={<AddToCartPage/>}></Route>
       <Route path={"/payment"} element={<Payment />} />
       <Route path="/admin" element={<AdminPage/>}/>
