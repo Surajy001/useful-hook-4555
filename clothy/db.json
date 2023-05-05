@@ -1,18 +1,465 @@
 {
     "men":[
-        {
+      
+          {
             "id": 1,
-            "title": "Soho Heritage Harrington Jacket",
-            "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-            "price": 1890.00, 
-            "price_c": 2490.00,
-            "discount": 24,
-            "size":"XL",
-            "color":"Black",
-            "label":"RELAXED FIT",
-            "category":"Jacket"
+            "title": "Vender Men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
+            "desc": "Soft at skin, It keeps you cool and adds charm to your personality. Wear it in parties, weddings, traditional functions and festive occasion. Team it up with a sleeveless Kota and complement it with a pair of Kolhapur chappals to complete the look.",
+            "mrp-price": 1598,
+            "discount-percentage":37,
+            "category": "Kurta",
+            "brand": "SMITH",
+            "price": 999,
+            "rating": 4.2,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31OMcTutULL.jpg",
+              "https://m.media-amazon.com/images/I/31-zma+5FyL.._SX._UX._SY._UY_.jpg",
+              "https://m.media-amazon.com/images/I/31TxFcf2b5L.._SX._UX._SY._UY_.jpg",
+              "https://m.media-amazon.com/images/I/31akRgRP4+L.._SX._UX._SY._UY_.jpg",
+              "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/aqqstplrctp8xas2gj3f.jpg"
+            ]
+          },
+
+          {
+            "id": 2,
+            "title": "HEORA Kurta Pyjama Set for Men Ethnic & Designer Wear (LE079)",
+            "desc": "Full Sleeve Kurta with Knee Length",
+            "mrp-price": 4999 ,
+            "discount-percentage": 64,
+            "category": "Kurta",
+            "brand": "HEORA",
+            "price": 1799,
+            "rating": 4.8,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/412WVuvs-jL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/91ZdNo3GoHL._UY500_.jpg",
+              "https://m.media-amazon.com/images/I/81F52g99FiL._UY500_.jpg",
+              "https://m.media-amazon.com/images/I/81MeSZkWThL._UY500_.jpg"
+            ]
+          },
+
+          {
+            "id": 3,
+            "title": "Pro-Ethic Style Developer Men's Cotton Solid Straight Kurta for Men Stylish Latest Ethnic Wear Pack of 1",
+            "desc": "Cotton Solid Straight Kurta for Men Stylish Latest Ethnic Wear",
+            "mrp-price": 1999,
+            "discount-percentage": 64,
+            "category": "Kurta",
+            "brand": "POLO",
+            "price": 725,
+            "rating": 4.1,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31XHYw8X1ZL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31DEYx-zSjL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/313O1batrtL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31VTCJofGnL._SR38,50_.jpg"
+            
+            ]
+          },
+
+          {
+            "id": 4,
+            "title": "Veera Paridhaan Men's Regular Kurta",
+            "desc": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
+            "mrp-price": 2199,
+            "discount-percentage": 55,
+            "category": "Kurta",
+            "brand": "SMITH",
+            "price": 999,
+            "rating": 4.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/317zRIsDNbL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31TvpP1y+mL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31dt4Ar-QyL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31C3+SqUaIL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 5,
+            "title": "Veera Paridhaan Men's Regular Kurta",
+            "desc": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
+            "mrp-price": 1000,
+            "discount-percentage": 55,
+            "category": "Kurta",
+            "brand": "HEORA",
+            "price": 450,
+            "rating": 4.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31z+a6IlesL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/316CC4s7P4L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31M53HNNMKL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31K67daSAnL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 6,
+            "title": "Raymond's Men's Regular Kurta",
+            "desc": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
+            "mrp-price": 2000,
+            "discount-percentage": 50,
+            "category": "Kurta",
+            "brand": "RAYMOND",
+            "price": 1000,
+            "rating": 4.5,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31BZxxVOK3L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31eXWUCnfOL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31KAevbFb3L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/610F8FyP7nL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 7,
+            "title": "POLO Men's Regular Kurta",
+            "desc": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
+            "mrp-price": 5000,
+            "discount-percentage": 50,
+            "category": "Kurta",
+            "brand": "POLO",
+            "price": 2500,
+            "rating": 4.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41zdIwqAH2L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31sGP+4flsL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31PDNg0RpWL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31kP3C-GMkL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 8,
+            "title": "Raymond's Men's Regular Kurta",
+            "desc": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
+            "mrp-price": 1000,
+            "discount-percentage": 55,
+            "category": "Kurta",
+            "brand": "RAYMOND",
+            "price": 450,
+            "rating": 4.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41ML4Hi3jHL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41heEsPqGrL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41flGRRHRYL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31oV50YCAaL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 1,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 1199,
+            "discount-percentage": 75,
+            "category": "Sports-Wear",
+            "brand": "RAYMOND",
+            "price": 299,
+            "rating": 4.3,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41WP3mTVhDL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41tagzI2xGL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/415dKFrra7L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41PCCJTFkxL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 2,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 2000,
+            "discount-percentage": 75,
+            "category": "Sports-Wear",
+            "brand": "SMITH",
+            "price": 500,
+            "rating": 4.4,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/314Y0r7vJML._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31QNG5c5KDL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/415qtdU2MtL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41vW7svW9OL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 3,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 3000,
+            "discount-percentage": 50,
+            "category": "Sports-Wear",
+            "brand": "HEORA",
+            "price": 1500,
+            "rating": 4.2,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31-LNJ4ywLL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31JwudqNYCL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/418X8RBBScL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41vyO3Hn4ZL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 4,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 2000,
+            "discount-percentage": 40,
+            "category": "Sports-Wear",
+            "brand": "POLO",
+            "price": 800,
+            "rating": 4.9,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31X2vDOTEoL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31WSe+KKjfL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31nLrTzIAuL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41+sM4Exu7L._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 5,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 3000,
+            "discount-percentage": 60,
+            "category": "Sports-Wear",
+            "brand": "POLO",
+            "price": 1200,
+            "rating": 4.8,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41veAbeLOeL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41CjlwIV+CL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41Q2HJtcM-L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31eBfuq3+XL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 6,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 2500,
+            "discount-percentage": 50,
+            "category": "Sports-Wear",
+            "brand": "SMITH",
+            "price": 1250,
+            "rating": 3.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31vBrwyKz1L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/3117eOKJcNL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31wlD74TFGL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31YhWGWb3cL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 7,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 5000,
+            "discount-percentage": 50,
+            "category": "Sports-Wear",
+            "brand": "SMITH",
+            "price": 2500,
+            "rating": 4.1,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41QZjzYpr4L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41RBM6l0gWL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41KOk9onmPL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31RfrVMbo0L._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 8,
+            "title": "Men's Regular Fit Sports T-Shirt",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 1300,
+            "discount-percentage": 50,
+            "category": "Sports-Wear",
+            "brand": "RAYMOND",
+            "price": 650,
+            "rating": 4.5,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31eCNeV-7OL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31IyaVJCO8L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31CAKWd9NFL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31ERRD+VcXL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 1,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 1000,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "RAYMOND",
+            "price": 500,
+            "rating": 4.3,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41efrrFbYwL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/313dy6rqbOL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41uOvXEdmOL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31BC3odxQSL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 2,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 500,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "HEORA",
+            "price": 250,
+            "rating": 4.9,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31JvZo0qBgL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31tTwwv8DEL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31uwVFJdOjL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31I71yAuVxL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 3,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 750,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "POLO",
+            "price": 375,
+            "rating": 4.8,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31pTr0xMvJL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31tKG5mXc3L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31nYs8SqAvL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41euL0dKVtL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 4,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 500,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "SMITH",
+            "price": 250,
+            "rating": 4.6,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41BTyVIkIGL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/3103dEAEamL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41UKe1vc+LL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41Xz-2nux-L._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 5,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 900,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "POLO",
+            "price": 450,
+            "rating": 4.7,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41+KpUIbZ1L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41iAvKRMQWL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41MG3X9dGVL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41m3ewIwo+L._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 6,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 1000,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "RAYMOND",
+            "price": 500,
+            "rating": 4.5,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31zFTKIdgBL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31RUK9q9Y2L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31GRbNBEJML._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31w7wRzT0nL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 7,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 1500,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "HEORA",
+            "price": 750,
+            "rating": 4.9,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/31MjITnkJ0L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31aPJMn7-YL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/315Z9bPcd1L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41hXyV0hUGL._SR38,50_.jpg"
+            ]
+          },
+
+          {
+            "id": 8,
+            "title": "Men's Regular Fit Vest",
+            "desc": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
+            "mrp-price": 2000,
+            "discount-percentage": 50,
+            "category": "Inner-Wear",
+            "brand": "SMITH",
+            "price": 1000,
+            "rating": 4.4,
+            "gender": "Men",
+            "images": [
+              "https://m.media-amazon.com/images/I/41OenS7tMcL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/41gic9OaMYL._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/31sa+8kLt3L._SR38,50_.jpg",
+              "https://m.media-amazon.com/images/I/51Z4HVIDViL._SR38,50_.jpg"
+            ]
           }
     ],
+
     "women":[
         {
             "id": 51,
@@ -28,3 +475,4 @@
           }
     ]
 }
+
