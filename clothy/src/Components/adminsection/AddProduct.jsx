@@ -41,7 +41,7 @@ const AddProduct = () => {
                 <FormControl isRequired>
                   <FormLabel>Product Title</FormLabel>
                   <Input
-                    placeholder="Enter Product Title"
+                    placeholder="Enter Product Title" 
                     name="title"
                   />
                 </FormControl>
