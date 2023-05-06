@@ -8,6 +8,7 @@ import AdminLogin from "../Pages/AdminLogin";
 import Signin from "../Pages/Signin/Signin";
 import Signup from "../Pages/Signup/Signup";
 import Dashboard from "../Pages/adminsection/Dashboard";
+import SingleProductPage from "../Pages/SingleProductPage";
 
 const AllRoutes = () => {
   
@@ -21,6 +22,7 @@ const AllRoutes = () => {
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>
+      <Route path="/product/:id" element={<SingleProductPage/>}/>
       <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
 
     </Routes>
