@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Container,
   Stack,
@@ -8,352 +8,88 @@ import {
   Text,
   Image,
   Icon,
-  IconButton,
-  createIcon,
-  IconProps,
+  // IconButton,
+  // createIcon,
+  // IconProps,
   useColorModeValue,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 export const HomePage = () => {
   return (
-    <Container maxW={'8xl'}>
+    <Container maxW={"8xl"}>
       <Stack
-        align={'center'}
+        align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-          <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
-            <Text>Fashion is a form of self-expression and autonomy at a particular period.</Text>
-            <Text>Read More</Text>
-          </Stack>
+        direction={{ base: "column", md: "row" }}
+      >
+        <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
+          <Text>
+            Fashion is a form of self-expression and autonomy at a particular
+            period.
+          </Text>
+          <Text>Read More</Text>
+        </Stack>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+          >
             <Text
-              as={'span'}
-              position={'relative'}
+              as={"span"}
+              position={"relative"}
               _after={{
                 content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
+                width: "full",
+                height: "30%",
+                position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: 'red.400',
+                bg: "red.400",
                 zIndex: -1,
-              }}>
+              }}
+            >
               CLOTHES ARE
             </Text>
             <br />
-            <Text as={'span'} >
-             THE - SPIRIT OF FASHION
-            </Text>
+            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
           </Heading>
-          {/* <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
-          </Text> */}
-          {/* <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button>
-          </Stack> */}
         </Stack>
 
         <Flex
           flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
+        >
           <Blob
-            w={'120%'}
-            h={'140%'}
-            position={'absolute'}
-            top={'-20%'}
+            w={"60%"}
+            h={"140%"}
+            position={"absolute"}
+            top={"-20%"}
             // left={0}
             zIndex={-1}
-            color={useColorModeValue('orange.200', 'orange.400')}
-            border={"1px solid"}
+            color={useColorModeValue("orange.200", "orange.400")}
+            // border={"1px solid"}
           />
           <Box
-            position={'relative'}
-            height={'150px'}
-            rounded={'xl'}
+            position={"relative"}
+            height={"150px"}
+            rounded={"xl"}
             // border={"1px solid"}
-            width={'150px'}
-            overflow={'hidden'}
+            width={"150px"}
+            overflow={"hidden"}
             left={4}
-            >
-            {/* <IconButton
-              aria-label={'Play Button'}
-              variant={'ghost'}
-              _hover={{ bg: 'transparent' }}
-              icon={<PlayIcon w={12} h={12} />}
-              size={'lg'}
-              color={'white'}
-              position={'absolute'}
-              left={'50%'}
-              top={'50%'}
-              transform={'translateX(-50%) translateY(-50%)'}
-            /> */}
+          >
             <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
+              alt={"Hero Image"}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
               src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-              }
-            />
-          </Box>
-        </Flex>
-      </Stack>
-
-
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-          <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
-            <Text>Fashion is a form of self-expression and autonomy at a particular period.</Text>
-            <Text>Read More</Text>
-          </Stack>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'red.400',
-                zIndex: -1,
-              }}>
-              CLOTHES ARE
-            </Text>
-            <br />
-            <Text as={'span'} >
-             THE - SPIRIT OF FASHION
-            </Text>
-          </Heading>
-          {/* <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
-          </Text> */}
-          {/* <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button>
-          </Stack> */}
-        </Stack>
-
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
-          <Blob
-            w={'120%'}
-            h={'140%'}
-            position={'absolute'}
-            top={'-20%'}
-            // left={0}
-            zIndex={-1}
-            color={useColorModeValue('orange.200', 'orange.400')}
-            border={"1px solid"}
-          />
-          <Box
-            position={'relative'}
-            height={'150px'}
-            rounded={'xl'}
-            // border={"1px solid"}
-            width={'150px'}
-            overflow={'hidden'}
-            left={4}
-            >
-            {/* <IconButton
-              aria-label={'Play Button'}
-              variant={'ghost'}
-              _hover={{ bg: 'transparent' }}
-              icon={<PlayIcon w={12} h={12} />}
-              size={'lg'}
-              color={'white'}
-              position={'absolute'}
-              left={'50%'}
-              top={'50%'}
-              transform={'translateX(-50%) translateY(-50%)'}
-            /> */}
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-              }
-            />
-          </Box>
-        </Flex>
-      </Stack>
-
-
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-          <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
-            <Text>Fashion is a form of self-expression and autonomy at a particular period.</Text>
-            <Text>Read More</Text>
-          </Stack>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'red.400',
-                zIndex: -1,
-              }}>
-              CLOTHES ARE
-            </Text>
-            <br />
-            <Text as={'span'} >
-             THE - SPIRIT OF FASHION
-            </Text>
-          </Heading>
-          {/* <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
-          </Text> */}
-          {/* <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button>
-          </Stack> */}
-        </Stack>
-
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
-          <Blob
-            w={'120%'}
-            h={'140%'}
-            position={'absolute'}
-            top={'-20%'}
-            // left={0}
-            zIndex={-1}
-            color={useColorModeValue('orange.200', 'orange.400')}
-            border={"1px solid"}
-          />
-          <Box
-            position={'relative'}
-            height={'150px'}
-            rounded={'xl'}
-            // border={"1px solid"}
-            width={'150px'}
-            overflow={'hidden'}
-            left={4}
-            >
-            {/* <IconButton
-              aria-label={'Play Button'}
-              variant={'ghost'}
-              _hover={{ bg: 'transparent' }}
-              icon={<PlayIcon w={12} h={12} />}
-              size={'lg'}
-              color={'white'}
-              position={'absolute'}
-              left={'50%'}
-              top={'50%'}
-              transform={'translateX(-50%) translateY(-50%)'}
-            /> */}
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               }
             />
           </Box>
@@ -361,126 +97,247 @@ export const HomePage = () => {
       </Stack>
 
       <Stack
-        align={'center'}
+        align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
-          <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
-            <Text>Fashion is a form of self-expression and autonomy at a particular period.</Text>
-            <Text>Read More</Text>
-          </Stack>
+        direction={{ base: "column", md: "row" }}
+      >
+        <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
+          <Text>
+            Fashion is a form of self-expression and autonomy at a particular
+            period.
+          </Text>
+          <Text>Read More</Text>
+        </Stack>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+          >
             <Text
-              as={'span'}
-              position={'relative'}
+              as={"span"}
+              position={"relative"}
               _after={{
                 content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
+                width: "full",
+                height: "30%",
+                position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: 'red.400',
+                bg: "red.400",
                 zIndex: -1,
-              }}>
+              }}
+            >
               CLOTHES ARE
             </Text>
             <br />
-            <Text as={'span'} >
-             THE - SPIRIT OF FASHION
-            </Text>
+            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
           </Heading>
-          {/* <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
-          </Text> */}
-          {/* <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button>
-          </Stack> */}
         </Stack>
 
         <Flex
           flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
+        >
           <Blob
-            w={'120%'}
-            h={'140%'}
-            position={'absolute'}
-            top={'-20%'}
+            w={"60%"}
+            h={"140%"}
+            position={"absolute"}
+            top={"-20%"}
             // left={0}
             zIndex={-1}
-            color={useColorModeValue('orange.200', 'orange.400')}
-            border={"1px solid"}
+            color={useColorModeValue("orange.200", "orange.400")}
+            // border={"1px solid"}
           />
           <Box
-            position={'relative'}
-            height={'150px'}
-            rounded={'xl'}
+            position={"relative"}
+            height={"150px"}
+            rounded={"xl"}
             // border={"1px solid"}
-            width={'150px'}
-            overflow={'hidden'}
+            width={"150px"}
+            overflow={"hidden"}
             left={4}
-            >
-            {/* <IconButton
-              aria-label={'Play Button'}
-              variant={'ghost'}
-              _hover={{ bg: 'transparent' }}
-              icon={<PlayIcon w={12} h={12} />}
-              size={'lg'}
-              color={'white'}
-              position={'absolute'}
-              left={'50%'}
-              top={'50%'}
-              transform={'translateX(-50%) translateY(-50%)'}
-            /> */}
+          >
             <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
+              alt={"Hero Image"}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
               src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               }
             />
           </Box>
         </Flex>
       </Stack>
 
+      <Stack
+        align={"center"}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 20, md: 28 }}
+        direction={{ base: "column", md: "row" }}
+      >
+        <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
+          <Text>
+            Fashion is a form of self-expression and autonomy at a particular
+            period.
+          </Text>
+          <Text>Read More</Text>
+        </Stack>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+          >
+            <Text
+              as={"span"}
+              position={"relative"}
+              _after={{
+                content: "''",
+                width: "full",
+                height: "30%",
+                position: "absolute",
+                bottom: 1,
+                left: 0,
+                bg: "red.400",
+                zIndex: -1,
+              }}
+            >
+              CLOTHES ARE
+            </Text>
+            <br />
+            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
+          </Heading>
+        </Stack>
 
-    
+        <Flex
+          flex={1}
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
+        >
+          <Blob
+            w={"60%"}
+            h={"140%"}
+            position={"absolute"}
+            top={"-20%"}
+            // left={0}
+            zIndex={-1}
+            color={useColorModeValue("orange.200", "orange.400")}
+            // border={"1px solid"}
+          />
+          <Box
+            position={"relative"}
+            height={"150px"}
+            rounded={"xl"}
+            // border={"1px solid"}
+            width={"150px"}
+            overflow={"hidden"}
+            left={4}
+          >
+            <Image
+              alt={"Hero Image"}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
+              src={
+                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+              }
+            />
+          </Box>
+        </Flex>
+      </Stack>
+
+      <Stack
+        align={"center"}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 20, md: 28 }}
+        direction={{ base: "column", md: "row" }}
+      >
+        <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
+          <Text>
+            Fashion is a form of self-expression and autonomy at a particular
+            period.
+          </Text>
+          <Text>Read More</Text>
+        </Stack>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+          >
+            <Text
+              as={"span"}
+              position={"relative"}
+              _after={{
+                content: "''",
+                width: "full",
+                height: "30%",
+                position: "absolute",
+                bottom: 1,
+                left: 0,
+                bg: "red.400",
+                zIndex: -1,
+              }}
+            >
+              CLOTHES ARE
+            </Text>
+            <br />
+            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
+          </Heading>
+        </Stack>
+
+        <Flex
+          flex={1}
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
+        >
+          <Blob
+            w={"60%"}
+            h={"140%"}
+            position={"absolute"}
+            top={"-20%"}
+            // left={0}
+            zIndex={-1}
+            color={useColorModeValue("orange.200", "orange.400")}
+            // border={"1px solid"}
+          />
+          <Box
+            position={"relative"}
+            height={"150px"}
+            rounded={"xl"}
+            // border={"1px solid"}
+            width={"150px"}
+            overflow={"hidden"}
+            left={4}
+          >
+            <Image
+              alt={"Hero Image"}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
+              src={
+                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+              }
+            />
+          </Box>
+        </Flex>
+      </Stack>
     </Container>
   );
 };
-
-
 
 // const PlayIcon = createIcon({
 //   displayName: 'PlayIcon',
@@ -492,11 +349,13 @@ export const HomePage = () => {
 export const Blob = (props) => {
   return (
     <Icon
-      width={'100%'}
+      width={"100%"}
       viewBox="0 0 578 440"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+      border={"1px solid green"}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

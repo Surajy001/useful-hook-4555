@@ -4,7 +4,7 @@ import { HomePage } from "../Pages/HomePage";
 import AddToCartPage from "../Pages/AddToCartPage";
 import Payment from "../Pages/Payment";
 import AdminPage from "../Pages/AdminPage";
-import AddToCartPage from "../Pages/AddToCartPage";
+// import AddToCartPage from "../Pages/AddToCartPage";
 import AdminLogin from "../Pages/AdminLogin";
 import Signin from "../Pages/Signin/Signin";
 import Signup from "../Pages/Signup/Signup";
@@ -19,7 +19,7 @@ const AllRoutes = () => {
       <Route path="/add-to-cart" element={<AddToCartPage/>}></Route>
       <Route path={"/payment"} element={<Payment />} />
       <Route path="/admin" element={<AdminPage/>}/>
-      <Route path="/cart-page" element={<AddToCartPage/>}/>
+      {/* <Route path="/cart-page" element={<AddToCartPage/>}/> */}
       <Route path="/admin-login" element={<AdminLogin/>}/>
       <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
 
