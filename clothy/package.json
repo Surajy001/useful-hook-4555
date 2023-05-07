@@ -5,8 +5,8 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.1",
-    "@emotion/react": "^11.10.8",
-    "@emotion/styled": "^11.10.8",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -50,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+
+  },
+  "description": "https://github.com/mui/material-ui/blob/v5.12.3/docs/data/material/components/rating/HalfRating.js",
+  "devDependencies": {
+    "react-scripts": "latest"
   }
 }
