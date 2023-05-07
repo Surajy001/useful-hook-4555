@@ -1,6 +1,5 @@
 {
-  "products":[
-    
+"products":[
         {
           "id": 1,
           "title": "Vender men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
@@ -999,34 +998,134 @@
           ]
         }
   ],
-
   "UserDetails": [
     {
-      "name": "Deepak",
-      "email": "deepaky@gmail.com",
-      "password": "123456",
-      "mobile": "147258369",
-      "gender": "female",
-      "isAuth": false,
-      "isFavourite": false,
-      "cart": [],
-      "wishlist": [],
-      "placedOrder": [],
-      "id": 1
-    },
-    {
-      "name": "suraj",
-      "email": "suraj@gmail.com",
-      "password": "12347",
+      "name": "Deepak Yadav",
+      "email": "deepak123@gmail.com",
+      "password": "1234567890",
       "mobile": "1234567889",
       "gender": "male",
       "isAuth": false,
-      "isFavourite": false,
       "productQuantity": 1,
-      "cart": [],
-      "wishlist": [],
-      "placedOrder": [],
-      "id": 2
+      "cart": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "isFavourite": false
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "isFavourite": true
+        }
+      ],
+      "orderPlaced": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "quantity": 1,
+          "isFavourite": false,
+        }
+      ]
+    },
+    {
+      "name": "Suraj Yadav",
+      "email": "Suraj123@gmail.com",
+      "password": "1234567890",
+      "isAuth": true,
+      "productQuantity": 1,
+      "mobile": "1234567889",
+      "gender": "male",
+      "cart": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "isFavourite": false
+        }
+      ],
+      "wishlist": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "isFavourite": false,
+        }
+      ],
+      "orderPlaced": [
+        {
+          "id": 2,
+          "title": "Soho Heritage Harrington Jacket",
+          "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+          "price": 1890.0,
+          "price_c": 2490.0,
+          "discount": 24,
+          "size": "XL",
+          "color": "Black",
+          "label": "RELAXED FIT",
+          "category": "Jacket",
+          "quantity":1,
+          "isFavourite": false
+        }
+      ]
     }
-  ]
+  ],
+  "TemporaryUserData": {
+    "cart": [
+      {
+        "id": 2,
+        "title": "Soho Heritage Harrington Jacket",
+        "quantity":1,
+        "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+        "price": 1890.0,
+        "price_c": 2490.0,
+        "discount": 24,
+        "size": "XL",
+        "color": "Black",
+        "label": "RELAXED FIT",
+        "category": "Jacket",
+        "isFavourite": false
+      }
+    ]
+  }
 }
