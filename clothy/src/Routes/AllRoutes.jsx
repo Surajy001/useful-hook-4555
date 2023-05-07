@@ -11,8 +11,22 @@ import SingleProductPage from "../Pages/SingleProductPage";
 
 const AllRoutes = () => {
   
+const adminRoutes=[
+  {
+    path: "/admin-dashboard",
+    element: <Dashboard/>,
+  },
+  {
+    path: "/admin-login",
+    element: <AdminLogin/>,
+  },
+]
+
   return (
     <Routes>
+      {adminRoutes.map((ele, key) => (
+          <Route key={key} path={ele.path} element={ele.element} />
+        ))}
       <Route path={"/"} element={<HomePage/>} />
       <Route path={"/signin"} element={<Signin/>} />
       <Route path={"/signup"} element={<Signup/>} />

@@ -1,14 +1,13 @@
 import {
   Box,
   Flex,
-  // Avatar,
   HStack,
   IconButton,
   Link,
   useDisclosure,
   useColorModeValue,
   Stack,
-  Image,
+  // Image,
   InputLeftElement,
   Button,
   InputGroup,
@@ -16,15 +15,12 @@ import {
   Tooltip,
   Text
 } from "@chakra-ui/react";
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-// import { green } from "@mui/material/colors";
-// import style from "./Navbar.module.css";
-// import { LogoDev } from "@mui/icons-material";
 import { FiSearch } from "react-icons/fi";
-import logo from "../../Assets/Clothy.png"
+// import logo from "../../Assets/Clothy.png"
 import { FaRegHeart } from 'react-icons/fa';
-// import { color } from "framer-motion";
+import style from './Navbar.module.css'
+import { NavLink } from "react-router-dom";
 
 
 
@@ -35,8 +31,9 @@ export const Navbar = () => {
     <>
       <Box 
       // bg={useColorModeValue("gray.100", "gray.900")} 
-      // border={"1px solid gray.400"}
-      p={3}
+      // border={"1px solid gray"}
+      py={3}
+      px={5}
       bgColor={"white"}
       position="sticky" top={0} zIndex="1001"
       boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
@@ -49,22 +46,32 @@ export const Navbar = () => {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          {/* <HStack spacing={8} alignItems={"center"}> */}
-            
+          <HStack spacing={8} alignItems={"center"}>
+            <Box>
+            <NavLink href={"/"}
+              _hover={{
+                textDecoration: "none",
+              }}
+              textAlign={"center"}>
+                {/* <Box> */}
+                 {/* <Image src={logo} alt="logo" width={"100px"} h={"50px"}  /> */}
+                <Text className={style.logo} 
+                fontWeight={700} 
+                fontSize={"30px"}>Clothy.  </Text>
+                {/* </Box> */}
+              </NavLink>
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}
               display={{ base: "none", md: "flex" }}
               alignItems={"center"}
+              
             >
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
-              <Link href={"/"} textAlign={"center"}>
-                <Box border={"1px solid red"}>
-                 <Image src={logo} alt="logo" width={"100px"} h={"50px"}  />
-                </Box>
-              </Link>
+              
 
               <Link
                 px={2}
@@ -127,7 +134,7 @@ export const Navbar = () => {
                 sale
               </Link>
             </HStack>
-          {/* </HStack> */}
+          </HStack>
          
            <InputGroup w="auto" display={{ base: "none", md: "flex" }} >
                 <InputLeftElement color="gray.500" cursor="pointer" _hover={{ color: "blue" }}>
@@ -141,8 +148,9 @@ export const Navbar = () => {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}
+          spacing={{ base: 5, md: 1,lg:5 }}
           alignItems={"center"}
+          // border={"1px solid red"}
           >
             <Button
             as={'a'}
@@ -157,8 +165,8 @@ export const Navbar = () => {
             }}>
             Sign In
           </Button>
-           <Link href="#">
-           <FaRegHeart />
+           <Link href="#" >
+           <FaRegHeart  />
            </Link>
             {/* <Link href="/add-to-cart"> */}
               {/* <ShoppingCartIcon
@@ -181,15 +189,18 @@ export const Navbar = () => {
                   color={"black"}
                   h={"40px"} alignItems={"center"}
                   display={"flex"}
+                  _hover={{
+                    textDecoration: "none",
+                  }}
                 >
                   <Tooltip
                     label={`You have 0 items in the cart`}
-                    fontSize="sm"
+                    fontSize="lg"
                     background="lightgrey"
                     color={"black"}
                     
                   >
-                    <Box display={"flex"} alignItems={"center"}>
+                    <Box display={"flex"} alignItems={"center"} >
                     <Text fontSize={"17px"} >
                       Cart 
                       </Text>
@@ -216,11 +227,18 @@ export const Navbar = () => {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
+          <Box pb={4} pt={4} display={{ md: "none" }}>
+             
             <Stack as={"nav"} spacing={4}>
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
+             <InputGroup w="auto" display={{ md: "flex" }} >
+                <InputLeftElement color="gray.500" cursor="pointer" _hover={{ color: "blue" }}>
+                    <FiSearch />
+                </InputLeftElement>
+                <Input placeholder="Search..." border={"1px solid gray"}  />
+            </InputGroup>
               <Link
                 px={2}
                 py={1}
