@@ -1,34 +1,23 @@
 import {
+  Flex,
+  Box,
   FormControl,
-  FormHelperText,
   FormLabel,
   Heading,
   Input,
+  Checkbox,
+  Stack,
   Button,
   Link,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Signin.module.css";
 import { useToast } from "@chakra-ui/react";
 
-import {
-  Flex,
-  Box,
-  // FormControl,
-  // FormLabel,
-  // Input,
-  Checkbox,
-  Stack,
-  // Link,
-  // Button,
-  // Heading,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
 
-
-function Signin() {
+const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -39,8 +28,8 @@ function Signin() {
   // all toasts are here
   const wrongEmail = () => {
     toast({
-      title: "Wrong Email or Password.",
-      description: "Please enter right email or password!!!",
+      title: "Wrong Email address or Password.",
+      description: "Please enter right email address or password!!!",
       status: "error",
       duration: 3000,
       isClosable: true,
@@ -58,17 +47,21 @@ function Signin() {
       position: "top",
     });
   };
-  // all toasts are here
 
   const submitLogin = async () => {
     try {
-      let res = await fetch("http://localhost:8080/login");
+      let res = await fetch("http://localhost:8080/UserDetails");
       let data = await res.json();
-      // console.log(data);
+
+      console.log(data);
+
       let Auth = false;
       for (let i in data) {
         if (data[i].email === email && data[i].password === password) {
           Auth = true;
+
+          data[i].isAuth=true;
+
           localStorage.setItem("name", data[i].name);
           break;
         }
@@ -86,68 +79,19 @@ function Signin() {
     }
     setemail("");
     setPassword("");
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
-    <div>
-      <div className={styles.mainDiv}>
-        <Heading color="black" textAlign="center">
-          Sign In
-        </Heading>
-        <FormControl>
-          <FormLabel>Email address</FormLabel>
-          <Input
-            placeholder="Your Email Address"
-            value={email}
-            onChange={(e) => setemail(e.target.value)}
-            type="email"
-          />
-
-          <FormLabel>Password</FormLabel>
-          <Input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Your Password"
-            type="password"
-          />
-          <FormHelperText>
-            We'll never share your Email & Password.
-          </FormHelperText>
-          <FormHelperText>
-            If have no account click{" "}
-            <Link color="black" href="/signup" fontWeight={"600"}>
-              Signup
-            </Link>
-          </FormHelperText>
-          <FormHelperText>
-            Go to admin panel{" "}
-            <Link color="black" fontWeight={"600"} href="#">
-              Signin
-            </Link>
-          </FormHelperText>
-          <Button
-            w="20%"
-            marginLeft="42%"
-            marginTop="30px"
-            color="white"
-            background="black"
-            onClick={submitLogin}
-            _hover={{
-              bg: "rgb(4,4,4)",
-            }}
-          >
-            <span className={styles.loginButton}>Sign in</span>
-          </Button>
-        </FormControl>
-      </div>
-
       <Flex
-      minH={'100vh'}
+      minH={'70vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack 
+      //border={"1px solid red"}
+      w={"1000px"}
+      spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'}>Sign in </Heading>
         </Stack>
@@ -160,11 +104,17 @@ function Signin() {
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" 
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" />
+              <Input type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              />
             </FormControl>
             <Stack spacing={10}>
               <Stack
@@ -175,6 +125,7 @@ function Signin() {
                 <Link color={'blue.400'}>Forgot password?</Link>
               </Stack>
               <Button
+                onClick={submitLogin}
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
@@ -192,9 +143,6 @@ function Signin() {
         </Box>
       </Stack>
     </Flex>
-
-
-    </div>
   );
 }
 

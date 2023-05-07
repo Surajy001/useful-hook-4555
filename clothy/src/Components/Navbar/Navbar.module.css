@@ -1,4 +1,4 @@
-.cart_item_total{
+/* .cart_item_total{
     position:relative;
     top:-20px;
     right:32px;
@@ -9,4 +9,16 @@
     width:8px;
     background:red;
     font-size: 13px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Raleway:ital,wght@1,900&display=swap');
+.logo::first-letter {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(216, 14, 34);
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo{
+    font-family: 'Raleway', sans-serif;
 }

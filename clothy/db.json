@@ -1000,15 +1000,33 @@
         }
   ],
 
-  
-  "login":[
-      {
-          
-      }
-
+  "UserDetails": [
+    {
+      "name": "Deepak",
+      "email": "deepaky@gmail.com",
+      "password": "123456",
+      "mobile": "147258369",
+      "gender": "female",
+      "isAuth": false,
+      "isFavourite": false,
+      "cart": [],
+      "wishlist": [],
+      "placedOrder": [],
+      "id": 1
+    },
+    {
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "password": "12347",
+      "mobile": "1234567889",
+      "gender": "male",
+      "isAuth": false,
+      "isFavourite": false,
+      "productQuantity": 1,
+      "cart": [],
+      "wishlist": [],
+      "placedOrder": [],
+      "id": 2
+    }
   ]
 }
-
-
-
-
