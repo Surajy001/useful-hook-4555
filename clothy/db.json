@@ -1,17 +1,17 @@
 {
-  "men":[
+  "products":[
     
         {
           "id": 1,
-          "title": "Vender Men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
+          "title": "Vender men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
           "description": "Soft at skin, It keeps you cool and adds charm to your personality. Wear it in parties, weddings, traditional functions and festive occasion. Team it up with a sleeveless Kota and complement it with a pair of Kolhapur chappals to complete the look.",
           "mrp_price": 1598,
           "discount_percentage":37,
           "category": "Kurta",
           "brand": "SMITH",
           "price": 999,
-          "rating": 4.2,
-          "gender": "Men",
+          "rating": 3.8,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61V1z9TQ1YL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61EN3H6QLDL._UL1500_.jpg",
@@ -23,7 +23,7 @@
 
         {
           "id": 2,
-          "title": "HEORA Kurta Pyjama Set for Men Ethnic & Designer Wear (LE079)",
+          "title": "HEORA Kurta Pyjama Set for men Ethnic & Designer Wear (LE079)",
           "description": "Full Sleeve Kurta with Knee Length",
           "mrp_price": 4999 ,
           "discount_percentage": 64,
@@ -31,7 +31,7 @@
           "brand": "HEORA",
           "price": 1799,
           "rating": 4.8,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/31sYt1bkYuL.jpg",
             "https://m.media-amazon.com/images/I/61mFI8liaxL._UL1205_.jpg",
@@ -42,15 +42,15 @@
 
         {
           "id": 3,
-          "title": "Pro-Ethic Style Developer Men's Cotton Solid Straight Kurta for Men Stylish Latest Ethnic Wear Pack of 1",
-          "description": "Cotton Solid Straight Kurta for Men Stylish Latest Ethnic Wear",
+          "title": "Pro-Ethic Style Developer men's Cotton Solid Straight Kurta for men Stylish Latest Ethnic Wear Pack of 1",
+          "description": "Cotton Solid Straight Kurta for men Stylish Latest Ethnic Wear",
           "mrp_price": 1999,
           "discount_percentage": 64,
           "category": "Kurta",
           "brand": "POLO",
           "price": 725,
-          "rating": 4.1,
-          "gender": "Men",
+          "rating": 2.1,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/611t5EozH7L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81w4502ytUL._UL1500_.jpg",
@@ -62,7 +62,7 @@
 
         {
           "id": 4,
-          "title": "Veera Paridhaan Men's Regular Kurta",
+          "title": "Veera Paridhaan men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
           "mrp_price": 2199,
           "discount_percentage": 55,
@@ -70,7 +70,7 @@
           "brand": "SMITH",
           "price": 999,
           "rating": 4.6,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61cO5SUtIQL._UL1440_.jpg",
             "https://m.media-amazon.com/images/I/61mHt+xlsAS._UL1440_.jpg",
@@ -81,7 +81,7 @@
 
         {
           "id": 5,
-          "title": "Veera Paridhaan Men's Regular Kurta",
+          "title": "Veera Paridhaan men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
           "mrp_price": 1000,
           "discount_percentage": 55,
@@ -89,7 +89,7 @@
           "brand": "HEORA",
           "price": 450,
           "rating": 4.6,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61fMaQv2AUL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71e6yzs8uzL._UL1500_.jpg",
@@ -100,15 +100,15 @@
 
         {
           "id": 6,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
           "mrp_price": 2000,
           "discount_percentage": 50,
           "category": "Kurta",
           "brand": "RAYMOND",
           "price": 1000,
-          "rating": 4.5,
-          "gender": "Men",
+          "rating": 1,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71Ep7A1HR5L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61fBkS4cU-L._UL1500_.jpg",
@@ -119,7 +119,7 @@
 
         {
           "id": 7,
-          "title": "POLO Men's Regular Kurta",
+          "title": "POLO men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
           "mrp_price": 5000,
           "discount_percentage": 50,
@@ -127,7 +127,7 @@
           "brand": "POLO",
           "price": 2500,
           "rating": 4.6,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/41TR1UOflGL.jpg",
             "https://m.media-amazon.com/images/I/41SMwfOt4RL.jpg",
@@ -138,15 +138,15 @@
 
         {
           "id": 8,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
           "mrp_price": 1000,
           "discount_percentage": 55,
           "category": "Kurta",
           "brand": "RAYMOND",
           "price": 450,
-          "rating": 4.6,
-          "gender": "Men",
+          "rating": 1,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61TWzF3+B6L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61Wq9HrZRFL._UL1500_.jpg",
@@ -157,14 +157,14 @@
 
         {
           "id": 9,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.","mrp_price": 1199,
           "discount_percentage": 75,
           "category": "Kurta",
           "brand": "RAYMOND",
           "price": 299,
-          "rating": 4.3,
-          "gender": "Men",
+          "rating": 4,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/612MYfnwVqL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61PJ5reeBvL._UL1500_.jpg",
@@ -175,14 +175,14 @@
 
         {
           "id": 10,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.", "mrp_price": 2000,
           "discount_percentage": 75,
           "category": "Kurta",
           "brand": "SMITH",
           "price": 500,
           "rating": 4.4,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71Nq5IHGVTS._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71q-rvHWT1S._UL1500_.jpg",
@@ -193,14 +193,14 @@
 
         {
           "id": 11,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.", "mrp_price": 3000,
           "discount_percentage": 50,
           "category": "Kurta",
           "brand": "HEORA",
           "price": 1500,
           "rating": 4.2,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71b-r1sy9YL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71w7o9e8aaL._UL1500_.jpg",
@@ -211,14 +211,14 @@
 
         {
           "id": 12,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.", "mrp_price": 2000,
           "discount_percentage": 40,
           "category": "Kurta",
           "brand": "POLO",
           "price": 800,
           "rating": 4.9,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61vBU9VUlRL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71ZVjMADCXL._UL1500_.jpg",
@@ -229,14 +229,14 @@
 
         {
           "id": 13,
-          "title": "Raymond's Men's Regular Kurta",
+          "title": "Raymond's men's Regular Kurta",
           "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.", "mrp_price": 3000,
           "discount_percentage": 60,
           "category": "Kurta",
           "brand": "POLO",
           "price": 1200,
           "rating": 4.8,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61SxwQ77+iL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/91wfjDJc5BL._UL1500_.jpg",
@@ -247,7 +247,7 @@
 
         {
           "id": 14,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 1199,
           "discount_percentage": 75,
@@ -255,7 +255,7 @@
           "brand": "RAYMOND",
           "price": 299,
           "rating": 4.3,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61xSbZqY7hL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/51Puj7isUcL._UL1500_.jpg",
@@ -266,7 +266,7 @@
 
         {
           "id": 15,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 2000,
           "discount_percentage": 75,
@@ -274,7 +274,7 @@
           "brand": "SMITH",
           "price": 500,
           "rating": 4.4,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61UGf0FVLGL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61GPASEYh8L._UL1500_.jpg",
@@ -285,15 +285,15 @@
 
         {
           "id": 16,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 3000,
           "discount_percentage": 50,
           "category": "Sports-Wear",
           "brand": "HEORA",
           "price": 1500,
-          "rating": 4.2,
-          "gender": "Men",
+          "rating": 3.2,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71Fp9df3hxL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61x3LJjfbRL._UL1500_.jpg",
@@ -304,7 +304,7 @@
 
         {
           "id": 17,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 2000,
           "discount_percentage": 40,
@@ -312,7 +312,7 @@
           "brand": "POLO",
           "price": 800,
           "rating": 4.9,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61wHVOuzCFL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61qSN5XdPDL._UL1500_.jpg",
@@ -323,7 +323,7 @@
 
         {
           "id": 18,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 3000,
           "discount_percentage": 60,
@@ -331,7 +331,7 @@
           "brand": "POLO",
           "price": 1200,
           "rating": 4.8,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61grh82v+sL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61TfhzgOArL._UL1500_.jpg",
@@ -342,7 +342,7 @@
 
         {
           "id": 19,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 2500,
           "discount_percentage": 50,
@@ -350,7 +350,7 @@
           "brand": "SMITH",
           "price": 1250,
           "rating": 3.6,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/612GNFRdAwL._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/81LXVibhJyL._UL1100_.jpg",
@@ -361,7 +361,7 @@
 
         {
           "id": 20,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 5000,
           "discount_percentage": 50,
@@ -369,7 +369,7 @@
           "brand": "SMITH",
           "price": 2500,
           "rating": 4.1,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61xJOUjoIcL._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/51ZXPEJJqjL._UL1100_.jpg",
@@ -380,15 +380,15 @@
 
         {
           "id": 21,
-          "title": "Men's Regular Fit Sports T-Shirt",
+          "title": "men's Regular Fit Sports T-Shirt",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 1300,
           "discount_percentage": 50,
           "category": "Sports-Wear",
           "brand": "RAYMOND",
           "price": 650,
-          "rating": 4.5,
-          "gender": "Men",
+          "rating": 2,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51pF2Yhr7ZL._UL1200_.jpg",
             "https://m.media-amazon.com/images/I/61sie0zXXeL._UL1200_.jpg",
@@ -399,15 +399,15 @@
 
         {
           "id": 22,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 1000,
           "discount_percentage": 50,
           "category": "Inner-Wear",
           "brand": "RAYMOND",
           "price": 500,
-          "rating": 4.3,
-          "gender": "Men",
+          "rating": 1,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61yXaH95lHL._UL1400_.jpg",
             "https://m.media-amazon.com/images/I/61P8vx8LOwL._UL1400_.jpg",
@@ -418,7 +418,7 @@
 
         {
           "id": 23,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 500,
           "discount_percentage": 50,
@@ -426,7 +426,7 @@
           "brand": "HEORA",
           "price": 250,
           "rating": 4.9,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/81g8qa0IcfL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/819Hl7BTMJL._UL1500_.jpg",
@@ -437,7 +437,7 @@
 
         {
           "id": 24,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 750,
           "discount_percentage": 50,
@@ -445,7 +445,7 @@
           "brand": "POLO",
           "price": 375,
           "rating": 4.8,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/81AmDdUhUIL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81HzFm-xXlL._UL1500_.jpg",
@@ -456,15 +456,15 @@
 
         {
           "id": 25,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 500,
           "discount_percentage": 50,
           "category": "Inner-Wear",
           "brand": "SMITH",
           "price": 250,
-          "rating": 4.6,
-          "gender": "Men",
+          "rating": 2,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/8124H1p8VoL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71PoPic61lL._UL1500_.jpg",
@@ -475,7 +475,7 @@
 
         {
           "id": 26,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 900,
           "discount_percentage": 50,
@@ -483,7 +483,7 @@
           "brand": "POLO",
           "price": 450,
           "rating": 4.7,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51pFiSbo5FL._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/51+4M86G4uL._UL1100_.jpg",
@@ -494,15 +494,15 @@
 
         {
           "id": 27,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 1000,
           "discount_percentage": 50,
           "category": "Inner-Wear",
           "brand": "RAYMOND",
           "price": 500,
-          "rating": 4.5,
-          "gender": "Men",
+          "rating": 2,
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51EKeuBCTIL._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/51Y9jRqK2kL._UL1100_.jpg",
@@ -513,7 +513,7 @@
 
         {
           "id": 28,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 1500,
           "discount_percentage": 50,
@@ -521,7 +521,7 @@
           "brand": "HEORA",
           "price": 750,
           "rating": 4.9,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/516vqx2jg8L._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/51Vi2soNDiL._UL1100_.jpg",
@@ -532,7 +532,7 @@
 
         {
           "id": 29,
-          "title": "Men's Regular Fit Vest",
+          "title": "men's Regular Fit Vest",
           "description": "Its a perfect companion for your active lifestyle. A fitness brand that brings to you comfort & style, with our affordable range of activewear clothing",
           "mrp_price": 2000,
           "discount_percentage": 50,
@@ -540,7 +540,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.4,
-          "gender": "Men",
+          "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51fFzsjfpjL._UL1100_.jpg",
             "https://m.media-amazon.com/images/I/51jPY4EqNgL._UL1100_.jpg",
@@ -558,7 +558,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71jYkLwsD6L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/71uX5SdSTiL._UL1500_.jpg",
@@ -575,8 +575,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 3,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/718MOFQpVEL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/7102aUQookL._UL1500_.jpg",
@@ -593,8 +593,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 5,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51odSo-cvVL._UL1250_.jpg",
             "https://m.media-amazon.com/images/I/51SEnyFJP8L._UL1250_.jpg",
@@ -611,8 +611,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 3,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61VGtPHMQ2L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61Djoah5VzL._UL1500_.jpg",
@@ -629,8 +629,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 2,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51MZ7Kc0saL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/51G8fqk8VqL._UL1500_.jpg",
@@ -647,8 +647,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 4,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51KkVzCHyGL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/51OcFRJhtCL._UL1500_.jpg",
@@ -665,8 +665,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 3,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51gkpU0olsL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/51r3j5iQLRL._UL1500_.jpg",
@@ -683,8 +683,8 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 2,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51E3-froJXL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61XIBwxAfTL._UL1500_.jpg",
@@ -701,8 +701,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 3,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71g+7KewfjS._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/41DFzq0hRJL.jpg",
@@ -719,8 +719,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 2,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71ERfNtHXnL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61Uc5a7RA+L._UL1500_.jpg",
@@ -737,8 +737,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 5,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61S-Tpv3vtL._UL1200_.jpg",
             "https://m.media-amazon.com/images/I/61bEyZwQ9pS._UL1200_.jpg",
@@ -755,8 +755,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 1,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71CmCtXs1SL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/617Ii5w+FSL._UL1500_.jpg",
@@ -773,8 +773,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 1,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71gr7j3VOkL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/61fXVyDrb9L._UL1500_.jpg",
@@ -791,8 +791,8 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
-          "gender": "Women",
+          "rating": 4,
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81kqWjQ5g4L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81QoZdsdKCL._UL1500_.jpg",
@@ -810,7 +810,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51kfVYQ5b-L._UL1280_.jpg",
             "https://m.media-amazon.com/images/I/515Z0JnnPaL._UL1280_.jpg",
@@ -828,7 +828,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81uvvz3jj8L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81zswDHV2eL._UL1500_.jpg",
@@ -846,7 +846,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71-OohIgItL._UL1280_.jpg",
             "https://m.media-amazon.com/images/I/613kjvmBMQL._UL1280_.jpg",
@@ -864,7 +864,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61PGFWgswDL._UL1280_.jpg",
             "https://m.media-amazon.com/images/I/71IhijCIoZL._UL1280_.jpg",       
@@ -882,7 +882,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91ZdosKaqbL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/91bnqPLfArL._UL1500_.jpg",
@@ -900,7 +900,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51GdCsRU0aL.jpg",
             "https://m.media-amazon.com/images/I/71KK80KlLJL._UL1500_.jpg",
@@ -918,7 +918,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61OlJMyBvxS._UL1080_.jpg",
             "https://m.media-amazon.com/images/I/914l2RP+5LL._UL1500_.jpg",
@@ -936,7 +936,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91x6POEO72L._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/A1Q9lt3EpVL._UL1500_.jpg",
@@ -954,7 +954,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81LXQt+BmWL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81zCDob8RML._UL1500_.jpg",
@@ -972,7 +972,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91hnIcKX7eL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/91PEdE2YneL._UL1500_.jpg",
@@ -990,7 +990,7 @@
           "brand": "SMITH",
           "price": 1000,
           "rating": 4.6,
-          "gender": "Women",
+          "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81IiovEhNxL._UL1500_.jpg",
             "https://m.media-amazon.com/images/I/81Ys9XgK4XL._UL1500_.jpg",

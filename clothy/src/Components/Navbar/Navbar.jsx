@@ -22,7 +22,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 // import style from "./Navbar.module.css";
 // import { LogoDev } from "@mui/icons-material";
 import { FiSearch } from "react-icons/fi";
-import logo from "../../Assets/Clothy.png"
+// import logo from "../../Assets/Clothy.png"
 import { FaRegHeart } from 'react-icons/fa';
 // import { color } from "framer-motion";
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
               ))} */}
               <Link href={"/"} textAlign={"center"}>
                 <Box border={"1px solid red"}>
-                 <Image src={logo} alt="logo" width={"100px"} h={"50px"}  />
+                 {/* <Image src={logo} alt="logo" width={"100px"} h={"50px"}  /> */}
                 </Box>
               </Link>
 
@@ -74,7 +74,7 @@ export const Navbar = () => {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                href={"#"}
+                href={"/menproducts"}
               >
                 Men
               </Link>
