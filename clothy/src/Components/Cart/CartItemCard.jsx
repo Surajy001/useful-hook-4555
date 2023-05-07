@@ -18,8 +18,10 @@ function CartItemCard({
   category,
   loading,
   favourite,
-  setFavrourite
+  setFavrourite,
+  rating
 }) {
+    console.log(rating)
   const [quantity, setQuantity] = useState(1);
   const [favStatus,setFavStatus] = useState(false);
   const IncreaseQuantity = () => {

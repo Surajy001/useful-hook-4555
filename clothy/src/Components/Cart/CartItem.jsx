@@ -63,7 +63,8 @@ function CartItem() {
     axios
       .get("http://localhost:8080/UserDetails")
       .then((data) => {
-        let CartData = data.data["Deepak"].cart;
+        let CartData = data.data;
+        console.log(CartData)
         setCart(CartData);
         setFavourite(data.data["Deepak"].wishlist);
       })
@@ -77,7 +78,7 @@ function CartItem() {
     <Box className={style.Cart_Main_Page}>
       {/* <h1>Welcome {email}</h1>   */}
       <Box className={style.cart_item}>
-        {Cart.map((item) => {
+        {Cart?.map((item) => {
           return (
             <CartItemCard
               key={item.id}
