@@ -13,6 +13,8 @@ import {
   // IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 export const HomePage = () => {
   return (
     <Container maxW={"8xl"}>
@@ -132,7 +134,7 @@ export const HomePage = () => {
               CLOTHES ARE
             </Text>
             <br />
-            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
+            <Text as={"span"}> <HiOutlineArrowNarrowRight/> <HiOutlineArrowNarrowRight/>THE SPIRIT OF FASHION</Text>
           </Heading>
         </Stack>
 
