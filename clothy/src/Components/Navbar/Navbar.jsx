@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FiSearch } from "react-icons/fi";
-// import logo from "../../Assets/Clothy.png"
 import { FaRegHeart } from 'react-icons/fa';
 import style from './Navbar.module.css'
 import { NavLink } from "react-router-dom";
@@ -71,7 +70,6 @@ export const Navbar = () => {
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))} */}
-              
 
               <Link
                 px={2}
@@ -81,7 +79,7 @@ export const Navbar = () => {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                href={"#"}
+                href={"/menproducts"}
               >
                 Men
               </Link>
