@@ -13,6 +13,8 @@ import {
   // IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { Carousels } from "../Components/Carousels/Carousels";
+
 export const HomePage = () => {
   return (
     <Container maxW={"8xl"}>
@@ -29,31 +31,80 @@ export const HomePage = () => {
           </Text>
           <Text>Read More</Text>
         </Stack>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} border={"1px solid"}
+        lineHeight={.5}
+        fontWeight={600}
+        fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+        >
+          {/* <Heading
             lineHeight={1.1}
             fontWeight={600}
             fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-          >
+            border={"1px solid"}
+            // alignItems={"center"}
+          > */}
             <Text
-              as={"span"}
-              position={"relative"}
-              _after={{
-                content: "''",
-                width: "full",
-                height: "30%",
-                position: "absolute",
-                bottom: 1,
-                left: 0,
-                bg: "red.400",
-                zIndex: -1,
-              }}
+              // as={"span"}
+              // position={"relative"}
+              // _after={{
+              //   content: "''",
+              //   width: "full",
+              //   height: "30%",
+              //   position: "absolute",
+                // bottom: 1,
+                // left: 0,
+                // bg: "red.400",
+                // zIndex: -1,
+              // }}
             >
               CLOTHES ARE
-            </Text>
-            <br />
-            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
-          </Heading>
+              </Text>
+              <Box display={"flex"}
+              justifyContent={"space-evenly"}
+
+              >
+                <Text>
+                THE 
+                </Text>
+                <div   style={{border:"1px solid", width:"20%",height:"5vh", borderRadius:"30px", verticalAlign:"middle" , display:"table"}}>
+                 {/* <ArrowRightAltIcon fontSize="20px" fontWeight="bold" /> */}
+                </div>
+                <Text>
+                SPIRIT
+                </Text>
+              </Box>
+              <Text>
+                OF FASHION
+              </Text>
+              {/* THE <div style={{display:"inline",
+               border:"1px solid",
+               textAlign:"center",
+               margin:"auto",
+               minWidth:"80px",
+               height:"50px"
+               }}> → </div> SPIRIT <br/> OF FASHION */}
+
+            {/* </Text> */}
+            {/* <br />
+            <Text>
+              THE{" "}
+              <Text
+                as={"span"}
+                borderRadius="30px"
+                border="1px solid black"
+                padding="-0px 10px"
+                // display={"inline"}
+                // width={"100px"}
+                // justifyContent={"center"}
+                // fontWeight={100}
+              >
+                
+                {/* <ArrowRightAltIcon fontSize="20px" fontWeight="bold" /> */}
+                {/* <HiArrowSmallRight /> */}
+              {/* </Text> */}
+              
+            {/* </Text> */}
+          {/* </Heading> */}
         </Stack>
 
         <Flex
@@ -63,7 +114,7 @@ export const HomePage = () => {
           position={"relative"}
           w={"full"}
         >
-          <Blob
+          {/* <Blob
             w={"60%"}
             h={"140%"}
             position={"absolute"}
@@ -89,6 +140,21 @@ export const HomePage = () => {
               w={"100%"}
               h={"100%"}
               src={
+                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+              }
+            />
+          </Box> */}
+          <Box border={"1px solid"} w={"150px"} borderRadius={"30px"} h={"200px"}>
+          <Image
+              alt={"Hero Image"}
+              fit={"cover"}
+              align={"center"}
+              alignItems={"center"}
+              w={"90%"}
+              h={"90%"}
+              borderRadius={"30px"}
+              // margin={"auto"}
+              src={ 
                 "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               }
             />
@@ -176,6 +242,8 @@ export const HomePage = () => {
         </Flex>
       </Stack>
 
+      <Carousels />
+
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -184,7 +252,7 @@ export const HomePage = () => {
       >
         <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
           <Text>
-            Fashion is a form of self-expression and autonomy at a particular
+            Fashion is a form of self - expression and autonomy at a particular
             period.
           </Text>
           <Text>Read More</Text>
@@ -212,7 +280,11 @@ export const HomePage = () => {
               CLOTHES ARE
             </Text>
             <br />
-            <Text as={"span"}>THE - SPIRIT OF FASHION</Text>
+            <Text as={"span"}>
+              THE
+              {/* <ArrowRightAltIcon /> */}
+              SPIRIT OF FASHION
+            </Text>
           </Heading>
         </Stack>
 
