@@ -1,16 +1,13 @@
 import axios from "axios";
 import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
-import { Email } from "@mui/icons-material";
+import { PATCH_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
 
-export const addUserData =
-  (userData, success, navigate, emailExist) => (dispatch) => {
-    dispatch({ type: SIGNUP_LOADING });
+
+export const addUserData = (userData, success, navigate, emailExist) => (dispatch) => {
+    dispatch({ type: SIGNUP_LOADING })    
     try{
-      axios.post("http://localhost:8080/UserDetails", {...userData})
-      // axios.post("http://localhost:8080/UserDetails", userData)
-      .then((data) => {
-        // console.log(res);
-        console.log(data)
+    axios.post("http://localhost:8080/UserDetails", userData)
+      .then(() => {
         dispatch({ type: SIGNUP_SUCCESS });
         success();
         navigate("/signin");
@@ -20,3 +17,18 @@ export const addUserData =
       console.log(err.message)
     }
   };
+
+// export const patchUserData =(newUserData,id) => (dispatch) => {
+//     dispatch({ type: SIGNUP_LOADING }) 
+//     try{
+//       axios.patch(`http://localhost:8080/UserDetails/${id}`, {...newUserData,isAuth:true})
+//       .then((res) => {
+//          console.log(res.data.isAuth);
+        
+//         dispatch({ type: PATCH_SUCCESS, payload:res.data.isAuth });
+//       })
+//     }catch(err){
+//       console.log(err);
+//       dispatch({type: SIGNUP_ERROR})
+//     }
+//   }

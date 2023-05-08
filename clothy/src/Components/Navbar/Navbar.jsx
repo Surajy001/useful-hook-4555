@@ -47,7 +47,7 @@ export const Navbar = () => {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-            <NavLink href={"/"}
+            <NavLink to={"/"}
               _hover={{
                 textDecoration: "none",
               }}
@@ -91,7 +91,7 @@ export const Navbar = () => {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                href={"#"}
+                href={"/womenproducts"}
               >
                 Women
               </Link>

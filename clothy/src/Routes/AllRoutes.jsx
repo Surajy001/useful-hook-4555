@@ -8,40 +8,75 @@ import Signin from "../Pages/Signin/Signin";
 import Signup from "../Pages/Signup/Signup";
 import Dashboard from "../Pages/adminsection/Dashboard";
 import SingleProductPage from "../Pages/SingleProductPage";
+import MenProductPage from "../Pages/adminsection/MenProduct";
+import WomenProductPage from "../Pages/adminsection/WomenProduct";
+import AdminsPage from "../Pages/adminsection/AdminsPage";
 import { MensPage } from "../Pages/MensPage";
+import { WomensPage } from "../Pages/WomensPage";
+
+import { Navbar } from "../Components/Navbar/Navbar";
+import { Footer } from "../Components/Footer/Footer";
+
+
 
 const AllRoutes = () => {
   
-const adminRoutes=[
+const PageRoutes=[
   {
-    path: "/admin-dashboard",
-    element: <Dashboard/>,
+    path: "/",
+    element: <HomePage/>,
   },
   {
-    path: "/admin-login",
-    element: <AdminLogin/>,
+    path: "/signin",
+    element: <Signin/>,
+  },
+  {
+    path: "/signup",
+    element: <Signup/>,
+  },
+  {
+    path: "/add-to-cart",
+    element: <AddToCartPage/>,
+  },
+  {
+    path: "/payment",
+    element: <Payment />,
+  },
+  {
+    path: "/product/:id",
+    element: <SingleProductPage/>,
+  },
+  {
+    path: "/menproducts",
+    element: <MensPage/>,
+  },
+  {
+    path: "/womenproducts",
+    element: <WomensPage />,
+  },
+  {
+    path: "*",
+    element: <h1>404 Page Not Found</h1>,
   },
 ]
 
   return (
-    <Routes>
-      {adminRoutes.map((ele, key) => (
-          <Route key={key} path={ele.path} element={ele.element} />
+    <>
+    <Routes> 
+      
+      {PageRoutes.map((ele, key) => (
+          <Route key={key} path={ele.path} element={<> <Navbar /> {ele.element} <Footer /> </>  } />
         ))}
-      <Route path={"/"} element={<HomePage/>} />
-      <Route path={"/signin"} element={<Signin/>} />
-      <Route path={"/signup"} element={<Signup/>} />
-      <Route path="/add-to-cart" element={<AddToCartPage/>}></Route>
-      <Route path={"/payment"} element={<Payment />} />
+
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>
-      <Route path="/product/:id" element={<SingleProductPage/>}/>
-
-      <Route path="/menproducts" element={<MensPage/>}/>
-
-      <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
+      <Route path="/admin-admins" element={<AdminsPage/>} />
+      <Route path="/admin-men-products" element={<MenProductPage/>}/>
+      <Route path="/admin-women-products" element={<WomenProductPage/>}/>
 
     </Routes>
+</>
+
   );
 };
 

@@ -198,7 +198,12 @@ export const HomePage = () => {
               CLOTHES ARE
             </Text>
             <br />
+<<<<<<< HEAD
             <Text as={"span"}>THE SPIRIT OF FASHION</Text>
+=======
+            <Text as={"span"}>
+              THE SPIRIT OF FASHION</Text>
+>>>>>>> 14290d09c61a01393dbc103a92c1b1b04d5cbb03
           </Heading>
         </Stack>
 

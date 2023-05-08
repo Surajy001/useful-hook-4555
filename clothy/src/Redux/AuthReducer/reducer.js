@@ -1,4 +1,5 @@
 import { LOGIN_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
+import { PATCH_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
 
 const initialState = {
   isLoading: false,
@@ -10,7 +11,7 @@ const initialState = {
 
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    // for signup
+    
     case SIGNUP_LOADING:
       return { ...state, isLoading: true };
     case SIGNUP_SUCCESS:
@@ -21,8 +22,9 @@ export const authReducer = (state = initialState, { type, payload }) => {
       //made changes for getting userData
     case SIGNUP_ERROR:
       return { ...state, isLoading: false, isError: true };
-
-    //default case
+    case PATCH_SUCCESS:
+      return {...state, isLoading:false, isAuth:payload }
+    
     default:
       return state;
   }
