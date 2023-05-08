@@ -6,7 +6,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../../actionType"
 export  const adminLoginAction = (obj)=>(dispatch)=>{
     dispatch({type:LOGIN_REQUEST})
     try {
-        return axios.get(`http://localhost:8080/adminlogin`).then(res=>{
+        return axios.get(`http://localhost:8080/AdminDetail`).then(res=>{
          
     //    console.log(obj)
        

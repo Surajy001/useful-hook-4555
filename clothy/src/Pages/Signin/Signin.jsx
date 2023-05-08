@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { patchUserData } from "../../Redux/AuthReducer/action";
@@ -24,13 +24,15 @@ const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const isAuth=useSelector((store)=>store.authReducer.isAuth);
+  const location=useLocation();
+  console.log(location.state)
 
   const dispatch=useDispatch();
 
   const navigate = useNavigate();
   const toast = useToast();
 
-   console.log('auth',isAuth)
+  //  console.log('auth',isAuth)
   // all toasts are here
   const wrongEmail = () => {
     toast({
@@ -71,7 +73,7 @@ const Signin=()=> {
             wrongEmail();
           }else{
             loginSuccess();
-            navigate("/");
+            navigate(`${location.state}`);
           }
       })
       console.log(isAuth);
