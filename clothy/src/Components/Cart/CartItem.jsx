@@ -13,28 +13,51 @@ function CartItem() {
   const [favourite, setFavourite] = useState([]);
 
   const isAuth = useSelector((store) => store.authReducer.isAuth);
+  const User = useSelector(store=>store.authReducer.user);
   const navigate = useNavigate();
   const CheckAuth = () => {
     console.log(isAuth);
     isAuth ? navigate("/payment") : navigate("/signin");
   };
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/UserDetails")
-      .then((data) => {
-        let CartData = data.data;
-        // let CartData = data.data.filter(item=>{
-          console.log(data)
-        //   return item.email === 'deepakyad'
-        // })
-        setCart(data.data['Suraj123@gmail.com'].cart);
-        // setFavourite(data.data["Deepak"].wishlist);
+
+
+  const LoginedUserCart =async (ulr,email="deepak123@gmail.com")=>{
+    try {
+      return await axios(`${ulr}`).then((res)=>{
+        let cartData = res.data.find((item)=>item.email===email);
+            setCart(cartData.cart)
       })
-      .finally(() => {
+    } catch (error) {
+      
+    }
+  }
+  const NotLoggedUserCart = async (ulr)=>{
+    try {
+      return await axios(`${ulr}`).then((res)=>{
+            console.log(res.data.cart);
+            setCart(res.data.cart)
+      })
+    } catch (error) {
+      
+    }
+    
+  }
+
+  useEffect(() => {
+    if(User.email){
+      LoginedUserCart("http://localhost:8080/UserDetails",User.email).finally(()=>{   
         setTimeout(() => {
           setLoading(true);
         }, 1500);
-      });
+      })
+    }else{
+      NotLoggedUserCart("http://localhost:8080/TemporaryUserData").finally(()=>{
+    }).finally(() => {
+      setTimeout(() => {
+        setLoading(true);
+      }, 1500);
+    });
+    }
   }, []);
   return (
     <Box className={style.Cart_Main_Page}>

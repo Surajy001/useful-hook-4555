@@ -139,8 +139,7 @@
   text-transform: uppercase;
   background-color: dodgerblue;
   transform: scale(1);
-  transition: background-color 1s,transform 1s;
-  animation: HeartBeat infinite;
+  transition: background-color 1s,transform 500ms;
 }
  /* @keyframes Animation {
   0%{
@@ -157,17 +156,17 @@
   }
 
 } */
-@keyframes HeartBeat {
+/* @keyframes HeartBeat {
   0%{
-    background-color: dodgerblue;
-    transition: bacground-color 1s;
+    background: dodgerblue;
+    transition: bacground 1s;
   }
   100%{
-    background-color: navy;
-    transition: bacground-color 1s;
+    background: navy;
+    transition: bacground 1s;
   }
   
-}
+} */
 
 .checkout:hover{
   background: navy;

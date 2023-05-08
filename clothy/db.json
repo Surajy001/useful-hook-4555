@@ -1074,6 +1074,19 @@
       "wishlist": [],
       "orderPlaced": [],
       "id": 3
+    },
+    {
+      "name": "Deepak Mahesh yadav",
+      "email": "deepakyad18@gmail.com",
+      "password": "1234",
+      "mobile": "9137270148",
+      "gender": "male",
+      "isAuth": false,
+      "productQuantity": 1,
+      "cart": [],
+      "wishlist": [],
+      "orderPlaced": [],
+      "id": 4
     }
   ],
   "TemporaryUserData": {

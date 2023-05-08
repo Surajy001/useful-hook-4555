@@ -15,6 +15,8 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
+import { LOGIN_SUCCESS, SIGNUP_SUCCESS } from "../../Redux/actionType";
 
 
 const Signin=()=> {
@@ -23,6 +25,7 @@ const Signin=()=> {
 
   const navigate = useNavigate();
   const toast = useToast();
+  const dispatch = useDispatch()
 
   // console.log('auth',isAuth)
   // all toasts are here
@@ -53,11 +56,13 @@ const Signin=()=> {
       let res = await fetch("http://localhost:8080/UserDetails");
       let data = await res.json();
 
-      console.log(data);
+      // console.log(data);
 
       let Auth = false;
       for (let i in data) {
         if (data[i].email === email && data[i].password === password) {
+          console.log(data[i])
+          dispatch({type:LOGIN_SUCCESS,payload:data[i]});
           Auth = true;
 
           data[i].isAuth=true;
