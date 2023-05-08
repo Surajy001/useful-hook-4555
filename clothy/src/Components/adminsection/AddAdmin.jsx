@@ -14,6 +14,8 @@ import {
     FormLabel,
     Input,
     Select,
+    Alert,
+    useToast,
 } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux';
 
@@ -59,6 +61,9 @@ const reducer = (state, action) => {
                 gender: payload,
             }
         }
+        case "reset":{
+            return initialState;
+        }
         default:
             return state;
     }
@@ -69,11 +74,25 @@ const AddAdmin = () => {
     const dispatcher = useDispatch();
     const [state, dispatch] = useReducer(reducer,
         initialState);
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const toast=useToast();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // dispatcher(addProduct(state));
-        console.log(state)
+        if(state.password!==confirmPassword || !state.email || !state.name || !state.mobile || !state.gender){
+            toast({
+                title: "Please fill required data",
+                description: "Please Share required info",
+                status: "error",
+                duration: 9000,
+                isClosable: true,
+                position: "top",
+              });
+        }
+        dispatcher()
+        dispatch({type:"reset"});
+        setConfirmPassword("");
     }
 
     const handleChange = (e) => {
@@ -105,7 +124,7 @@ const AddAdmin = () => {
                         <ModalCloseButton />
                         <form>
                             <ModalBody>
-                                <FormControl isRequired>
+                                <FormControl >
                                     <FormLabel>Username</FormLabel>
                                     <Input
                                         placeholder="Enter Username Here "
@@ -115,7 +134,7 @@ const AddAdmin = () => {
                                     />
                                 </FormControl>
 
-                                <FormControl mt={4} isRequired>
+                                <FormControl mt={4} >
                                     <FormLabel>User Email</FormLabel>
                                     <Input
                                         placeholder="Enter Email Here"
@@ -125,17 +144,17 @@ const AddAdmin = () => {
                                     />
 
                                 </FormControl>
-                                <FormControl isRequired>
+                                <FormControl >
                                     <FormLabel>Phone No.</FormLabel>
                                     <Input
                                         placeholder="Enter Phone No. Here"
-                                        name='Mobile'
+                                        name='mobile'
                                         onChange={handleChange}
                                         value={state.mobile}
                                     />
                                 </FormControl>
 
-                                <FormControl mt={4} isRequired>
+                                <FormControl mt={4} >
                                     <FormLabel>Select Gender</FormLabel>
                                     <Select
                                         placeholder="Select Gender"
@@ -147,22 +166,29 @@ const AddAdmin = () => {
                                         <option value="women">Women</option>
                                     </Select>
                                 </FormControl>
-                                <FormControl mt={4} isRequired>
+                                <FormControl mt={4} >
                                     <FormLabel>Password</FormLabel>
                                     <Input
                                         placeholder="Enter Password"
-                                        name="password"
                                         type="password"
+                                        name="password"
                                         onChange={handleChange}
                                         value={state.password}
+                                    />
+                                </FormControl>
+                                <FormControl mt={4} >
+                                    <FormLabel>Confirm Password</FormLabel>
+                                    <Input
+                                        placeholder="Enter Password"
+                                        type="password"
+                                        onChange={(e) => { setConfirmPassword(e.target.value) }}
+                                        value={confirmPassword}
                                     />
                                 </FormControl>
 
                             </ModalBody>
                             <ModalFooter >
-                                <Button colorScheme='blue' mr={3} onClick={() => {
-                                    handleSubmit()
-                                }}>
+                                <Button colorScheme='blue' mr={3} onClick={handleSubmit}>
                                     Add
                                 </Button>
                                 <Button onClick={onClose}>Cancel</Button>

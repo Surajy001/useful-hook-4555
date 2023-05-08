@@ -8,7 +8,6 @@
       "isLogin": false
     }
   ],
-
   "products": [
     {
       "id": 1,
@@ -959,7 +958,6 @@
       ]
     }
   ],
-
   "UserDetails": [
     {
       "id": 1,
@@ -1056,7 +1054,6 @@
           "isFavourite": false
         }
       ],
-      
       "orderPlaced": [
         {
           "id": 2,

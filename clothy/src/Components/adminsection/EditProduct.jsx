@@ -17,73 +17,103 @@ import {
 } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux';
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { editProduct, getMenProduct, getWomenProduct } from '../../Redux/Admin/action';
 
 
-// const initialState = {
-//     title: "",
-//     category: "",
-//     brand: "",
-//     price: "",
-//     images:[],
-// };
 
-const reducer = (state, action) => {
-    const { type, payload } = action;
-    switch (type) {
-        case "title": {
-            return {
-                ...state,
-                title: payload,
-            }
-        }
-        case "category": {
-            return {
-                ...state,
-                category: payload,
-            }
-        }
-        case "brand": {
-            return {
-                ...state,
-                brand: payload,
-            }
-        }
-        case "price": {
-            return {
-                ...state,
-                price: +payload,
-            }
-        }
-        case "images": {
-            return {
-                ...state,
-                images: payload,
-            }
-        }
-        default:
-            return state;
-    }
-}
 
 const EditProduct = ({ id, title, category, brand, price, images }) => {
+
+
+    const reducer = (state, action) => {
+        const { type, payload } = action;
+        switch (type) {
+            case "title": {
+                return {
+                    ...state,
+                    title: payload,
+                }
+            }
+            case "category": {
+                return {
+                    ...state,
+                    category: payload,
+                }
+            }
+            case "brand": {
+                return {
+                    ...state,
+                    brand: payload,
+                }
+            }
+            case "price": {
+                return {
+                    ...state,
+                    price: +payload,
+                }
+            }
+            case "images": {
+                return {
+                    ...state,
+                    images: [state.images1, state.images2, state.images3, state.images4]
+                }
+            }
+            case "images1": {
+                return {
+                    ...state,
+                    images1: payload,
+                }
+            }
+            case "images2": {
+                return {
+                    ...state,
+                    images2: payload,
+                }
+            }
+            case "images3": {
+                return {
+                    ...state,
+                    images3: payload,
+                }
+            }
+            case "images4": {
+                return {
+                    ...state,
+                    images4: payload,
+                }
+            }
+            case "reset": {
+                return initialState;
+            }
+            default:
+                return state;
+        }
+    }
+
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const dispatcher = useDispatch();
-    const [state, dispatch] = useReducer(reducer,
-        { title, category, brand, price, images });
-    const [image1, setImage1] = useState(images[0]);
-    const [image2, setImage2] = useState(images[1]);
-    const [image3, setImage3] = useState(images[2]);
-    const [image4, setImage4] = useState(images[3]);
-    const [arrayImages, setArrayImages] = useState([]);
+    let initialState = { title, category, brand, price, images, images1: images[0], images2: images[1], images3: images[2], images4: images[3] };
+    const [state, dispatch] = useReducer(reducer, initialState);
+
 
     const handleSubmit = (e, id) => {
         e.preventDefault();
-        // dispatcher(addProduct(state));
-        console.log(state)
+        dispatcher(editProduct({
+            title: state.title, category: state.category,
+            brand: state.brand,
+            price: state.price,
+            images: state.images
+        }, id)).then(()=>{
+           dispatcher(getMenProduct());
+           dispatcher(getWomenProduct());
+        })
+        ;
     }
 
     const handleChange = (e) => {
         dispatch({ type: e.target.name, payload: e.target.value })
+        dispatch({ type: "images" })
     }
 
     return (
@@ -150,37 +180,29 @@ const EditProduct = ({ id, title, category, brand, price, images }) => {
                                     <FormLabel>Product Image </FormLabel>
                                     <Input
                                         placeholder="Enter URL for Image 1"
-                                        name="image1"
-                                        onChange={(e) => {
-                                            setImage1(e.target.value);
-                                        }}
-                                        value={image1}
+                                        name="images1"
+                                        onChange={handleChange}
+                                        value={state.images1}
                                     />
                                     <Input
                                         placeholder="Enter URL for Image 2"
-                                        name="image2"
-                                        onChange={(e) => {
-                                            setImage2(e.target.value);
-                                        }}
-                                        value={image2}
+                                        name="images2"
+                                        onChange={handleChange}
+                                        value={state.images2}
                                         mt={2}
                                     />
                                     <Input
                                         placeholder="Enter URL for Image 3"
-                                        name="image3"
-                                        onChange={(e) => {
-                                            setImage3(e.target.value);
-                                        }}
-                                        value={image3}
+                                        name="images3"
+                                        onChange={handleChange}
+                                        value={state.images3}
                                         mt={2}
                                     />
                                     <Input
                                         placeholder="Enter URL for Image 4"
-                                        name="image4"
-                                        onChange={(e) => {
-                                            setImage4(e.target.value);
-                                        }}
-                                        value={image4}
+                                        name="images4"
+                                        onChange={handleChange}
+                                        value={state.images4}
                                         mt={2}
                                     />
                                 </FormControl>
@@ -188,11 +210,15 @@ const EditProduct = ({ id, title, category, brand, price, images }) => {
                             </ModalBody>
                             <ModalFooter >
                                 <Button colorScheme='blue' mr={3} onClick={(e) => {
+                                    onClose()
                                     handleSubmit(e, id)
                                 }}>
                                     Add
                                 </Button>
-                                <Button onClick={onClose}>Cancel</Button>
+                                <Button onClick={() => {
+                                    dispatch({ type: "reset" });
+                                    onClose();
+                                }}>Cancel</Button>
                             </ModalFooter>
                         </form>
                     </ModalContent>

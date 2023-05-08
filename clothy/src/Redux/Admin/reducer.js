@@ -1,10 +1,12 @@
-import { DELETE_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "../actionType";
+import { DELETE_PRODUCT_SUCCESS, PRODUCT_TOTAL_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, GET_MEN_PRODUCT_SUCCESS, GET_WOMEN_PRODUCT_SUCCESS } from "../actionType";
 
   
   const initialState = {
     isLoading: false,
     isError: false,
-    products: [],
+    totalProducts:0,
+    mensProducts: [],
+    womensProducts:[]
   };
 
   export const reducer = (state = initialState, { payload, type }) => {
@@ -22,11 +24,18 @@ import { DELETE_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, PATCH_PRODUCT_SUCCESS, POS
           isError: true,
         };
       }
-      case GET_PRODUCT_SUCCESS: {
+      case GET_MEN_PRODUCT_SUCCESS: {
         return {
           ...state,
           isLoading: false,
-          products: payload,
+          mensProducts: payload,
+        };
+      }
+      case GET_WOMEN_PRODUCT_SUCCESS: {
+        return {
+          ...state,
+          isLoading: false,
+          womensProducts: payload,
         };
       }
       case POST_PRODUCT_SUCCESS: {
@@ -47,6 +56,14 @@ import { DELETE_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, PATCH_PRODUCT_SUCCESS, POS
           isLoading: false,
           isError: false,
         };
+      }
+      case PRODUCT_TOTAL_SUCCESS:{
+        return {
+          ...state,
+          isLoading:false,
+          isError:false,
+          totalProducts:payload
+        }
       }
       default:
         return state;

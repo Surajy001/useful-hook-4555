@@ -19,7 +19,6 @@ const Sidebar = (props) => {
                 py="21"
                 cursor="pointer"
                 color="inherit"
-                _dark={{ color: "gray.400" }}
                 _hover={{
                     bg: "gray.100",
                     _dark: { bg: "gray.900" },
@@ -43,40 +42,24 @@ const Sidebar = (props) => {
 
     return (
         <Box
-            pos="fixed"
-            top="0"
-            left="0"
             zIndex="sticky"
             h="full"
-            pb="10"
             overflowX="hidden"
             overflowY="auto"
             bg="white"
-            _dark={{ bg: "gray.800" }}
             border
             color="inherit"
-            borderRightWidth="1px"
             w="60"
             boxShadow={"md"}
             {...props}
         >
-            <Flex px="4" py="30" align="center">
-                <Text
-                    fontSize="2xl"
-                    ml="2"
-                    color="brand.500"
-                    _dark={{ color: "white" }}
-                    fontWeight="semibold"
-                >
-                    Clothy
-                </Text>
-            </Flex>
             <Flex
                 direction="column"
                 as="nav"
                 fontSize="sm"
                 color="gray.600"
                 aria-label="Main Navigation"
+                
             >
                 <NavItem icon={MdHome}>
                     <Link to={"/admin-dashboard"}>Dashboard</Link>
@@ -87,7 +70,7 @@ const Sidebar = (props) => {
                 <NavItem icon={AiFillGift}>Orders</NavItem>
                 <NavItem icon={CgLogOut}>Logout</NavItem>
             </Flex>
-        </Box>
+        </Box >
 
     )
 }
