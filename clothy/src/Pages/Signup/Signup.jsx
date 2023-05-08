@@ -28,10 +28,7 @@ const initialState = {
   mobile: "",
   gender: "",
   isAuth:false,
-  isFavourite:false,
   productQuantity:1,
-  // profile:
-  //   "https://loopinfosol.in/themeforest/ekka-html-v33/ekka-admin/assets/img/vendor/u1.jpg",
   cart:[],
   wishlist:[],
   placedOrder:[]
@@ -90,14 +87,16 @@ const Signup=()=> {
     setUserData(initialState);
     try {
       let res = await fetch("http://localhost:8080/UserDetails");
+
       // console.log(res);
+      
       let data = await res.json();
       // console.log(data);
       var mailAuth = false;
       for (let i in data) {
         if (data[i].email === userData.email) {
           mailAuth = true;
-          // data[i].isAuth=true
+          // userData.isAuth=true;
           break;
         }
       }

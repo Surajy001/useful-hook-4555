@@ -47,7 +47,7 @@ export const Navbar = () => {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-            <NavLink href={"/"}
+            <NavLink to={"/"}
               _hover={{
                 textDecoration: "none",
               }}

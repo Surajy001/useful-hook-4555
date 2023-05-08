@@ -15,11 +15,15 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
+import { patchUserData } from "../../Redux/AuthReducer/action";
 
 
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
+  
+  const dispatch=useDispatch();
 
   const navigate = useNavigate();
   const toast = useToast();
@@ -53,14 +57,14 @@ const Signin=()=> {
       let res = await fetch("http://localhost:8080/UserDetails");
       let data = await res.json();
 
-      console.log(data);
+      // console.log(data);
 
       let Auth = false;
       for (let i in data) {
         if (data[i].email === email && data[i].password === password) {
           Auth = true;
-
-          data[i].isAuth=true;
+          dispatch(patchUserData(data[i],data[i].id))
+          // data[i].isAuth=true;
 
           localStorage.setItem("name", data[i].name);
           break;
