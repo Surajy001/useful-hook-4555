@@ -14,10 +14,10 @@ export const addProduct = (productData) => async (dispatch) => {
         });
 };
 
-export const getProduct = (dispatch) => {
+export const getMenProduct = (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST });
     axios
-      .get()
+      .get(`http://localhost:8080/products?gender=men`)
       .then((res) => {
         dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
       })
@@ -25,8 +25,20 @@ export const getProduct = (dispatch) => {
         dispatch({ type: PRODUCT_FAILURE });
       });
   };
+  export const getWomenProduct=(dispatch)=>{
+    dispatch({ type: PRODUCT_REQUEST });
+    axios
+      .get(`http://localhost:8080/products?gender=women`)
+      .then((res) => {
+        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
+      })
+      .catch(() => {
+        dispatch({ type: PRODUCT_FAILURE });
+      });
+  };
+  
 
-  export const editProduct = (obj, id) => async (dispatch) => {
+  export const editProduct = (productData, id) => async (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST });
     await axios
       .patch()

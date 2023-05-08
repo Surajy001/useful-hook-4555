@@ -91,7 +91,7 @@ export const Navbar = () => {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                href={"#"}
+                href={"/womenproducts"}
               >
                 Women
               </Link>

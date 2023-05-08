@@ -21,7 +21,7 @@ import { addProduct } from '../../Redux/Admin/action';
 
 const initialState = {
   title: "",
-  desc: "",
+  description: "",
   category: "",
   brand: "",
   price: "",
@@ -42,10 +42,10 @@ const reducer = (state, action) => {
         title: payload,
       }
     }
-    case "desc": {
+    case "description": {
       return {
         ...state,
-        desc: payload,
+        description: payload,
       }
     }
     case "category": {
@@ -114,9 +114,7 @@ const AddProduct = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, dispatch] = useReducer(reducer, initialState);
   const dispatcher = useDispatch();
-  const data = useSelector((store) => {
-    return store.adminReducer;
-  })
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -131,6 +129,9 @@ const AddProduct = () => {
   return (
     <div>
       <Button
+      boxShadow={"md"}
+      border={"1px solid grey"}
+      size={"sm"}
         onClick={() => {
           onOpen()
         }}
@@ -161,9 +162,9 @@ const AddProduct = () => {
                   <FormLabel>Product Description</FormLabel>
                   <Input
                     placeholder="Enter Product Description"
-                    name="desc"
+                    name="description"
                     onChange={handleChange}
-                    value={state.desc}
+                    value={state.description}
                   />
                 </FormControl>
                 <FormControl mt={4} isRequired>

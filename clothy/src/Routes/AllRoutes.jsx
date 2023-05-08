@@ -8,9 +8,16 @@ import Signin from "../Pages/Signin/Signin";
 import Signup from "../Pages/Signup/Signup";
 import Dashboard from "../Pages/adminsection/Dashboard";
 import SingleProductPage from "../Pages/SingleProductPage";
+import MenProductPage from "../Pages/adminsection/MenProduct";
+import WomenProductPage from "../Pages/adminsection/WomenProduct";
+import AdminsPage from "../Pages/adminsection/AdminsPage";
 import { MensPage } from "../Pages/MensPage";
+import { WomensPage } from "../Pages/WomensPage";
+
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
+
+
 
 const AllRoutes = () => {
   
@@ -44,6 +51,10 @@ const PageRoutes=[
     element: <MensPage/>,
   },
   {
+    path: "/womenproducts",
+    element: <WomensPage />,
+  },
+  {
     path: "*",
     element: <h1>404 Page Not Found</h1>,
   },
@@ -59,7 +70,10 @@ const PageRoutes=[
 
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>
-      
+      <Route path="/admin-admins" element={<AdminsPage/>} />
+      <Route path="/admin-men-products" element={<MenProductPage/>}/>
+      <Route path="/admin-women-products" element={<WomenProductPage/>}/>
+
     </Routes>
 </>
 

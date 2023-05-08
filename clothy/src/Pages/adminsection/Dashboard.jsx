@@ -9,7 +9,7 @@ const Dashboard = () => {
   const sidebar = useDisclosure();
 
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" border={"1px solid"}>
 
       <Sidebar display={{ base: "none", md: "unset" }} />
 
@@ -25,16 +25,14 @@ const Dashboard = () => {
         </DrawerContent>
       </Drawer>
 
-      <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
+      <Box ml={{ base: 0, md: 60 }} transition=".3s ease" >
 
         <Navbar onclick={sidebar.onOpen} />
 
-        <Box p="4">
-          <AddProduct />
+        <Box p="3" border={"1px solid"}>
+          
         </Box>
-
       </Box>
-
     </Box>
   );
 }

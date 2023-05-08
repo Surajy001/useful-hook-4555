@@ -1,4 +1,4 @@
-import { Avatar, Flex, IconButton, Input, InputGroup, InputLeftElement, } from '@chakra-ui/react';
+import { Avatar, Flex, IconButton, Input, InputGroup, InputLeftElement, Text, } from '@chakra-ui/react';
 import { FiMenu, FiSearch } from "react-icons/fi";
 
 const Navbar = ({ onclick }) => {
@@ -6,14 +6,16 @@ const Navbar = ({ onclick }) => {
     return (
         <Flex
             align="center"
-            justify="space-between"
+            justify={"space-between"}
+            px={5}
+            py={10}
             w="full"
-            px="4"
             bg="white"
             _dark={{ bg: "gray.800" }}
-            borderBottomWidth="1px"
+            borderBottom="2px solid #CBD5E0"
             color="inherit"
             h="14"
+            boxShadow={"md"}
         >
             <IconButton
                 display={{ base: "inline-flex", md: "none" }}
@@ -21,22 +23,24 @@ const Navbar = ({ onclick }) => {
                 icon={<FiMenu />}
                 size="sm"
             />
-            <InputGroup w="96" display={{ base: "none", md: "flex" }}>
+            <Flex display={{ base: "none", md: "flex" }} w={"95%"} justifyContent={"center"}>
+            <InputGroup  display={{ base: "none", md: "flex" }} w={"30%"} >
                 <InputLeftElement color="gray.500" cursor="pointer" _hover={{ color: "blue" }}>
                     <FiSearch />
                 </InputLeftElement>
-                <Input placeholder="Search for Products..." />
+                <Input placeholder="Search for Products..." border={"1px solid grey"}/>
             </InputGroup>
+            </Flex>
 
-            <Flex align="center">
+            <Flex align="center" w={"8%"}  justifyContent={"space-between"}  border={"1px solid"}>
                 <Avatar
-                    ml="4"
                     size="sm"
-                    name="anubra266"
-                    src="https://avatars.githubusercontent.com/u/30869823?v=4"
+                    name={``}
                     cursor="pointer"
                 />
+                <Text></Text>
             </Flex>
+            
         </Flex>
     )
 }
