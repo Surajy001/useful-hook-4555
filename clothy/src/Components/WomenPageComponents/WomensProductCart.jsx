@@ -11,6 +11,7 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = styled(Box)`
   transition: box-shadow 0.2s ease-in-out;
@@ -35,6 +36,7 @@ const WomensProductCart = ({
   const truncatedTitle =
     title.length > 30 ? title.substring(0, 30) + '...' : title;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate=useNavigate();
 
   const handleMouseEnter = () => {
     setCurrentImageIndex(1);
@@ -44,13 +46,18 @@ const WomensProductCart = ({
     setCurrentImageIndex(0);
   };
 
+  const handleDetail=()=>{
+    navigate(`/product/${id}`)
+  };
+
+
   return (
     <ProductCard
       borderWidth="1px"
       borderRadius="md"
       overflow="hidden"
       textAlign="left" 
-      p="6"
+      p="4"
       mb="4"
       // className={style.productCard}
     >
@@ -64,6 +71,8 @@ const WomensProductCart = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         // width={"50%"}
+        onClick={handleDetail}
+        cursor={"pointer"}
       />
 
       <Box d="flex"  mt="4" textAlign="center"  >

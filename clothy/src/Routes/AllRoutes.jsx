@@ -16,6 +16,7 @@ import { WomensPage } from "../Pages/WomensPage";
 
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -34,10 +35,7 @@ const PageRoutes=[
     path: "/signup",
     element: <Signup/>,
   },
-  {
-    path: "/add-to-cart",
-    element: <AddToCartPage/>,
-  },
+  
   {
     path: "/payment",
     element: <Payment />,
@@ -67,6 +65,8 @@ const PageRoutes=[
       {PageRoutes.map((ele, key) => (
           <Route key={key} path={ele.path} element={<> <Navbar /> {ele.element} <Footer /> </>  } />
         ))}
+
+      <Route path="/add-to-cart" element={<PrivateRoute> <Navbar /> <AddToCartPage/> <Footer /> </PrivateRoute> }/>
 
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>

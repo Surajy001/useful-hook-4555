@@ -53,3 +53,8 @@ export const SIGNUP_ERROR = "SIGNUP_ERROR";
 
 //patch
 export const PATCH_SUCCESS = "PATCH_SUCCESS";
+
+//patch userData
+export const PATCH_SUCCESS_USERDATA = "PATCH_SUCCESS_USERDATA";
+
+

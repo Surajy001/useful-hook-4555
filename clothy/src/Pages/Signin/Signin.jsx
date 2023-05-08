@@ -15,20 +15,22 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { patchUserData } from "../../Redux/AuthReducer/action";
+import axios from "axios";
 
 
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const isAuth=useSelector((store)=>store.authReducer.isAuth);
+
   const dispatch=useDispatch();
 
   const navigate = useNavigate();
   const toast = useToast();
 
-  // console.log('auth',isAuth)
+   console.log('auth',isAuth)
   // all toasts are here
   const wrongEmail = () => {
     toast({
@@ -54,29 +56,53 @@ const Signin=()=> {
 
   const submitLogin = async () => {
     try {
-      let res = await fetch("http://localhost:8080/UserDetails");
-      let data = await res.json();
+      let res = await axios("http://localhost:8080/UserDetails").then((resdata)=>{
+          //  console.log(data.data);
+          let userFilterData=resdata?.data?.map((el)=>{
+            if (el.email === email && el.password === password) {
+                  
+              console.log(el)
+              dispatch(patchUserData(el,el.id))
+              return el
+            }
+           })
+           console.log(userFilterData)
+          if(userFilterData.length ===0){
+            wrongEmail();
+          }else{
+            loginSuccess();
+            navigate("/");
+          }
+      })
+      console.log(isAuth);
+      // let data = await res.json();
 
       // console.log(data);
 
-      let Auth = false;
-      for (let i in data) {
-        if (data[i].email === email && data[i].password === password) {
-          Auth = true;
-          dispatch(patchUserData(data[i],data[i].id))
+      // let Auth = false;
+      // for (let i in data) {
+      //   if (data[i].email === email && data[i].password === password) {
+      //     // Auth = true;
+      //     dispatch(patchUserData(data[i],data[i].id)).then(()=>{
+      //       loginSuccess();
+      //       navigate("/");
+      //     })
           // data[i].isAuth=true;
 
-          localStorage.setItem("name", data[i].name);
-          break;
-        }
-      }
+          // localStorage.setItem("name", data[i].name);
+          // return
+        // }
+        // else{
+        //   wrongEmail();
+        // }
+          //}
 
-      if (Auth === false) {
-        wrongEmail();
-      } else {
-        loginSuccess();
-        navigate("/");
-      }
+      // if (!isAuth) {
+      //   wrongEmail();
+      // } else {
+      //   loginSuccess();
+      //   navigate("/");
+      // }
 
     } catch (error) {
       console.log(error);
