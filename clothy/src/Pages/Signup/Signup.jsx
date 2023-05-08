@@ -28,13 +28,12 @@ const initialState = {
   mobile: "",
   gender: "",
   isAuth:false,
-  isFavourite:false,
   productQuantity:1,
   // profile:
   //   "https://loopinfosol.in/themeforest/ekka-html-v33/ekka-admin/assets/img/vendor/u1.jpg",
   cart:[],
   wishlist:[],
-  placedOrder:[]
+  orderPlaced:[]
 };
 
 const Signup=()=> {
@@ -55,7 +54,7 @@ const Signup=()=> {
       isClosable: true,
       position: "top",
     });
-  };
+  };  
 
   const emailExist = () => {
     toast({
@@ -87,21 +86,20 @@ const Signup=()=> {
 
   const postdata = async (e) => {
     e.preventDefault();
-    setUserData(initialState);
     try {
       let res = await fetch("http://localhost:8080/UserDetails");
       // console.log(res);
-      let data = await res.json();
-      // console.log(data);
+      let data = await res.json();                                                                                                                                                                                                                                                               
+      console.log(data);
       var mailAuth = false;
       for (let i in data) {
         if (data[i].email === userData.email) {
           mailAuth = true;
-          // data[i].isAuth=true
+          // data[i].isAuth=tr  ue
           break;
         }
       }
-
+      
       if (mailAuth === true) {
         emailExist();
         return;
@@ -117,11 +115,12 @@ const Signup=()=> {
       userData.password &&
       userData.gender &&
       userData.mobile
-    ) {
-      dispatch(addUserData(userData, signupSuccess, navigate, emailExist));
-    } else {
-      fillRequiredData();
-    }
+      ) {
+        dispatch(addUserData(userData, signupSuccess, navigate, emailExist));
+      } else {
+        fillRequiredData();
+      }
+      setUserData(initialState);
   };
 
   return (

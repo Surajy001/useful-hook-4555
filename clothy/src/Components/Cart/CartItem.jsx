@@ -8,47 +8,6 @@ import axios from "axios";
 import { Email } from "@mui/icons-material";
 function CartItem() {
   const total = useSelector((store) => store.CartReducer.CartTotal);
-  const data = [
-    {
-      id: 1,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-    {
-      id: 2,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-    {
-      id: 3,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-  ];
   const [loading, setLoading] = useState(false);
   const [Cart, setCart] = useState([]);
   const [favourite, setFavourite] = useState([]);
@@ -64,9 +23,12 @@ function CartItem() {
       .get("http://localhost:8080/UserDetails")
       .then((data) => {
         let CartData = data.data;
-        console.log(CartData)
-        setCart(CartData);
-        setFavourite(data.data["Deepak"].wishlist);
+        // let CartData = data.data.filter(item=>{
+          console.log(data)
+        //   return item.email === 'deepakyad'
+        // })
+        setCart(data.data['Suraj123@gmail.com'].cart);
+        // setFavourite(data.data["Deepak"].wishlist);
       })
       .finally(() => {
         setTimeout(() => {
@@ -97,7 +59,7 @@ function CartItem() {
         <hr />
         <div className={style.cart_total_detail} style={{width:'90%',margin:'auto',padding:'2rem auto',}}>
           <div className={style.cart_total_details}>
-            <Text>Price {data.length} items </Text> <Text>{total}</Text>
+            <Text>Price {Cart.length} items </Text> <Text>{total}</Text>
           </div>
           <div className={style.cart_total_details}>
             <Text>Discount</Text><Text className={style.discountPrice} style={{ color: "darkgreen" }}>
@@ -125,8 +87,9 @@ function CartItem() {
           className={style.checkout}
           color={"#fff"}
           onClick={CheckAuth}
+          fontWeight={'bold'}
           background={"dodgerblue"}
-          w="50%"
+          w="60%"
         >
           Checkout ➡
         </Button>

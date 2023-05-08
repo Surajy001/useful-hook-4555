@@ -21,7 +21,6 @@ function CartItemCard({
   setFavrourite,
   rating
 }) {
-    console.log(rating)
   const [quantity, setQuantity] = useState(1);
   const [favStatus,setFavStatus] = useState(false);
   const IncreaseQuantity = () => {
@@ -34,7 +33,7 @@ function CartItemCard({
         // console.log(favourite.find())
         setFavStatus(!favStatus)
         let isFavExist = favourite.find((item)=>item.title === title);
-        console.log(isFavExist);
+        // console.log(isFavExist);
         
 
   }

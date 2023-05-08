@@ -132,18 +132,17 @@
   border-radius: 10px;
 }
 .checkout{
-  margin: auto;
-  font-size: 1.1rem;
+  margin: 10px auto;
+  font-size: 1.2vw;
+  width: 15vw;
   letter-spacing: .1em;
-  font-weight: bolder;
   text-transform: uppercase;
   background-color: dodgerblue;
   transform: scale(1);
-  transform: transform 1s;
-  transition: background 1s;
-  animation:Animation 3s infinite;
+  transition: background-color 1s,transform 1s;
+  animation: HeartBeat infinite;
 }
-@keyframes Animation {
+ /* @keyframes Animation {
   0%{
       background:linear-gradient(to right,dodgerblue,indigo) ;
       transition-delay: 5s;
@@ -157,9 +156,21 @@
       transition-delay: 2s;
   }
 
+} */
+@keyframes HeartBeat {
+  0%{
+    background-color: dodgerblue;
+    transition: bacground-color 1s;
+  }
+  100%{
+    background-color: navy;
+    transition: bacground-color 1s;
+  }
+  
 }
 
 .checkout:hover{
+  background: navy;
   transform: scale(1.1);
-  background:dodgerblue ;
+
 }
