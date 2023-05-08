@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Ankit Choudhary",
       "email": "ankit123@gmail.com",
-      "password": "1234567890",
+      "password": "67890",
       "isLogin": false
     }
   ],
@@ -966,7 +966,7 @@
       "password": "1234",
       "mobile": "1234567889",
       "gender": "male",
-      "isAuth": false,
+      "isAuth": true,
       "productQuantity": 1,
       "cart": [
         {
