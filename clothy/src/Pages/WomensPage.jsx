@@ -2,9 +2,12 @@ import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 
 
-import Sidebar from '../Components/MensPageComponents/Sidebar';
-import MensProductList from '../Components/MensPageComponents/MensProductList';
-export const MensPage = () => {
+
+import Sidebar from '../Components/WomenPageComponents/Sidebar';
+
+import WomensProductList from '../Components/WomenPageComponents/WomensProductList';
+
+export const WomensPage = () => {
   return (
     <Flex width="95%" margin={"auto"}  marginTop={"20px"}>
       <Box w="20%" 
@@ -15,7 +18,7 @@ export const MensPage = () => {
       <Box w="80%" 
       // border="1px solid red"
       >
-        <MensProductList />
+        <WomensProductList />
       </Box>
     </Flex>
   );

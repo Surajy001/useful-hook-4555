@@ -9,6 +9,7 @@ import Signup from "../Pages/Signup/Signup";
 import Dashboard from "../Pages/adminsection/Dashboard";
 import SingleProductPage from "../Pages/SingleProductPage";
 import { MensPage } from "../Pages/MensPage";
+import { WomensPage } from "../Pages/WomensPage";
 
 const AllRoutes = () => {
   
@@ -38,6 +39,7 @@ const adminRoutes=[
       <Route path="/product/:id" element={<SingleProductPage/>}/>
 
       <Route path="/menproducts" element={<MensPage/>}/>
+      <Route path="/womenproducts" element={<WomensPage />}/>
 
       <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
 
