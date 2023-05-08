@@ -9,8 +9,12 @@ import {
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from 'react-router-dom';
 import EditProduct from './EditProduct';
+import { deleteProduct, getMenProduct, getWomenProduct } from '../../Redux/Admin/action';
+import { useDispatch } from 'react-redux';
 
 const ProductTable = ({data}) => {
+
+    const dispatcher=useDispatch();
     return (
         <Table>
             <Thead >
@@ -37,7 +41,10 @@ const ProductTable = ({data}) => {
                         <EditProduct {...el}/>
                     </Td>
                     <Td>
-                        <button>
+                        <button onClick={()=>{dispatcher(deleteProduct(el.id)).then((res)=>{
+                            dispatcher(getMenProduct());
+                            dispatcher(getWomenProduct());
+                        })}}>
                             <DeleteIcon boxSize={6} />
                         </button>
                     </Td>

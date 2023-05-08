@@ -118,7 +118,7 @@ const AdminLogin = () => {
   
   const data = useSelector((store)=>store.adminLoginReducer.admindata)
   const isAuth= useSelector((store)=>store.adminLoginReducer.isAuth)
-  console.log(data,isAuth)
+  // console.log(data,isAuth)
 
   const dispatch = useDispatch()
 
