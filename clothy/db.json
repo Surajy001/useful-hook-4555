@@ -16,7 +16,7 @@
           "category": "Kurta",
           "brand": "SMITH",
           "price": 999,
-          "rating": 3.8,
+          "rating": 1,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61V1z9TQ1YL._UL1500_.jpg",
@@ -36,7 +36,7 @@
           "category": "Kurta",
           "brand": "HEORA",
           "price": 1799,
-          "rating": 4.8,
+          "rating": 2,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/31sYt1bkYuL.jpg",
@@ -55,7 +55,7 @@
           "category": "Kurta",
           "brand": "POLO",
           "price": 725,
-          "rating": 2.1,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/611t5EozH7L._UL1500_.jpg",
@@ -75,7 +75,7 @@
           "category": "Kurta",
           "brand": "SMITH",
           "price": 999,
-          "rating": 4.6,
+          "rating": 4,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61cO5SUtIQL._UL1440_.jpg",
@@ -94,7 +94,7 @@
           "category": "Kurta",
           "brand": "HEORA",
           "price": 450,
-          "rating": 4.6,
+          "rating": 5,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61fMaQv2AUL._UL1500_.jpg",
@@ -132,7 +132,7 @@
           "category": "Kurta",
           "brand": "POLO",
           "price": 2500,
-          "rating": 4.6,
+          "rating": 2,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/41TR1UOflGL.jpg",
@@ -151,7 +151,7 @@
           "category": "Kurta",
           "brand": "RAYMOND",
           "price": 450,
-          "rating": 1,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61TWzF3+B6L._UL1500_.jpg",
@@ -187,7 +187,7 @@
           "category": "Kurta",
           "brand": "SMITH",
           "price": 500,
-          "rating": 4.4,
+          "rating": 5,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71Nq5IHGVTS._UL1500_.jpg",
@@ -205,7 +205,7 @@
           "category": "Kurta",
           "brand": "HEORA",
           "price": 1500,
-          "rating": 4.2,
+          "rating": 1,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71b-r1sy9YL._UL1500_.jpg",
@@ -223,7 +223,7 @@
           "category": "Kurta",
           "brand": "POLO",
           "price": 800,
-          "rating": 4.9,
+          "rating": 2,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61vBU9VUlRL._UL1500_.jpg",
@@ -241,7 +241,7 @@
           "category": "Kurta",
           "brand": "POLO",
           "price": 1200,
-          "rating": 4.8,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61SxwQ77+iL._UL1500_.jpg",
@@ -260,7 +260,7 @@
           "category": "Sports-Wear",
           "brand": "RAYMOND",
           "price": 299,
-          "rating": 4.3,
+          "rating": 4,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61xSbZqY7hL._UL1500_.jpg",
@@ -279,7 +279,7 @@
           "category": "Sports-Wear",
           "brand": "SMITH",
           "price": 500,
-          "rating": 4.4,
+          "rating": 5,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61UGf0FVLGL._UL1500_.jpg",
@@ -298,7 +298,7 @@
           "category": "Sports-Wear",
           "brand": "HEORA",
           "price": 1500,
-          "rating": 3.2,
+          "rating": 1,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/71Fp9df3hxL._UL1500_.jpg",
@@ -317,7 +317,7 @@
           "category": "Sports-Wear",
           "brand": "POLO",
           "price": 800,
-          "rating": 4.9,
+          "rating": 2,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61wHVOuzCFL._UL1500_.jpg",
@@ -336,7 +336,7 @@
           "category": "Sports-Wear",
           "brand": "POLO",
           "price": 1200,
-          "rating": 4.8,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61grh82v+sL._UL1500_.jpg",
@@ -355,7 +355,7 @@
           "category": "Sports-Wear",
           "brand": "SMITH",
           "price": 1250,
-          "rating": 3.6,
+          "rating": 4,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/612GNFRdAwL._UL1100_.jpg",
@@ -374,7 +374,7 @@
           "category": "Sports-Wear",
           "brand": "SMITH",
           "price": 2500,
-          "rating": 4.1,
+          "rating": 4.5,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61xJOUjoIcL._UL1100_.jpg",
@@ -393,7 +393,7 @@
           "category": "Sports-Wear",
           "brand": "RAYMOND",
           "price": 650,
-          "rating": 2,
+          "rating": 1,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51pF2Yhr7ZL._UL1200_.jpg",
@@ -412,7 +412,7 @@
           "category": "Inner-Wear",
           "brand": "RAYMOND",
           "price": 500,
-          "rating": 1,
+          "rating": 2,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/61yXaH95lHL._UL1400_.jpg",
@@ -431,7 +431,7 @@
           "category": "Inner-Wear",
           "brand": "HEORA",
           "price": 250,
-          "rating": 4.9,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/81g8qa0IcfL._UL1500_.jpg",
@@ -450,7 +450,7 @@
           "category": "Inner-Wear",
           "brand": "POLO",
           "price": 375,
-          "rating": 4.8,
+          "rating": 4,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/81AmDdUhUIL._UL1500_.jpg",
@@ -469,7 +469,7 @@
           "category": "Inner-Wear",
           "brand": "SMITH",
           "price": 250,
-          "rating": 2,
+          "rating": 5,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/8124H1p8VoL._UL1500_.jpg",
@@ -488,7 +488,7 @@
           "category": "Inner-Wear",
           "brand": "POLO",
           "price": 450,
-          "rating": 4.7,
+          "rating": 1,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51pFiSbo5FL._UL1100_.jpg",
@@ -524,9 +524,9 @@
           "mrp_price": 1500,
           "discount_percentage": 50,
           "category": "Inner-Wear",
-          "brand": "HEORA",
+          "brand": "POLO",
           "price": 750,
-          "rating": 4.9,
+          "rating": 3,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/516vqx2jg8L._UL1100_.jpg",
@@ -543,9 +543,9 @@
           "mrp_price": 2000,
           "discount_percentage": 50,
           "category": "Inner-Wear",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 4.4,
+          "rating": 4,
           "gender": "men",
           "images": [
             "https://m.media-amazon.com/images/I/51fFzsjfpjL._UL1100_.jpg",
@@ -579,9 +579,9 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
-          "rating": 3,
+          "rating": 1,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/718MOFQpVEL._UL1500_.jpg",
@@ -597,9 +597,9 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
-          "rating": 5,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51odSo-cvVL._UL1250_.jpg",
@@ -615,7 +615,7 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
           "rating": 3,
           "gender": "women",
@@ -635,7 +635,7 @@
           "category": "Leggings",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 2,
+          "rating": 4,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51MZ7Kc0saL._UL1500_.jpg",
@@ -651,9 +651,9 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
-          "rating": 4,
+          "rating": 1,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51KkVzCHyGL._UL1500_.jpg",
@@ -669,9 +669,9 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
-          "rating": 3,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51gkpU0olsL._UL1500_.jpg",
@@ -687,9 +687,9 @@
           "description": "Perfect fitting leggings with modern touch and design",
           "mrp_price": 2000,
           "category": "Leggings",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 2,
+          "rating":3,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51E3-froJXL._UL1500_.jpg",
@@ -707,7 +707,7 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 3,
+          "rating": 4,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71g+7KewfjS._UL1500_.jpg",
@@ -723,9 +723,9 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
-          "rating": 2,
+          "rating": 5,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71ERfNtHXnL._UL1500_.jpg",
@@ -741,9 +741,9 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 5,
+          "rating": 1,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61S-Tpv3vtL._UL1200_.jpg",
@@ -759,9 +759,9 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
-          "rating": 1,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71CmCtXs1SL._UL1500_.jpg",
@@ -779,7 +779,7 @@
           "category": "Gawn",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 1,
+          "rating": 3,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71gr7j3VOkL._UL1500_.jpg",
@@ -795,7 +795,7 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
           "rating": 4,
           "gender": "women",
@@ -813,7 +813,7 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
           "rating": 4.6,
           "gender": "women",
@@ -831,9 +831,9 @@
           "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Gawn",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 1,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81uvvz3jj8L._UL1500_.jpg",
@@ -851,7 +851,7 @@
           "category": "Saree",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/71-OohIgItL._UL1280_.jpg",
@@ -867,9 +867,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 3,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61PGFWgswDL._UL1280_.jpg",
@@ -885,9 +885,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 4,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91ZdosKaqbL._UL1500_.jpg",
@@ -903,9 +903,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/51GdCsRU0aL.jpg",
@@ -923,7 +923,7 @@
           "category": "Saree",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 5,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/61OlJMyBvxS._UL1080_.jpg",
@@ -939,9 +939,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "POLO",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 4,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91x6POEO72L._UL1500_.jpg",
@@ -957,9 +957,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "HEORA",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 1,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81LXQt+BmWL._UL1500_.jpg",
@@ -975,9 +975,9 @@
           "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
           "mrp_price": 2000,
           "category": "Saree",
-          "brand": "SMITH",
+          "brand": "RAYMOND",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 2,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/91hnIcKX7eL._UL1500_.jpg",
@@ -995,7 +995,7 @@
           "category": "Saree",
           "brand": "SMITH",
           "price": 1000,
-          "rating": 4.6,
+          "rating": 5,
           "gender": "women",
           "images": [
             "https://m.media-amazon.com/images/I/81IiovEhNxL._UL1500_.jpg",
@@ -1058,7 +1058,7 @@
           "label": "RELAXED FIT",
           "category": "Jacket",
           "quantity": 1,
-          "isFavourite": false,
+          "isFavourite": false
         }
       ]
     },
@@ -1098,7 +1098,7 @@
           "color": "Black",
           "label": "RELAXED FIT",
           "category": "Jacket",
-          "isFavourite": false,
+          "isFavourite": false
         }
       ],
       "orderPlaced": [

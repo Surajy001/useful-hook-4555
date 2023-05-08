@@ -19,7 +19,7 @@ const ProductCard = styled(Box)`
   }
 `;
 
-const MensProductCart = ({
+const WomensProductCart = ({
   id,
   title,
   desc,
@@ -122,8 +122,9 @@ const MensProductCart = ({
         </Button>
       </Box>
 
+     
     </ProductCard>
   );
 };
 
-export default MensProductCart;
+export default WomensProductCart;

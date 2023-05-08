@@ -12,6 +12,7 @@ import MenProductPage from "../Pages/adminsection/MenProduct";
 import WomenProductPage from "../Pages/adminsection/WomenProduct";
 import AdminsPage from "../Pages/adminsection/AdminsPage";
 import { MensPage } from "../Pages/MensPage";
+import { WomensPage } from "../Pages/WomensPage";
 
 
 const AllRoutes = () => {
@@ -45,6 +46,7 @@ const adminRoutes=[
       <Route path="/product/:id" element={<SingleProductPage/>}/>
 
       <Route path="/menproducts" element={<MensPage/>}/>
+      <Route path="/womenproducts" element={<WomensPage />}/>
 
       <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
 
