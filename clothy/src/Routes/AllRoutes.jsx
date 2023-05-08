@@ -11,11 +11,27 @@ import SingleProductPage from "../Pages/SingleProductPage";
 import MenProductPage from "../Pages/adminsection/MenProduct";
 import WomenProductPage from "../Pages/adminsection/WomenProduct";
 import AdminsPage from "../Pages/adminsection/AdminsPage";
+import { MensPage } from "../Pages/MensPage";
+
 
 const AllRoutes = () => {
   
+const adminRoutes=[
+  {
+    path: "/admin-dashboard",
+    element: <Dashboard/>,
+  },
+  {
+    path: "/admin-login",
+    element: <AdminLogin/>,
+  },
+]
+
   return (
     <Routes>
+      {adminRoutes.map((ele, key) => (
+          <Route key={key} path={ele.path} element={ele.element} />
+        ))}
       <Route path={"/"} element={<HomePage/>} />
       <Route path={"/signin"} element={<Signin/>} />
       <Route path={"/signup"} element={<Signup/>} />
@@ -27,6 +43,9 @@ const AllRoutes = () => {
       <Route path="/admin-men-products" element={<MenProductPage/>}/>
       <Route path="/admin-women-products" element={<WomenProductPage/>}/>
       <Route path="/product/:id" element={<SingleProductPage/>}/>
+
+      <Route path="/menproducts" element={<MensPage/>}/>
+
       <Route path={"*"} element={<h1>404 Page Not Found</h1>}/>
 
     </Routes>
