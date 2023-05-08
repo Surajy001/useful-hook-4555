@@ -1,12 +1,9 @@
 import axios from "axios";
-import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
+import { PATCH_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
 
 export const addUserData =
   (userData, success, navigate, emailExist) => (dispatch) => {
-    dispatch({ type: SIGNUP_LOADING });
-    //let name=userData.name;
-    
-    // axios.post("http://localhost:8080/UserDetails", {[name]:userData})
+    dispatch({ type: SIGNUP_LOADING })    
     axios.post("http://localhost:8080/UserDetails", userData)
       .then(() => {
         // console.log(res);
@@ -18,4 +15,20 @@ export const addUserData =
         dispatch({ type: SIGNUP_ERROR });
         // emailExist();
       });
+  };
+
+  export const patchUserData =(newUserData,id) => (dispatch) => {
+    dispatch({ type: SIGNUP_LOADING }) 
+    try{
+      axios.patch(`http://localhost:8080/UserDetails/${id}`, {...newUserData,isAuth:true})
+      .then((res) => {
+         console.log(res.data.isAuth);
+        
+        dispatch({ type: PATCH_SUCCESS, payload:res.data.isAuth });
+      })
+    }catch(err){
+      console.log(err);
+      dispatch({type: SIGNUP_ERROR})
+    }
+       
   };
