@@ -1,10 +1,10 @@
-import { PATCH_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
+import { PATCH_SUCCESS, PATCH_SUCCESS_USERDATA, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "../actionType";
 
 const initialState = {
   isLoading: false,
   isError: false,
-  isAuth: localStorage.getItem('name') || false,
-  user: [],
+  isAuth: false,
+  user: {},
 };
 
 export const authReducer = (state = initialState, { type, payload }) => {
@@ -18,7 +18,8 @@ export const authReducer = (state = initialState, { type, payload }) => {
       return { ...state, isLoading: false, isError: true };
     case PATCH_SUCCESS:
       return {...state, isLoading:false, isAuth:payload }
-    
+      case PATCH_SUCCESS_USERDATA:
+        return {...state, isLoading:false, user:{...payload} }
     default:
       return state;
   }

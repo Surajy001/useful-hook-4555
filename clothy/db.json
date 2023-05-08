@@ -8,7 +8,6 @@
       "isLogin": false
     }
   ],
-
   "products": [
     {
       "id": 1,
@@ -959,13 +958,12 @@
       ]
     }
   ],
-
   "UserDetails": [
     {
       "id": 1,
       "name": "Deepak Yadav",
       "email": "deepak123@gmail.com",
-      "password": "1234567890",
+      "password": "1234",
       "mobile": "1234567889",
       "gender": "male",
       "isAuth": false,
@@ -1056,7 +1054,6 @@
           "isFavourite": false
         }
       ],
-      
       "orderPlaced": [
         {
           "id": 2,
@@ -1086,6 +1083,19 @@
       "wishlist": [],
       "placedOrder": [],
       "id": 3
+    },
+    {
+      "name": "SURAJ2",
+      "email": "suraj2@gmail.com",
+      "password": "12345",
+      "mobile": "147258369",
+      "gender": "male",
+      "isAuth": true,
+      "productQuantity": 1,
+      "cart": [],
+      "wishlist": [],
+      "placedOrder": [],
+      "id": 4
     }
   ],
   "TemporaryUserData": {
