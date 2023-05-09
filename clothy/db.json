@@ -1,11 +1,12 @@
 {
   "AdminDetail": [
     {
-      "id": 1,
-      "name": "Ankit Choudhary",
+      "name": "ankit",
       "email": "ankit123@gmail.com",
-      "password": "67890",
-      "isLogin": false
+      "password": "123456",
+      "gender": "men",
+      "mobile": "453434",
+      "id": 1
     }
   ],
   "products": [
@@ -970,7 +971,7 @@
       "productQuantity": 1,
       "cart": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -985,7 +986,7 @@
       ],
       "wishlist": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -998,9 +999,9 @@
           "isFavourite": true
         }
       ],
-      "orderPlaced": [
+      "placedOrder": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1026,7 +1027,7 @@
       "gender": "male",
       "cart": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1041,7 +1042,7 @@
       ],
       "wishlist": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1054,9 +1055,9 @@
           "isFavourite": false
         }
       ],
-      "orderPlaced": [
+      "placedOrder": [
         {
-          "id": 2,
+          "id": 1,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1101,7 +1102,7 @@
   "TemporaryUserData": {
     "cart": [
       {
-        "id": 2,
+        "id": 1,
         "title": "Soho Heritage Harrington Jacket",
         "quantity": 1,
         "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",

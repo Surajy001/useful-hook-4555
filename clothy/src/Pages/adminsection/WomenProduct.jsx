@@ -7,30 +7,31 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWomenProduct } from "../../Redux/Admin/action";
 import ProductTable from "../../Components/adminsection/ProductTable";
 import Pagination from "../../Components/adminsection/Pagination";
+import SkeletonCart from "../../Components/Cart/SkeletonCart";
 
 
 
-const WomenProductPage = ()=>{
-    const sidebar = useDisclosure();
-    const dispatcher = useDispatch();
-    const productsData= useSelector((store)=>{
-      return store.adminReducer;
-    })
-    const [pgno,setPgno]=useState(1);
-    const totalPages = Math.ceil(productsData.totalProducts / 10);
+const WomenProductPage = () => {
+  const sidebar = useDisclosure();
+  const dispatcher = useDispatch();
+  const productsData = useSelector((store) => {
+    return store.adminReducer;
+  })
+  const [pgno, setPgno] = useState(1);
+  const totalPages = Math.ceil(productsData.totalProducts / 10);
 
-    const handlePageChange = (page) => {
-      setPgno(page)
-    }
+  const handlePageChange = (page) => {
+    setPgno(page)
+  }
 
-    useEffect(()=>{
-      dispatcher(getWomenProduct(pgno))
-    },[pgno])
+  useEffect(() => {
+    dispatcher(getWomenProduct(pgno))
+  }, [pgno])
 
-    
 
-    return (
-      <Box>
+
+  return (
+    <Box>
       <Box transition=".3s ease">
         <Navbar onclick={sidebar.onOpen} />
       </Box>
@@ -57,8 +58,9 @@ const WomenProductPage = ()=>{
           </Box>
 
           <Box border={"1px solid"} w={"92%"} margin={"auto"} mt={5} borderRadius={7}>
-            <Heading color={"#718096"} py={5}>Women's Product Data</Heading>
-            <ProductTable data={productsData.womensProducts} />
+            <Heading color={"#718096"} py={5}>Women's Product Data</Heading>{
+              productsData.isLoading ? <SkeletonCart /> :
+                <ProductTable data={productsData.womensProducts} />}
           </Box>
 
           <div style={{ margin: "auto", width: "90%", display: "flex", justifyContent: "center" }} >
@@ -67,7 +69,7 @@ const WomenProductPage = ()=>{
         </Box>
       </Box>
     </Box>
-    );
+  );
 }
 
 export default WomenProductPage;

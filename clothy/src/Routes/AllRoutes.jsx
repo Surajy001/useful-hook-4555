@@ -10,13 +10,14 @@ import Dashboard from "../Pages/adminsection/Dashboard";
 import SingleProductPage from "../Pages/SingleProductPage";
 import MenProductPage from "../Pages/adminsection/MenProduct";
 import WomenProductPage from "../Pages/adminsection/WomenProduct";
-import AdminsPage from "../Pages/adminsection/AdminsPage";
 import { MensPage } from "../Pages/MensPage";
 import { WomensPage } from "../Pages/WomensPage";
 
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
 import PrivateRoute from "./PrivateRoute";
+import OrderPage from "../Pages/adminsection/OrderPage";
+import UserPage from "../Pages/adminsection/UserPage";
 
 
 
@@ -70,9 +71,10 @@ const PageRoutes=[
 
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>
-      <Route path="/admin-admins" element={<AdminsPage/>} />
+      <Route path="/admin-admins" element={<UserPage/>} />
       <Route path="/admin-men-products" element={<MenProductPage/>}/>
       <Route path="/admin-women-products" element={<WomenProductPage/>}/>
+      <Route path="/admin-order-products" element={<OrderPage/>}/>
 
     </Routes>
 </>
