@@ -1100,21 +1100,6 @@
     }
   ],
   "TemporaryUserData": {
-    "cart": [
-      {
-        "id": 1,
-        "title": "Soho Heritage Harrington Jacket",
-        "quantity": 1,
-        "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-        "price": 1890,
-        "price_c": 2490,
-        "discount": 24,
-        "size": "XL",
-        "color": "Black",
-        "label": "RELAXED FIT",
-        "category": "Jacket",
-        "isFavourite": false
-      }
-    ]
+    "cart": []
   }
 }

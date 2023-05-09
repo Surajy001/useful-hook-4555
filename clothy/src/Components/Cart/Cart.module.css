@@ -41,8 +41,7 @@
 }
 .CartItemContainer {
   display: flex;
-  width: 40vw;
-  border: 1px solid hsl(120, 100%, 25%);
+  width: 60vw;
   justify-content: space-between;
   margin: 1rem auto;
 }

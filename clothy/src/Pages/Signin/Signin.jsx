@@ -13,27 +13,32 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { patchUserData } from "../../Redux/AuthReducer/action";
 import axios from "axios";
-
+import style from '../OtherPages/style.module.css'
 
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
+
+  const {user}=useSelector((store)=>store.authReducer);
+
   const isAuth=useSelector((store)=>store.authReducer.isAuth);
   const location=useLocation();
-  console.log(location.state)
+  //console.log(location.state)
+
 
   const dispatch=useDispatch();
 
   const navigate = useNavigate();
   const toast = useToast();
+  const location = useLocation();
 
   //  console.log('auth',isAuth)
-  // all toasts are here
+
   const wrongEmail = () => {
     toast({
       title: "Wrong Email address or Password.",
@@ -58,6 +63,12 @@ const Signin=()=> {
 
   const submitLogin = async () => {
     try {
+
+      let res = await axios("http://localhost:8080/UserDetails");
+      let Mendata = res.data;
+     let UserDetails =   Mendata.find((item)=>{
+        return item.email=== email&& item.password===password        
+
       let res = await axios("http://localhost:8080/UserDetails").then((resdata)=>{
           //  console.log(data.data);
           let userFilterData=resdata?.data?.map((el)=>{
@@ -75,19 +86,40 @@ const Signin=()=> {
             loginSuccess();
             navigate(`${location.state}`);
           }
+
       })
-      console.log(isAuth);
-      // let data = await res.json();
-
-      // console.log(data);
-
+      console.log(UserDetails)
+      if(UserDetails&&UserDetails.email===email){
+        if(UserDetails.password!=password){
+          toast({
+            title: "Login Failed.",
+            description: "Wrong Password",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+            position: "top",
+          })
+        }else{
+          loginSuccess();
+          dispatch(patchUserData(UserDetails,UserDetails.id)).then(()=>{
+            navigate(`${location.state?location.state:'/'}`);
+          })
+        }
+      }else{
+        toast({
+          title: "Login Failed.",
+          description: "Wrong Credentails",
+          status: "error",
+          duration: 2000,
+          isClosable: true,
+          position: "top",
+        })
+      }
       // let Auth = false;
       // for (let i in data) {
       //   if (data[i].email === email && data[i].password === password) {
       //     // Auth = true;
       //     dispatch(patchUserData(data[i],data[i].id)).then(()=>{
-      //       loginSuccess();
-      //       navigate("/");
       //     })
           // data[i].isAuth=true;
 
@@ -168,7 +200,9 @@ const Signin=()=> {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-              If have no account? <Link color={'blue.400'} href="/signup">Sign Up</Link>
+              If have no account? <NavLink className={style.links} style={{color:'dodgerblue'}} to="/signup">
+                    Sign Up
+                  </NavLink>
               </Text>
             </Stack>
           </Stack>

@@ -8,6 +8,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 
 const Logo = (props) => {
   return (
@@ -59,7 +60,7 @@ export const Footer = () => {
             <Link href={'#'}>Women</Link>
             <Link href={'#'}>Accessories</Link>
             <Link href={'#'}>Winter</Link>
-            <Link href={"/admin-login"}>Admin Page</Link>
+            <NavLink to={"/admin-login"}>Admin Page</NavLink>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>

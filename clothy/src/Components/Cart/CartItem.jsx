@@ -2,83 +2,57 @@ import React, { useEffect, useState } from "react";
 import CartItemCard from "./CartItemCard";
 import { Box, Button, Center, Text } from "@chakra-ui/react";
 import style from "./Cart.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Email } from "@mui/icons-material";
+import { GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER } from "../../Redux/actionType";
 function CartItem() {
   const total = useSelector((store) => store.CartReducer.CartTotal);
-  const data = [
-    {
-      id: 1,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-    {
-      id: 2,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-    {
-      id: 3,
-      title: "Soho Heritage Harrington Jacket",
-      image:
-        "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
-      price: 1890.0,
-      price_c: 2490.0,
-      discount: 24,
-      size: "XL",
-      color: "Black",
-      label: "RELAXED FIT",
-      category: "Jacket",
-    },
-  ];
   const [loading, setLoading] = useState(false);
-  const [Cart, setCart] = useState([]);
+
+  const [MainCart, setMainCart] = useState([]);
+
   const [favourite, setFavourite] = useState([]);
 
-  const isAuth = useSelector((store) => store.authReducer.isAuth);
+  const Cart = useSelector(state=>state.CartReducer.Cart);
+
+  const {user} = useSelector((store) => store.authReducer);
+
+  const {isAuth} = user;
+
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
+
   const CheckAuth = () => {
     console.log(isAuth);
     isAuth ? navigate("/payment") : navigate("/signin");
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/UserDetails")
+    if(isAuth){
+      const {cart} = user;
+      setMainCart(cart);
+      
+    }else{
+      axios
+      .get("http://localhost:8080/TemporaryUserData")
       .then((data) => {
-        let CartData = data.data;
-        console.log(CartData)
-        setCart(CartData);
-        setFavourite(data.data["Deepak"].wishlist);
+        let CartData = data.data.cart;
+        console.log(CartData) 
+        setMainCart(CartData);
+        dispatch({type:GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER,payload:CartData})
       })
-      .finally(() => {
-        setTimeout(() => {
-          setLoading(true);
-        }, 1500);
-      });
+    }
+    setTimeout(() => {
+      setLoading(true);
+    }, 1500);
   }, []);
   return (
     <Box className={style.Cart_Main_Page}>
       {/* <h1>Welcome {email}</h1>   */}
       <Box className={style.cart_item}>
-        {Cart?.map((item) => {
+        {MainCart?.map((item) => {
           return (
             <CartItemCard
               key={item.id}
@@ -97,7 +71,7 @@ function CartItem() {
         <hr />
         <div className={style.cart_total_detail} style={{width:'90%',margin:'auto',padding:'2rem auto',}}>
           <div className={style.cart_total_details}>
-            <Text>Price {data.length} items </Text> <Text>{total}</Text>
+            <Text>Price {Cart?.length} items </Text> <Text>{total}</Text>
           </div>
           <div className={style.cart_total_details}>
             <Text>Discount</Text><Text className={style.discountPrice} style={{ color: "darkgreen" }}>
