@@ -5,10 +5,11 @@ import SkeletonCart from "./SkeletonCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { FaVestPatches } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 function CartItemCard({
   id,
   title,
-  image,
+  images,
   price,
   price_c,
   discount,
@@ -21,9 +22,10 @@ function CartItemCard({
   setFavrourite,
   rating
 }) {
-    console.log(rating)
+  console.log(rating)
   const [quantity, setQuantity] = useState(1);
   const [favStatus,setFavStatus] = useState(false);
+  const dispatch = useDispatch();
   const IncreaseQuantity = () => {
     setQuantity((prev) => prev + 1);
   };
@@ -35,8 +37,6 @@ function CartItemCard({
         setFavStatus(!favStatus)
         let isFavExist = favourite.find((item)=>item.title === title);
         console.log(isFavExist);
-        
-
   }
   return !loading ? (
     <SkeletonCart />
@@ -47,7 +47,7 @@ function CartItemCard({
             <FavoriteBorderOutlinedIcon onClick={AddTOFav} className={style.Favourite_icon_outlined} style={{position:'sticky',left:'13rem',top:'3rem'}}/>
         }
       <div className={style.ImageButton}>
-        <img src={image} alt={title} />
+        <img src={images[0]} alt={title} />
         <Button onClick={IncreaseQuantity}>+</Button>
         <Button
           disabled

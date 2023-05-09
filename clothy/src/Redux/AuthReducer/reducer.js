@@ -3,13 +3,11 @@ import { PATCH_SUCCESS, PATCH_SUCCESS_USERDATA, SIGNUP_ERROR, SIGNUP_LOADING, SI
 const initialState = {
   isLoading: false,
   isError: false,
-  isAuth: false,
-  user: {},
+  user:{},
 };
 
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    
     case SIGNUP_LOADING:
       return { ...state, isLoading: true };
     case SIGNUP_SUCCESS:
@@ -17,9 +15,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
     case SIGNUP_ERROR:
       return { ...state, isLoading: false, isError: true };
     case PATCH_SUCCESS:
-      return {...state, isLoading:false, isAuth:payload }
-      case PATCH_SUCCESS_USERDATA:
-        return {...state, isLoading:false, user:{...payload} }
+      return {...state, isLoading:false, user:payload};
     default:
       return state;
   }

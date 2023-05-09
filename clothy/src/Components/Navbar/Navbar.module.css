@@ -37,3 +37,17 @@
   @media screen and (min-width: 1100px) {
     
   }
+  .navLinks:active{
+    background-color: dodgerblue;
+  }
+  .navLinks:hover{
+      background-color: rgba(236, 230, 230, 0.545);
+}
+.navLinks{
+      padding: .5rem 1rem;
+      border-radius: 5px;
+      font-family:cursive;
+      font-size: 1.1rem;
+      font-weight: bolder;
+      color: #201a1abb;
+  }

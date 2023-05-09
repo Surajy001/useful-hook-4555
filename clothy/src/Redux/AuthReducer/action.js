@@ -22,12 +22,11 @@ export const addUserData =
     try{
      return axios.patch(`http://localhost:8080/UserDetails/${id}`, {...newUserData,isAuth:true})
       .then((res) => {
-         console.log(res.data.isAuth);
+        //  console.log(res.data.isAuth);
          console.log("data",res.data);
 
-        dispatch({ type: PATCH_SUCCESS, payload:res.data.isAuth });
-        dispatch({ type: PATCH_SUCCESS_USERDATA, payload:res.data });
-      })
+          dispatch({ type: PATCH_SUCCESS, payload:res.data });
+        })
     }catch(err){
       console.log(err);
       dispatch({type: SIGNUP_ERROR})
@@ -43,8 +42,9 @@ export const addUserData =
       .then((res) => {
         //  console.log(res.data.isAuth);
         //  console.log("data",res.data);
-
+        
         dispatch({ type: PATCH_SUCCESS, payload:res.data.isAuth });
+        localStorage.setItem("userDetails",JSON.stringify(res.data))
         dispatch({ type: PATCH_SUCCESS_USERDATA, payload:res.data });
       })
     }catch(err){

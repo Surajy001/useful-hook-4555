@@ -17,6 +17,10 @@ import { WomensPage } from "../Pages/WomensPage";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { Footer } from "../Components/Footer/Footer";
 import PrivateRoute from "./PrivateRoute";
+import Winter from "../Pages/OtherPages/Winter";
+import About from "../Pages/OtherPages/About";
+import Sales from "../Pages/OtherPages/Sale";
+import WishList from "../Pages/OtherPages/WhishLIst";
 
 
 
@@ -35,11 +39,6 @@ const PageRoutes=[
     path: "/signup",
     element: <Signup/>,
   },
-  
-  {
-    path: "/payment",
-    element: <Payment />,
-  },
   {
     path: "/product/:id",
     element: <SingleProductPage/>,
@@ -53,9 +52,30 @@ const PageRoutes=[
     element: <WomensPage />,
   },
   {
+    path: "/winter",
+    element: <Winter />,
+  },
+  {
+    path: "/About",
+    element: <About />,
+  },
+  {
+    path: "/sale",
+    element: <Sales />,
+  },
+  {
+    path: "/wishList",
+    element: <WishList />,
+  },
+  {
+    path: "/add-to-cart",
+    element: <AddToCartPage />,
+  },
+  {
     path: "*",
     element: <h1>404 Page Not Found</h1>,
   },
+  
 ]
 
   return (
@@ -63,10 +83,10 @@ const PageRoutes=[
     <Routes> 
       
       {PageRoutes.map((ele, key) => (
-          <Route key={key} path={ele.path} element={<> <Navbar /> {ele.element} <Footer /> </>  } />
+          <Route key={key} path={ele.path} element={<> <Navbar/> {ele.element} <Footer /> </>  } />
         ))}
 
-      <Route path="/add-to-cart" element={<PrivateRoute> <Navbar /> <AddToCartPage/> <Footer /> </PrivateRoute> }/>
+      <Route path="/payment" element={<PrivateRoute> <Navbar /> <Payment/> <Footer /> </PrivateRoute> }/>
 
       <Route path="/admin-dashboard" element={<Dashboard/>}/>
       <Route path="/admin-login" element={<AdminLogin/>}/>

@@ -15,12 +15,12 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { addUserData } from "../../Redux/AuthReducer/action";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-
+import style from '../OtherPages/style.module.css'
 const initialState = {
   name: "",
   email: "",
@@ -246,9 +246,9 @@ const Signup=()=> {
               <Stack pt={6}>
                 <Text align={"center"}>
                   Already a user?{" "}
-                  <Link color={"blue.400"} href="/signin">
+                  <NavLink className={style.links} style={{color:'dodgerblue'}} to="/signin">
                     Sign In
-                  </Link>
+                  </NavLink>
                 </Text>
               </Stack>
             </Stack>

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { mengetProducts } from '../../Redux/MensPageRedux/action';
-import MensProductCart from './MensProductCart';
-import styled from 'styled-components';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { mengetProducts } from "../../Redux/MensPageRedux/action";
+import MensProductCart from "./MensProductCart";
+import styled from "styled-components";
+import { useLocation, useSearchParams } from "react-router-dom";
 import {
   Box,
   Grid,
@@ -12,14 +12,20 @@ import {
   VStack,
   Button,
   HStack,
-} from '@chakra-ui/react';
+  useToast,
+} from "@chakra-ui/react";
+import {
+  AddtoCartData,
+  GetTemperaryCartData,
+} from "../../Redux/CartReducer/action";
+import axios, { Axios } from "axios";
+import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER } from "../../Redux/actionType";
+import { getMenProduct } from "../../Redux/Admin/action";
 
 const MensProductList = () => {
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
-  const menproducts = useSelector(
-    (store) => store.menproductReducer.products
-  );
+  const menproducts = useSelector((store) => store.menproductReducer.products);
   const location = useLocation();
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,10 +33,10 @@ const MensProductList = () => {
 
   let obj = {
     params: {
-      category: searchParams.getAll('category'),
-      brand: searchParams.getAll('brand'),
-      _sort: searchParams.get('order') && 'price',
-      _order: searchParams.get('order'),
+      category: searchParams.getAll("category"),
+      brand: searchParams.getAll("brand"),
+      _sort: searchParams.get("order") && "price",
+      _order: searchParams.get("order"),
     },
   };
 
@@ -57,9 +63,9 @@ const MensProductList = () => {
       pageButtons.push(
         <Button
           key={i}
-          variant={currentPage === i ? 'solid' : 'ghost'}
+          variant={currentPage === i ? "solid" : "ghost"}
           onClick={() => handlePageChange(i)}
-          _hover={{bg:"dodgerblue"}}
+          _hover={{ bg: "dodgerblue" }}
         >
           {i}
         </Button>
@@ -71,38 +77,105 @@ const MensProductList = () => {
           variant="ghost"
           disabled={currentPage === 1}
           onClick={() => handlePageChange(currentPage - 1)}
-          _hover={{bg:"dodgerblue"}}
+          _hover={{ bg: "dodgerblue" }}
         >
-          {'Prev'}
+          {"Prev"}
         </Button>
         {pageButtons}
         <Button
           variant="ghost"
           disabled={currentPage === totalPages}
           onClick={() => handlePageChange(currentPage + 1)}
-          _hover={{bg:"dodgerblue"}}
+          _hover={{ bg: "dodgerblue" }}
         >
-          {'Next'}
+          {"Next"}
         </Button>
       </>
     );
   };
-  
+  const toast = useToast();
+  const { user } = useSelector((store) => store.authReducer);
+  const { isAuth, cart } = user;
+  const { Cart } = useSelector((state) => state.CartReducer);
+  const AddToCart =async (id) => {
+    console.log(id);
+    if (isAuth) {
+      let cartDetails = cart?.find((item) => item.id === id);
+      if (cart.includes(cartDetails)) {
+        toast({
+          title: "Product, Already In the Cart!",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "info",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+      } else {
+        toast({
+          title: "Congratulations, Product Added To Cart!!👍",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+      }
+    } else {
+      let dataCart = currentProducts.find((item) => item.id == id);
+      dispatch(GetTemperaryCartData);
+      let actualCartDataToPost = Cart?.find((item) => item?.id == dataCart.id);
+      if (actualCartDataToPost) {
+        toast({
+          title: "Product, Already In the Cart!",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "info",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+        return 
+      }else{
+        try {
+          // I am deepak i am not able to apply this in actions js and it is giving me erorr of please link it with thunk 
+          // there must be some error need to be fixed but for now it is fine
+       return await  axios
+            .post("http://localhost:8080/TemporaryUserData", {
+              cart: [...Cart, dataCart],
+            })
+            .then((response) => {
+              console.log(response.data);
+              toast({
+                title: "Congratulations, Product Added To Cart!!👍",
+                description: `🚀Go to the cart page to see the cart-details`,
+                status: "success",
+                duration: 3000,
+                isClosable: true,
+                position: "top",
+              });
+            })
+            
+        } catch(error) {
+          console.log(error);
+        }
+      
+      }
+    }
+  };
 
   return (
     <Box p={4}>
       <Grid
         templateColumns={{
-          base: 'repeat(1, 1fr)',
-          md: 'repeat(2, 1fr)',
-          lg: 'repeat(3, 1fr)',
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
         }}
         gap={6}
       >
         {currentProducts.length > 0 ? (
           currentProducts.map((el) => (
             <GridItem key={el.id}>
-              <MensProductCart {...el} />
+              <MensProductCart {...el} AddToCart={AddToCart} />
             </GridItem>
           ))
         ) : (
@@ -111,14 +184,19 @@ const MensProductList = () => {
           </VStack>
         )}
       </Grid>
-      <div style={{margin:"auto", width:"100%", display:"flex", justifyContent:"center"}} >
-      <HStack mt={8}    >{renderPagination()}</HStack>
+      <div
+        style={{
+          margin: "auto",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <HStack mt={8}>{renderPagination()}</HStack>
       </div>
-    
     </Box>
   );
 };
-
 export default MensProductList;
 
 const DIV = styled.div`

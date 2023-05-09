@@ -10,8 +10,13 @@ import {
   Heading,
   Image,
   Text,
+  useToast,
 } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import AddToCartPage from '../../Pages/AddToCartPage';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
+import { addProduct } from '../../Redux/Admin/action';
 
 const ProductCard = styled(Box)`
   transition: box-shadow 0.2s ease-in-out;
@@ -32,12 +37,16 @@ const MensProductCart = ({
   rating,
   gender,
   images,
+  AddToCart
 }) => {
   const truncatedTitle =
     title.length > 30 ? title.substring(0, 30) + '...' : title;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const navigate=useNavigate();
-
+  const toast = useToast();
+  const dispatch = useDispatch();
+  const {user} = useSelector(store=>store.authReducer);
+  const {isAuth,cart} = user;
   const handleMouseEnter = () => {
     setCurrentImageIndex(1);
   };
@@ -49,6 +58,43 @@ const MensProductCart = ({
   const handleDetail=()=>{
     navigate(`/product/${id}`)
   };
+  
+  // const AddToCart = (id)=>{
+  //   if(isAuth){
+  //     let cartDetails = cart?.find(item=>item.id===id);
+  //     if(cart.includes(cartDetails)){
+  //       toast({
+  //         title: "Product, Already In the Cart!",
+  //         description: `🚀Go to the cart page to see the cart-details`,
+  //         status: "info",
+  //         duration: 3000,
+  //         isClosable: true,
+  //         position: "top",
+  //       })
+  //     }else{
+  //       toast({
+  //         title: "Congratulations, Product Added To Cart!!👍",
+  //         description: `🚀Go to the cart page to see the cart-details`,
+  //         status: "success",
+  //         duration: 3000,
+  //         isClosable: true,
+  //         position: "top",
+  //         })
+  //     }
+  //   }else{
+  //     dispatch(AddtoCartData)
+  //     console.log("user is not authenicated",user)
+  //   }
+  //     // toast({
+  //     //   title: "Congratulations, Product Added To Cart!!👍",
+  //     //   description: `🚀Go to the cart page to see the cart-details`,
+  //     //   status: "success",
+  //     //   duration: 3000,
+  //     //   isClosable: true,
+  //     //   position: "top",
+  //     //   })
+        
+  // }
 
   return (
     <ProductCard
@@ -122,7 +168,7 @@ const MensProductCart = ({
       </Box>
 
 <Box d="flex" mt="2" style={{display:"flex",justifyContent:"space-between"}}>
-        <Button colorScheme="blue" size="sm">
+        <Button colorScheme="blue" size="sm" onClick={(e)=>AddToCart(id)}>
           Add to Cart
         </Button>
         <Button colorScheme="green" size="sm" >
