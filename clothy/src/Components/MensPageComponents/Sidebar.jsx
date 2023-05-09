@@ -1,7 +1,13 @@
 import { Input } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
-
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+} from '@chakra-ui/react'
 
 import {
   Box,
@@ -11,6 +17,13 @@ import {
   RadioGroup,
   Stack,
   Text,
+  Menu,
+  MenuButton,
+  Button,
+  MenuList,
+  MenuGroup,
+  MenuItem,
+  MenuDivider
 } from '@chakra-ui/react';
 
 const Sidebar = () => {
@@ -73,94 +86,345 @@ setCategory(newCategory);
  },[category,brand,order]);
   
   return (
-    <Box style={{position:"relative",left:0}}>
-      <Text fontSize="xl" fontWeight="bold" mb="4">
-        Filter by Category
-      </Text>
-
-      <Stack spacing="2" mb="4">
-        <Checkbox
+    <div >
+<Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem>
+    <h2>
+      <AccordionButton
+        sx={{
+          
+          color: "black",
+          borderRadius: "0.25rem",
+          padding: "1rem",
+          cursor: "pointer",
+          "&:hover": {
+           
+          }
+        }}
+      >
+        <Box as="span" flex='1' textAlign='left'>
+         Filter by Category
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel
+      pb={4}
+      textAlign={"left"}
+      sx={{
+       
+        padding: "1rem",
+        borderRadius: "0.25rem",
+        "&:hover": {
+         
+        }
+      }}
+    >
+      <label
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}
+      >
+        <input
+          type="checkbox"
           value="Kurta"
           onChange={handleCategory}
-          isChecked={category.includes('Kurta')}
-        >
+          checked={category.includes("Kurta")}
+          sx={{
+            mr: "0.5rem",
+            ml: 0,
+            "&:hover": {
+             
+            }
+          }}
+          style={{ marginLeft: 0, marginRight: "0.5rem" }}
+        />
+        <Box as="span" flex='1' textAlign='left'>
           Kurta
-        </Checkbox>
-
-        <Checkbox
+        </Box>
+      </label>
+      <br />
+      <label
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}
+      >
+        <input
+          type="checkbox"
           value="Sports-Wear"
           onChange={handleCategory}
-          isChecked={category.includes('Sports-Wear')}
-        >
+          checked={category.includes("Sports-Wear")}
+          sx={{
+            mr: "0.5rem",
+            ml: 0,
+            "&:hover": {
+              
+            }
+          }}
+          style={{ marginLeft: 0, marginRight: "0.5rem" }}
+        />
+        <Box as="span" flex='1' textAlign='left'>
           Sports-Wear
-        </Checkbox>
-
-        <Checkbox
+        </Box>
+      </label>
+      <br />
+      <label
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}
+      >
+        <input
+          type="checkbox"
           value="Inner-Wear"
           onChange={handleCategory}
-          isChecked={category.includes('Inner-Wear')}
-        >
+          checked={category.includes("Inner-Wear")}
+          sx={{
+            mr: "0.5rem",
+            ml: 0,
+            "&:hover": {
+              
+            }
+          }}
+          style={{ marginLeft: 0, marginRight: "0.5rem"}}
+        />
+        <Box as="span" flex='1' textAlign='left'>
           Inner-Wear
-        </Checkbox>
-      </Stack>
+        </Box>
+      </label>
+    </AccordionPanel>
+  </AccordionItem>
 
-      <Text fontSize="xl" fontWeight="bold" mb="4">
-        Filter by Brand
-      </Text>
 
-      <Stack spacing="2" mb="4">
-        <Checkbox
+  <AccordionItem>
+    <h2>
+      <AccordionButton sx={{
+         
+          color: "black",
+          borderRadius: "0.25rem",
+          padding: "1rem",
+          cursor: "pointer",
+          "&:hover": {
+           
+          }
+        }}>
+        <Box as="span" flex='1' textAlign='left'>
+         Filter by Brand
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+      
+    </h2>
+    <AccordionPanel pb={4} textAlign={"left"} sx={{
+       
+        padding: "1rem",
+        borderRadius: "0.25rem",
+        "&:hover": {
+        
+        }
+      }}>
+      <label sx={{ display: 'flex', alignItems: 'center',  "&:hover input": {
+          
+          } }}>
+        <input
+          type="checkbox"
           value="SMITH"
           onChange={handleBrand}
-          isChecked={brand.includes('SMITH')}
-        >
+          checked={brand.includes('SMITH')}
+          sx={{
+            mr: "0.5rem",
+            ml: 0,
+            "&:hover": {
+             
+            }
+          }}
+          style={{ marginLeft: 0, marginRight: "0.5rem" }}
+        />
+        <Box as="span" flex='1' textAlign='left'>
           SMITH
-        </Checkbox>
-
-        <Checkbox
+        </Box>
+      </label>
+      <br />
+      <label sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}>
+        <input
+          type="checkbox"
           value="HEORA"
           onChange={handleBrand}
-          isChecked={brand.includes('HEORA')}
-        >
+          checked={brand.includes('HEORA')}
+          sx={{
+            mr: "0.5rem",
+            ml: 0,
+            "&:hover": {
+              
+            }
+          }}
+          style={{ marginLeft: 0, marginRight: "0.5rem" }}
+        />
+        <Box as="span" flex='1' textAlign='left'>
           HEORA
-        </Checkbox>
-
-        <Checkbox
+        </Box>
+      </label>
+      <br />
+      <label  sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}>
+        <input
+        sx={{
+          mr: "0.5rem",
+          ml: 0,
+          "&:hover": {
+          
+          }
+        }}
+        style={{ marginLeft: 0, marginRight: "0.5rem" }}
+          type="checkbox"
           value="POLO"
           onChange={handleBrand}
-          isChecked={brand.includes('POLO')}
-        >
+          checked={brand.includes('POLO')}
+        
+        />
+        <Box as="span" flex='1' textAlign='left'>
           POLO
-        </Checkbox>
-
-        <Checkbox
+        </Box>
+      </label>
+      <br />
+      <label   sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover input": {
+           
+          }
+        }}>
+        <input
+          type="checkbox"
           value="RAYMOND"
           onChange={handleBrand}
-          isChecked={brand.includes('RAYMOND')}
-        >
-          RAYMOND
-        </Checkbox>
-      </Stack>
-
-      <Text fontSize="xl" fontWeight="bold" mb="4">
-        Sort by Price
-      </Text>
-
-      { <div onChange={handleSort}>
-<input type="radio" name="order" value={"asc"} 
- defaultChecked={order==="asc"}
-></input>
-<label>Ascending</label>
-<br></br>
-<input type="radio" name="order" value={"desc"} 
-  defaultChecked={order==="desc"} 
- ></input>
- <label>Descending</label>
- </div> }
+          checked={
+            brand.includes("RAYMOND")
+            }
+            sx={{
+              mr: "0.5rem",
+              ml: 0,
+              "&:hover": {
+                
+              }
+            }}
+            style={{ marginLeft: 0, marginRight: "0.5rem"}}
+            />
+            RAYMOND
+            </label>
+            </AccordionPanel>
+            </AccordionItem>
 
 
+            <AccordionItem>
+            <h2>
+            <AccordionButton sx={{
+        
+          color: "black",
+          borderRadius: "0.25rem",
+          padding: "1rem",
+          cursor: "pointer",
+          "&:hover": {
+           
+          }
+        }}>
+            <Box as="span" flex="1" textAlign="left">
+            Sort by Price
+            </Box>
+            <AccordionIcon />
+            </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4} textAlign={"left"}
+            sx={{
+             
+              padding: "1rem",
+              borderRadius: "0.25rem",
+              "&:hover": {
+               
+              }
+            }}
+            >
+            <label style={{ display: "block" }}
+             sx={{
+              display: "flex",
+              alignItems: "center",
+              "&:hover input": {
+                
+              }
+            }}
+            >
+            <input
+            type="radio"
+            name="order"
+            value="asc"
+            onChange={handleSort}
+            checked={order === "asc"}
+            sx={{
+              mr: "0.5rem",
+              ml: 0,
+              "&:hover": {
+                
+              }
+            }}
+            style={{ marginLeft: 0, marginRight: "0.5rem", backgroundColor: "#cbd5e0" }}
 
-    </Box>
+            />
+            Ascending
+            </label>
+            <label style={{ display: "block" }}
+             sx={{
+              display: "flex",
+              alignItems: "center",
+              "&:hover input": {
+            
+              }
+            }}
+            >
+            <input
+            type="radio"
+            name="order"
+            value="desc"
+            onChange={handleSort}
+            checked={order === "desc"}
+            sx={{
+              mr: "0.5rem",
+              ml: 0,
+              "&:hover": {
+         
+              }
+            }}
+            style={{ marginLeft: 0, marginRight: "0.5rem", backgroundColor: "#cbd5e0" }}
+            />
+            Descending
+            </label>
+            </AccordionPanel>
+            </AccordionItem>
+            </Accordion>;
+            
+
+  </div>
   );
 };
 
