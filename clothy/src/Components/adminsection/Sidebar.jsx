@@ -4,8 +4,7 @@ import { AiFillGift } from "react-icons/ai";
 import { HiCollection } from "react-icons/hi";
 import { MdHome } from "react-icons/md";
 import { CgLogOut } from "react-icons/cg";
-import { Link } from 'react-router-dom';
-
+import { Link,NavLink } from 'react-router-dom';
 
 const Sidebar = (props) => {
 
@@ -19,7 +18,6 @@ const Sidebar = (props) => {
                 py="21"
                 cursor="pointer"
                 color="inherit"
-                _dark={{ color: "gray.400" }}
                 _hover={{
                     bg: "gray.100",
                     _dark: { bg: "gray.900" },
@@ -43,51 +41,37 @@ const Sidebar = (props) => {
 
     return (
         <Box
-            pos="fixed"
-            top="0"
-            left="0"
             zIndex="sticky"
             h="full"
-            pb="10"
             overflowX="hidden"
             overflowY="auto"
             bg="white"
-            _dark={{ bg: "gray.800" }}
             border
             color="inherit"
-            borderRightWidth="1px"
             w="60"
             boxShadow={"md"}
             {...props}
         >
-            <Flex px="4" py="30" align="center">
-                <Text
-                    fontSize="2xl"
-                    ml="2"
-                    color="brand.500"
-                    _dark={{ color: "white" }}
-                    fontWeight="semibold"
-                >
-                    Clothy
-                </Text>
-            </Flex>
             <Flex
                 direction="column"
                 as="nav"
                 fontSize="sm"
                 color="gray.600"
                 aria-label="Main Navigation"
+                
             >
                 <NavItem icon={MdHome}>
                     <Link to={"/admin-dashboard"}>Dashboard</Link>
                 </NavItem>
-                <NavItem icon={FaUserCircle}><Link to={"/admin-admins"}>Admins</Link></NavItem>
+                <NavItem icon={FaUserCircle}><Link to={"/admin-admins"}>Users</Link></NavItem>
                 <NavItem icon={HiCollection}><Link to={"/admin-men-products"}>Men Products</Link></NavItem>
                 <NavItem icon={HiCollection}><Link to={"/admin-women-products"}>Women Products</Link></NavItem>
-                <NavItem icon={AiFillGift}>Orders</NavItem>
-                <NavItem icon={CgLogOut}>Logout</NavItem>
+                <NavItem icon={AiFillGift}><Link to={"/admin-order-products"}>Orders</Link></NavItem>
+                <NavItem icon={CgLogOut}>
+                   <NavLink to={"/"}>Logout</NavLink> 
+                    </NavItem>
             </Flex>
-        </Box>
+        </Box >
 
     )
 }

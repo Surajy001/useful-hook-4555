@@ -271,23 +271,25 @@ const SingleProductPage = () => {
               </Box>
             </Stack>
 
-            {/* <Button
+            <Button
               rounded={"none"}
               w={"full"}
               mt={1}
               size={"lg"}
               py={"1"}
-              bgGradient="linear(to-r, pink.400, orange.400)"
+              bg={'blue.400'}
+              // bgGradient="linear(to-r, blue.400, orange.400)"
               color={useColorModeValue("white", "gray.900")}
               
               _hover={{
                 transform: "translateY(2px)",
                 boxShadow: "lg",
+                bg:'green.500'
               }}
-              onClick={addToCart}
+              // onClick={addToCart}
             >
               Add to cart
-            </Button> */}
+            </Button>
 
             <Stack
               direction="row"
