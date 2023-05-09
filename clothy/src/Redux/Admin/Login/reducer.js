@@ -5,7 +5,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../../actionType";
     isLoading : false,
     isError:false,
     admindata:[],
-    isAuth:false
+    isAuth:localStorage.getItem("loginIsAuth")||false,
 
  }
  export const reducer = (state = init,{type,payload})=>{
@@ -20,8 +20,8 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../../actionType";
          return{
             ...state,
             isLoading:false,
-            isError:true
-
+            isError:true,
+            isAuth:false
          }
         }
         case LOGIN_SUCCESS:{
@@ -29,7 +29,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../../actionType";
             ...state,
             isLoading:false,
             isError:false,
-            admindata:[...payload],
+            admindata:payload,
             isAuth:true,
          }
         }

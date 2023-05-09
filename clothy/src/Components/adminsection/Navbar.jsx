@@ -4,10 +4,7 @@ import { useSelector } from 'react-redux';
 
 const Navbar = ({ onclick }) => {
 
-    const userDetail=useSelector((store)=>{
-        return store.adminLoginReducer;
-    })
-    
+    const data = useSelector((store) => store.adminLoginReducer.admindata);
 
     return (
         <Flex
@@ -45,13 +42,13 @@ const Navbar = ({ onclick }) => {
                     </InputGroup>
                 </Flex>
 
-                <Flex align="center" justifyContent={"space-between"} w={"6.9%"}>
+                <Flex align="center" justifyContent={"space-between"} w={"5.5%"}>
                     <Avatar
                         size="sm"
-                        name={``}
+                        name={data[0]?.name}
                         cursor="pointer"
                     />
-                    <Text>xytjctgc</Text>
+                    <Text fontWeight={"bold"} fontSize={"lg"}>{data[0]?.name}</Text>
                 </Flex>
             </Flex>
         </Flex >

@@ -14,10 +14,11 @@ import {
     FormLabel,
     Input,
     Select,
-    Alert,
     useToast,
 } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux';
+import { addAdmin } from '../../Redux/Admin/action';
+
 
 
 const initialState = {
@@ -61,7 +62,7 @@ const reducer = (state, action) => {
                 gender: payload,
             }
         }
-        case "reset":{
+        case "reset": {
             return initialState;
         }
         default:
@@ -75,12 +76,12 @@ const AddAdmin = () => {
     const [state, dispatch] = useReducer(reducer,
         initialState);
     const [confirmPassword, setConfirmPassword] = useState("");
-    const toast=useToast();
+    const toast = useToast();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // dispatcher(addProduct(state));
-        if(state.password!==confirmPassword || !state.email || !state.name || !state.mobile || !state.gender){
+        if (state.password !== confirmPassword || !state.email || !state.name || !state.mobile || !state.gender) {
             toast({
                 title: "Please fill required data",
                 description: "Please Share required info",
@@ -88,11 +89,20 @@ const AddAdmin = () => {
                 duration: 9000,
                 isClosable: true,
                 position: "top",
-              });
+            });
+        } else {
+            dispatcher(addAdmin(state));
+            toast({
+                title: "Sign Up Successful.",
+                description: "Welcome to Clothy.",
+                status: "success",
+                duration: 5000,
+                isClosable: true,
+                position: "top",
+            });
+            dispatch({ type: "reset" });
+            setConfirmPassword("");
         }
-        dispatcher()
-        dispatch({type:"reset"});
-        setConfirmPassword("");
     }
 
     const handleChange = (e) => {
@@ -162,8 +172,8 @@ const AddAdmin = () => {
                                         onChange={handleChange}
                                         value={state.gender}
                                     >
-                                        <option value="men">Men</option>
-                                        <option value="women">Women</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
                                     </Select>
                                 </FormControl>
                                 <FormControl mt={4} >

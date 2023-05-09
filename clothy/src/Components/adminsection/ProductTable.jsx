@@ -12,21 +12,20 @@ import EditProduct from './EditProduct';
 import { deleteProduct, getMenProduct, getWomenProduct } from '../../Redux/Admin/action';
 import { useDispatch } from 'react-redux';
 
-const ProductTable = ({data}) => {
+const ProductTable = ({data,pgno}) => {
 
     const dispatcher=useDispatch();
     return (
         <Table>
             <Thead >
                 <Tr borderTop={"1px solid #CBD5E0"}>
-                    <Th>Product Image</Th>
-                    <Th>Product Name</Th>
-                    <Th>Brand</Th>
-                    <Th>Category</Th>
-                    <Th>Price</Th>
-                    <Th>Edit</Th>
-                    <Th>Delete</Th>
-
+                    <Th>PRODUCT IMAGE</Th>
+                    <Th>PRODUCT NAME</Th>
+                    <Th>BRAND</Th>
+                    <Th>CATEGORY</Th>
+                    <Th>PRICE</Th>
+                    <Th>EDIT</Th>
+                    <Th>DELETE</Th>
                 </Tr>
             </Thead>
             <Tbody >

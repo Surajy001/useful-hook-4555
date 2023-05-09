@@ -19,7 +19,7 @@
 //         ...formState,
 //         [name]:value,
 //        }
-       
+
 //        setFormState(newObj)
 //     }
 
@@ -27,7 +27,7 @@
 //     e.preventDefault()
 //         dispatch(AdminLoginAction())
 //    }
-    
+
 //   return (
 //     <DIV>
 //       <form onSubmit={handleSubmit} >
@@ -41,14 +41,14 @@
 
 // export default AdminLogin
 // const DIV = styled.div`
-       
+
 //         height: 500px;
 //         border: 1px solid gray;
 //         display: flex;
 //         flex-direction:column;
 //         justify-content: center;
 //         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-     
+
 //     form{
 //         width: 50%;
 //         height: 350px;
@@ -57,12 +57,12 @@
 //         display: flex;
 //         flex-direction:column;
 //         align-items: center;
-       
+
 //         align-content:center;
 //         justify-content:space-evenly;
 //         padding: 20px;
 //         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-       
+
 
 //     }
 //     input[type=text]{
@@ -72,16 +72,16 @@
 //         padding: 5px;
 //         text-align: left;
 //         border-radius:0px;
-        
+
 //     }
 //     input[type=submit]{
 //         width: 20%;
 //         height: 40px;
 //         border: 1px solid gray;
 //         border-radius:0px;
-        
+
 //     }
-    
+
 
 // `
 import { useEffect, useState } from "react";
@@ -99,26 +99,26 @@ import {
   Avatar,
   FormControl,
   FormHelperText,
-  InputRightElement
+  InputRightElement,
+  useToast
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import {adminLoginAction } from "../Redux/Admin/Login/action";
+import { adminLoginAction } from "../Redux/Admin/Login/action";
 import { useNavigate } from "react-router-dom";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 const init = {
-  email:'',
-  password:''
+  email: '',
+  password: ''
 }
 
 const AdminLogin = () => {
   const navigate = useNavigate()
-  
-  const data = useSelector((store)=>store.adminLoginReducer.admindata)
-  const isAuth= useSelector((store)=>store.adminLoginReducer.isAuth)
-  // console.log(data,isAuth)
+
+  const data = useSelector((store) => store.adminLoginReducer.admindata)
+  const isAuth=useSelector((store)=>store.adminLoginReducer.isAuth)
 
   const dispatch = useDispatch()
 
@@ -126,27 +126,44 @@ const AdminLogin = () => {
 
   const handleShowClick = () => setShowPassword(!showPassword);
 
-  // for login 
-  const [formState,setFormState] = useState(init)
+  const [formState, setFormState] = useState(init)
+  const toast = useToast();
 
-  const ClickHandle = (e)=>{
-   
-   const {name , value} = e.target;
-   let newObj = {
-    ...formState,
-    [name]:value
-   }
-   setFormState(newObj)
+  const ClickHandle = (e) => {
+
+    const { name, value } = e.target;
+    let newObj = {
+      ...formState,
+      [name]: value
+    }
+    setFormState(newObj)
   }
- 
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    dispatch(adminLoginAction(formState)).then((res)=>{
-         navigate("/admin-dashboard")
-    })
-     
-    
 
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+    if(isAuth){
+      navigate("/admin-dashboard")
+      return
+    }
+    dispatch(adminLoginAction)
+  
+    data?.map((el, i) => {
+      if (el.email === formState.email && el.password === formState.password) {
+        isAuth=true;
+        localStorage.setItem("loginIsAuth",isAuth);
+        navigate("/admin-dashboard")
+      } else {
+        toast({
+          title: "Login Failed.",
+          description: "Wrong Credentails",
+          status: "error",
+          duration: 2000,
+          isClosable: true,
+          position: "top",
+        })
+      }
+    })
   }
 
   return (
@@ -180,7 +197,7 @@ const AdminLogin = () => {
                     pointerEvents="none"
                     children={<CFaUserAlt color="gray.300" />}
                   />
-                  <Input name="email" type="email"  placeholder="email address" onChange={ClickHandle}  value={formState.email}/>
+                  <Input name="email" type="email" placeholder="email address" onChange={ClickHandle} value={formState.email} />
                 </InputGroup>
               </FormControl>
               <FormControl>

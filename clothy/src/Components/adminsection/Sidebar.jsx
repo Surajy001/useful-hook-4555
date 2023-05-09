@@ -4,8 +4,7 @@ import { AiFillGift } from "react-icons/ai";
 import { HiCollection } from "react-icons/hi";
 import { MdHome } from "react-icons/md";
 import { CgLogOut } from "react-icons/cg";
-import { Link } from 'react-router-dom';
-
+import { Link,NavLink } from 'react-router-dom';
 
 const Sidebar = (props) => {
 
@@ -64,11 +63,13 @@ const Sidebar = (props) => {
                 <NavItem icon={MdHome}>
                     <Link to={"/admin-dashboard"}>Dashboard</Link>
                 </NavItem>
-                <NavItem icon={FaUserCircle}><Link to={"/admin-admins"}>Admins</Link></NavItem>
+                <NavItem icon={FaUserCircle}><Link to={"/admin-admins"}>Users</Link></NavItem>
                 <NavItem icon={HiCollection}><Link to={"/admin-men-products"}>Men Products</Link></NavItem>
                 <NavItem icon={HiCollection}><Link to={"/admin-women-products"}>Women Products</Link></NavItem>
-                <NavItem icon={AiFillGift}>Orders</NavItem>
-                <NavItem icon={CgLogOut}>Logout</NavItem>
+                <NavItem icon={AiFillGift}><Link to={"/admin-order-products"}>Orders</Link></NavItem>
+                <NavItem icon={CgLogOut}>
+                   <NavLink to={"/"}>Logout</NavLink> 
+                    </NavItem>
             </Flex>
         </Box >
 

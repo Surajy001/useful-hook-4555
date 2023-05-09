@@ -108,7 +108,6 @@ const EditProduct = ({ id, title, category, brand, price, images }) => {
            dispatcher(getMenProduct());
            dispatcher(getWomenProduct());
         })
-        ;
     }
 
     const handleChange = (e) => {
@@ -152,7 +151,7 @@ const EditProduct = ({ id, title, category, brand, price, images }) => {
                                     >
                                         <option value="tshirt">T Shirt</option>
                                         <option value="shirt">Shirt</option>
-                                        <option value="kurta">Kurta</option>
+                                        <option value="jacket">Jacket</option>
                                         <option value="sports-wear">Sports Wear</option>
                                     </Select>
                                 </FormControl>
