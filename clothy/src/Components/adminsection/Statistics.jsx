@@ -62,11 +62,11 @@ export const Statistics = () => {
   useEffect(() => {
 
     getData("http://localhost:8080/products").then((res) => {
-      setData(res.length);
+      setData(res?.length);
     });
 
     getData("http://localhost:8080/UserDetails").then((res) => {
-      setUser(res.length);
+      setUser(res?.length);
     });
 
     getData("http://localhost:8080/UserDetails").then((res) => {
@@ -78,7 +78,7 @@ export const Statistics = () => {
   useEffect(() => {
     let count = 0;
     userData.forEach((el) => {
-      count += el.placedOrder.length;
+      count += el.placedOrder?.length;
     });
     setOrder(count);
   }, [userData]);
