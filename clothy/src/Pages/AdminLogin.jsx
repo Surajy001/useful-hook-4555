@@ -84,6 +84,7 @@
 
 
 // `
+
 import { useEffect, useState } from "react";
 import {
   Flex,
@@ -118,7 +119,7 @@ const AdminLogin = () => {
   const navigate = useNavigate()
 
   const data = useSelector((store) => store.adminLoginReducer.admindata)
-  const isAuth=useSelector((store)=>store.adminLoginReducer.isAuth)
+  // const isAuth=useSelector((store)=>store.adminLoginReducer.isAuth)
 
   const dispatch = useDispatch()
 
@@ -142,17 +143,25 @@ const AdminLogin = () => {
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    if(isAuth){
-      navigate("/admin-dashboard")
-      return
-    }
-    dispatch(adminLoginAction)
+    // if(isAuth){
+    //   navigate("/admin-dashboard")
+    //   return
+    // }
+    dispatch(adminLoginAction(formState))
   
-    data?.map((el, i) => {
-      if (el.email === formState.email && el.password === formState.password) {
-        isAuth=true;
-        localStorage.setItem("loginIsAuth",isAuth);
+    
+      if (data?.email === formState.email && data?.password === formState.password) {
+        // isAuth=true;
+        // localStorage.setItem("loginIsAuth",isAuth);
         navigate("/admin-dashboard")
+        toast({
+          title: "Login Success.",
+          description: "Welcome to Clothy.",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+          position: "top",
+        })
       } else {
         toast({
           title: "Login Failed.",
@@ -163,7 +172,6 @@ const AdminLogin = () => {
           position: "top",
         })
       }
-    })
   }
 
   return (
@@ -237,12 +245,12 @@ const AdminLogin = () => {
           </form>
         </Box>
       </Stack>
-      <Box>
+      {/* <Box>
         New to us?{" "}
         <Link color="teal.500" href="#">
           Sign Up
         </Link>
-      </Box>
+      </Box> */}
     </Flex>
   );
 };
