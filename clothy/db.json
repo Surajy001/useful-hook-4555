@@ -1096,6 +1096,19 @@
       "wishlist": [],
       "placedOrder": [],
       "id": 4
+    },
+    {
+      "name": "archana mahesh yadav",
+      "email": "deepakyad18@gmail.com",
+      "password": "1234",
+      "mobile": "9137270148",
+      "gender": "female",
+      "isAuth": false,
+      "productQuantity": 1,
+      "cart": [],
+      "wishlist": [],
+      "placedOrder": [],
+      "id": 5
     }
   ],
   "TemporaryUserData": {
@@ -1117,60 +1130,6 @@
           "https://m.media-amazon.com/images/I/612jvQDIwtL._UL1500_.jpg",
           "https://m.media-amazon.com/images/I/61EW1va4vbL._UL1500_.jpg",
           "https://m.media-amazon.com/images/I/61AOgXFMlkL._UL1500_.jpg"
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Veera Paridhaan men's Regular Kurta",
-        "description": "The material of kurta is good. Keep in mind to order the size as we need to order one size big than the ordinary size we generally purchase from store.",
-        "mrp_price": 2199,
-        "discount_percentage": 55,
-        "category": "Kurta",
-        "brand": "SMITH",
-        "price": 999,
-        "rating": 4,
-        "gender": "men",
-        "images": [
-          "https://m.media-amazon.com/images/I/61cO5SUtIQL._UL1440_.jpg",
-          "https://m.media-amazon.com/images/I/61mHt+xlsAS._UL1440_.jpg",
-          "https://m.media-amazon.com/images/I/61+iFw4lN5S._UL1440_.jpg",
-          "https://m.media-amazon.com/images/I/814irFpdpTL._UL1440_.jpg"
-        ]
-      },
-      {
-        "id": 2,
-        "title": "HEORA Kurta Pyjama Set for men Ethnic & Designer Wear (LE079)",
-        "description": "Full Sleeve Kurta with Knee Length",
-        "mrp_price": 4999,
-        "discount_percentage": 64,
-        "category": "Kurta",
-        "brand": "HEORA",
-        "price": 1799,
-        "rating": 2,
-        "gender": "men",
-        "images": [
-          "https://m.media-amazon.com/images/I/31sYt1bkYuL.jpg",
-          "https://m.media-amazon.com/images/I/61mFI8liaxL._UL1205_.jpg",
-          "https://m.media-amazon.com/images/I/71C4j4iF9FL._UL1500_.jpg",
-          "https://m.media-amazon.com/images/I/71otndHEC1L._UL1280_.jpg"
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Pro-Ethic Style Developer men's Cotton Solid Straight Kurta for men Stylish Latest Ethnic Wear Pack of 1",
-        "description": "Cotton Solid Straight Kurta for men Stylish Latest Ethnic Wear",
-        "mrp_price": 1999,
-        "discount_percentage": 64,
-        "category": "Kurta",
-        "brand": "POLO",
-        "price": 725,
-        "rating": 3,
-        "gender": "men",
-        "images": [
-          "https://m.media-amazon.com/images/I/611t5EozH7L._UL1500_.jpg",
-          "https://m.media-amazon.com/images/I/81w4502ytUL._UL1500_.jpg",
-          "https://m.media-amazon.com/images/I/61ysTgrwPaL._UL1500_.jpg",
-          "https://m.media-amazon.com/images/I/61uDMumMvjL._UL1404_.jpg"
         ]
       }
     ]

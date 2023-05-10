@@ -14,6 +14,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Carousels } from "../Components/Carousels/Carousels";
+import { NavLink } from "react-router-dom";
+import { ExternalLinkIcon, LinkIcon } from "@chakra-ui/icons";
+import { HiExternalLink } from "react-icons/hi";
 
 export const HomePage = () => {
   return (
@@ -29,7 +32,7 @@ export const HomePage = () => {
             Fashion is a form of self-expression and autonomy at a particular
             period.
           </Text>
-          <Text>Read More</Text>
+          <NavLink to="/About" style={{fontWeight:'bold',color:'dodgerblue',fontSize:'1.2rem',textTransform:'Capitalize'}}>Want to Know more about us Click the Link  <ExternalLinkIcon/></NavLink>
         </Stack>
         <Stack flex={1} spacing={{ base: 5, md: 10 }} border={"1px solid"}
         lineHeight={.5}
@@ -340,7 +343,7 @@ export const HomePage = () => {
             Fashion is a form of self-expression and autonomy at a particular
             period.
           </Text>
-          <Text>Read More</Text>
+          <NavLink to="/About">Read More</NavLink>
         </Stack>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
