@@ -18,12 +18,9 @@ import {
 
 import { NavLink } from "react-router-dom";
 import { ExternalLinkIcon, LinkIcon } from "@chakra-ui/icons";
-import { HiExternalLink } from "react-icons/hi";
 import { Carousels } from "../Components/HomeComponents/Carousels";
 import { Carousels2 } from "../Components/HomeComponents/Carousels2";
 import { FollowPart } from "../Components/HomeComponents/FollowPart";
-import { FiArrowUpRight } from "react-icons/fi";
-import { BsArrowRight } from "react-icons/bs";
 import style from "../Components/Navbar/Navbar.module.css";
 
 export const HomePage = () => {

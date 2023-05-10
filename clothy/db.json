@@ -3,10 +3,21 @@
     {
       "name": "Ankit Choudhary",
       "email": "ankit123@gmail.com",
+      "password": "1234567890",
+      "isLogin": false,
+      "id":1
+    },
+    {
+      "name": "Deepak Mahesh Yadav",
+      "email": "deepakyad18@gmail.com",
+      "password": "1234",
+      "gender": "male",
+      "mobile": "9137270148",
+      "id": 2
       "password": "123456",
       "gender": "male",
       "mobile": "45682355",
-      "id": 1
+      "id": 2
     },
     {
       "name": "Saurabh Pandey",
@@ -14,7 +25,7 @@
       "password": "123123",
       "gender": "male",
       "mobile": "72355201",
-      "id": 2
+      "id": 3
     },
     {
       "name": "Vikas Suresh",
@@ -22,7 +33,7 @@
       "password": "789789",
       "gender": "male",
       "mobile": "789652354",
-      "id": 3
+      "id": 4
     }
   ],
   "products": [
