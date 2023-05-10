@@ -1,12 +1,11 @@
 {
   "AdminDetail": [
     {
-      "name": "ankit",
+      "id": 1,
+      "name": "Ankit Choudhary",
       "email": "ankit123@gmail.com",
-      "password": "123456",
-      "gender": "men",
-      "mobile": "453434",
-      "id": 1
+      "password": "67890",
+      "isLogin": false
     }
   ],
   "products": [
@@ -537,10 +536,10 @@
       "id": 30,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 3000,
       "category": "Leggings",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 2000,
       "rating": 4.6,
       "gender": "women",
       "images": [
@@ -554,10 +553,10 @@
       "id": 31,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 5000,
       "category": "Leggings",
       "brand": "RAYMOND",
-      "price": 1000,
+      "price": 3000,
       "rating": 1,
       "gender": "women",
       "images": [
@@ -571,10 +570,10 @@
       "id": 32,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2500,
       "category": "Leggings",
       "brand": "POLO",
-      "price": 1000,
+      "price": 1200,
       "rating": 2,
       "gender": "women",
       "images": [
@@ -588,10 +587,10 @@
       "id": 33,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2600,
       "category": "Leggings",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 1600,
       "rating": 3,
       "gender": "women",
       "images": [
@@ -605,10 +604,10 @@
       "id": 34,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2500,
       "category": "Leggings",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 1600,
       "rating": 4,
       "gender": "women",
       "images": [
@@ -622,10 +621,10 @@
       "id": 35,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2080,
       "category": "Leggings",
       "brand": "POLO",
-      "price": 1000,
+      "price": 1500,
       "rating": 1,
       "gender": "women",
       "images": [
@@ -639,10 +638,10 @@
       "id": 36,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2600,
       "category": "Leggings",
       "brand": "RAYMOND",
-      "price": 1000,
+      "price": 1055,
       "rating": 2,
       "gender": "women",
       "images": [
@@ -656,10 +655,10 @@
       "id": 37,
       "title": "Flared Leggings Gym wear",
       "description": "Perfect fitting leggings with modern touch and design",
-      "mrp_price": 2000,
+      "mrp_price": 2100,
       "category": "Leggings",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 1005,
       "rating": 3,
       "gender": "women",
       "images": [
@@ -673,10 +672,10 @@
       "id": 38,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 2006,
       "category": "Gawn",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 1800,
       "rating": 4,
       "gender": "women",
       "images": [
@@ -690,10 +689,10 @@
       "id": 39,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 7000,
       "category": "Gawn",
       "brand": "POLO",
-      "price": 1000,
+      "price": 5000,
       "rating": 5,
       "gender": "women",
       "images": [
@@ -707,10 +706,10 @@
       "id": 40,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 6000,
       "category": "Gawn",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 3000,
       "rating": 1,
       "gender": "women",
       "images": [
@@ -724,10 +723,10 @@
       "id": 41,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 9000,
       "category": "Gawn",
       "brand": "RAYMOND",
-      "price": 1000,
+      "price": 4000,
       "rating": 2,
       "gender": "women",
       "images": [
@@ -741,10 +740,10 @@
       "id": 42,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 8000,
       "category": "Gawn",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 4000,
       "rating": 3,
       "gender": "women",
       "images": [
@@ -758,10 +757,10 @@
       "id": 43,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 7000,
       "category": "Gawn",
       "brand": "POLO",
-      "price": 1000,
+      "price": 5500,
       "rating": 4,
       "gender": "women",
       "images": [
@@ -775,10 +774,10 @@
       "id": 44,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 6300,
       "category": "Gawn",
       "brand": "RAYMOND",
-      "price": 1000,
+      "price": 5600,
       "rating": 4.6,
       "gender": "women",
       "images": [
@@ -792,10 +791,10 @@
       "id": 45,
       "title": "Modern Gawn",
       "description": "Modern Gawn made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 5500,
       "category": "Gawn",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 4700,
       "rating": 1,
       "gender": "women",
       "images": [
@@ -809,10 +808,10 @@
       "id": 46,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 6700,
       "category": "Saree",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 3500,
       "rating": 2,
       "gender": "women",
       "images": [
@@ -826,10 +825,10 @@
       "id": 47,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 2600,
       "category": "Saree",
       "brand": "POLO",
-      "price": 1000,
+      "price": 1300,
       "rating": 3,
       "gender": "women",
       "images": [
@@ -843,10 +842,10 @@
       "id": 48,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 3000,
       "category": "Saree",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 2000,
       "rating": 4,
       "gender": "women",
       "images": [
@@ -877,10 +876,10 @@
       "id": 50,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 3000,
       "category": "Saree",
       "brand": "SMITH",
-      "price": 1000,
+      "price": 1500,
       "rating": 5,
       "gender": "women",
       "images": [
@@ -894,10 +893,10 @@
       "id": 51,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 3600,
       "category": "Saree",
       "brand": "POLO",
-      "price": 1000,
+      "price": 2600,
       "rating": 4,
       "gender": "women",
       "images": [
@@ -911,10 +910,10 @@
       "id": 52,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 2060,
       "category": "Saree",
       "brand": "HEORA",
-      "price": 1000,
+      "price": 1200,
       "rating": 1,
       "gender": "women",
       "images": [
@@ -928,10 +927,10 @@
       "id": 53,
       "title": "Designer Saree",
       "description": "Modern Designer Saree made with proper fit wear material along with light weigth desiner materials",
-      "mrp_price": 2000,
+      "mrp_price": 3800,
       "category": "Saree",
       "brand": "RAYMOND",
-      "price": 1000,
+      "price": 2800,
       "rating": 2,
       "gender": "women",
       "images": [
@@ -971,7 +970,7 @@
       "productQuantity": 1,
       "cart": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -986,7 +985,7 @@
       ],
       "wishlist": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -999,9 +998,9 @@
           "isFavourite": true
         }
       ],
-      "placedOrder": [
+      "orderPlaced": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1027,7 +1026,7 @@
       "gender": "male",
       "cart": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1042,7 +1041,7 @@
       ],
       "wishlist": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1055,9 +1054,9 @@
           "isFavourite": false
         }
       ],
-      "placedOrder": [
+      "orderPlaced": [
         {
-          "id": 1,
+          "id": 2,
           "title": "Soho Heritage Harrington Jacket",
           "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
           "price": 1890,
@@ -1100,6 +1099,21 @@
     }
   ],
   "TemporaryUserData": {
-    "cart": []
+    "cart": [
+      {
+        "id": 2,
+        "title": "Soho Heritage Harrington Jacket",
+        "quantity": 1,
+        "image": "https://assets.burberry.com/is/image/Burberryltd/93FB0DD4-CC1E-4F10-8A59-975E389BA547?$BBY_V2_SL_1x1$&wid=1251&hei=1251",
+        "price": 1890,
+        "price_c": 2490,
+        "discount": 24,
+        "size": "XL",
+        "color": "Black",
+        "label": "RELAXED FIT",
+        "category": "Jacket",
+        "isFavourite": false
+      }
+    ]
   }
 }
