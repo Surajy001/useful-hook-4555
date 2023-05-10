@@ -12,16 +12,7 @@
       "email": "deepakyad18@gmail.com",
       "password": "1234",
       "gender": "male",
-      "mobile": "9137270148",
-      "id": 2
-    },
-    {
-      "name": "Saurabh Pandey",
-      "email": "saurabh@gmail.com",
-      "password": "123123",
-      "gender": "male",
-      "mobile": "72355201",
-      "id": 3
+       "id": 2
     },
     {
       "name": "Vikas Suresh",
@@ -29,11 +20,12 @@
       "password": "789789",
       "gender": "male",
       "mobile": "789652354",
-      "id": 4
+      "id": 3
     }
   ],
-  "products": [
-    {
+
+  "products":   [
+      { 
       "id": 1,
       "title": "Vender men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
       "description": "Soft at skin, It keeps you cool and adds charm to your personality. Wear it in parties, weddings, traditional functions and festive occasion. Team it up with a sleeveless Kota and complement it with a pair of Kolhapur chappals to complete the look.",
@@ -70,6 +62,8 @@
         "https://m.media-amazon.com/images/I/71otndHEC1L._UL1280_.jpg"
       ]
     },
+    {
+,
     {
       "id": 3,
       "title": "Pro-Ethic Style Developer men's Cotton Solid Straight Kurta for men Stylish Latest Ethnic Wear Pack of 1",
@@ -1137,7 +1131,6 @@
   ],
   "TemporaryUserData": {
     "cart": [
-      {
         "id": 1,
         "title": "Vender men's Cotton Long Sleeve Embroidered Mirror Work Kurta (Rama)",
         "description": "Soft at skin, It keeps you cool and adds charm to your personality. Wear it in parties, weddings, traditional functions and festive occasion. Team it up with a sleeveless Kota and complement it with a pair of Kolhapur chappals to complete the look.",
@@ -1245,6 +1238,7 @@
           "https://m.media-amazon.com/images/I/71gvQVVWCtL._UL1500_.jpg",
           "https://m.media-amazon.com/images/I/81QEIP11hCL._UL1500_.jpg"
         ]
+      ]
       }
     ]
   }
