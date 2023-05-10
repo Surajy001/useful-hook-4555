@@ -10,7 +10,7 @@
     background:red;
     font-size: 13px;
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Raleway:ital,wght@1,900&display=swap');
 .logo::first-letter {
     font-size: 30px;
@@ -25,6 +25,9 @@
     margin-bottom: auto;
 }
   
+.header{
+    font-family:"Roboto" ;
+}
 
   @media screen and (min-width: 10px) {
     .name {

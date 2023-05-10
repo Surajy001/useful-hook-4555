@@ -15,123 +15,125 @@ import {
   Input,
   Select,
 } from '@chakra-ui/react'
-import { useDispatch, useSelector } from 'react-redux';
-import { addProduct } from '../../Redux/Admin/action';
+import { useDispatch } from 'react-redux';
+import { addProduct, getMenProduct, getWomenProduct } from '../../Redux/Admin/action';
 
-
-const initialState = {
-  title: "",
-  description: "",
-  category: "",
-  brand: "",
-  price: "",
-  rating: "",
-  gender: "",
-  image1: "",
-  image2: "",
-  image3: "",
-  image4: "",
-};
-
-const reducer = (state, action) => {
-  const { type, payload } = action;
-  switch (type) {
-    case "title": {
-      return {
-        ...state,
-        title: payload,
-      }
-    }
-    case "description": {
-      return {
-        ...state,
-        description: payload,
-      }
-    }
-    case "category": {
-      return {
-        ...state,
-        category: payload,
-      }
-    }
-    case "brand": {
-      return {
-        ...state,
-        brand: payload,
-      }
-    }
-    case "price": {
-      return {
-        ...state,
-        price: +payload,
-      }
-    }
-    case "rating": {
-      return {
-        ...state,
-        rating: +payload,
-      }
-    }
-    case "gender": {
-      return {
-        ...state,
-        gender: payload,
-      }
-    }
-    case "image1": {
-      return {
-        ...state,
-        image1: payload,
-      }
-    }
-    case "image2": {
-      return {
-        ...state,
-        image2: payload,
-      }
-    }
-    case "image3": {
-      return {
-        ...state,
-        image3: payload,
-      }
-    }
-    case "image4": {
-      return {
-        ...state,
-        image4: payload,
-      }
-    }
-    case "reset": {
-      return initialState;
-    }
-    default:
-      return state;
-  }
-}
 
 const AddProduct = () => {
+
+  const reducer = (state, action) => {
+    const { type, payload } = action;
+    switch (type) {
+      case "title": {
+        return {
+          ...state,
+          title: payload,
+        }
+      }
+      case "description": {
+        return {
+          ...state,
+          description: payload,
+        }
+      }
+      case "category": {
+        return {
+          ...state,
+          category: payload,
+        }
+      }
+      case "brand": {
+        return {
+          ...state,
+          brand: payload,
+        }
+      }
+      case "price": {
+        return {
+          ...state,
+          price: +payload,
+        }
+      }
+      case "rating": {
+        return {
+          ...state,
+          rating: +payload,
+        }
+      }
+      case "gender": {
+        return {
+          ...state,
+          gender: payload,
+        }
+      }
+      case "images": {
+        return {
+          ...state,
+          images:  [state.image1, state.image2, state.image3, state.image4],
+        }
+      }
+      case "image1": {
+        return {
+          ...state,
+          image1:payload,
+        }
+      }
+      case "image2": {
+        return {
+          ...state,
+          image2: payload,
+        }
+      }
+      case "image3": {
+        return {
+          ...state,
+          image3: payload,
+        }
+      }
+      case "image4": {
+        return {
+          ...state,
+          image4: payload,
+        }
+      }
+      case "reset": {
+        return initialState;
+      }
+      default:
+        return state;
+    }
+  }
+
+  let initialState = {
+    title: "", description: "", category: "", brand: "", price: "", rating: "", gender: "", images: [], image1: "", image2: "", image3: "", image4: "",
+  };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, dispatch] = useReducer(reducer, initialState);
   const dispatcher = useDispatch();
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatcher(addProduct(state));
-    dispatch({ type: "reset" });
+    dispatcher(addProduct({
+      title: state.title, description: state.description, category: state.category, brand: state.brand, price: state.price, gender: state.gender, rating: state.rating, images: state.images
+    })).then(() => {
+      dispatcher(getMenProduct());
+      dispatcher(getWomenProduct());
+      dispatch({ type: "reset" });
+    })
   }
 
   const handleChange = (e) => {
     dispatch({ type: e.target.name, payload: e.target.value })
+    dispatch({ type: "images" })
   }
 
   return (
     <div>
       <Button
-      boxShadow={"md"}
-      border={"1px solid grey"}
-      size={"sm"}
+        boxShadow={"md"}
+        border={"1px solid grey"}
+        size={"sm"}
         onClick={() => {
           onOpen()
         }}
@@ -177,7 +179,7 @@ const AddProduct = () => {
                   >
                     <option value="tshirt">T Shirt</option>
                     <option value="shirt">Shirt</option>
-                    <option value="shorts">Jacket</option>
+                    <option value="jacket">Jacket</option>
                     <option value="jeans">Jeans</option>
                   </Select>
                 </FormControl>
