@@ -50,8 +50,8 @@ const OrderPage = () => {
                     </Drawer>
                 </Box>
                 <Box w={"92%"}>
-                    <Box display={"flex"} justifyContent={"space-between"} pr={20} pl={20} alignItems={"center"} mt={3}>
-                        <p>fasdfaasd</p>
+                    <Box display={"flex"} justifyContent={"flex-end"} pr={20} pl={20} alignItems={"center"} mt={3}>
+                    
                     </Box>
 
                     <Box border={"1px solid"} w={"92%"} margin={"auto"} mt={5} borderRadius={7}>
