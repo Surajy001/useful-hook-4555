@@ -4,8 +4,8 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../../actionType";
  const init = {
     isLoading : false,
     isError:false,
-    admindata:[],
-    isAuth:localStorage.getItem("loginIsAuth")||false,
+    admindata:{},
+   //  isAuth:localStorage.getItem("loginIsAuth")||false,
 
  }
  export const reducer = (state = init,{type,payload})=>{

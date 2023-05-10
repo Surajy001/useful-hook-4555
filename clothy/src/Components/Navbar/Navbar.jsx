@@ -34,6 +34,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BiUser } from "react-icons/bi";
 
 import { HiShoppingCart } from "react-icons/hi";
+import Search from "../HomeComponents/SearchFunction";
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -157,7 +158,8 @@ export const Navbar = () => {
             >
               <FiSearch />
             </InputLeftElement>
-            <Input placeholder="Search..." border={"1px solid gray"} />
+            {/* <Input placeholder="Search..." border={"1px solid gray"} /> */}
+            <Search />
           </InputGroup>
 
           <Stack

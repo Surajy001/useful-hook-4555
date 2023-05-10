@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { patchUserData } from "../../Redux/AuthReducer/action";
 import axios from "axios";
 import style from '../OtherPages/style.module.css'
@@ -23,31 +23,29 @@ import style from '../OtherPages/style.module.css'
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
-
   const {user}=useSelector((store)=>store.authReducer);
 
   const isAuth=useSelector((store)=>store.authReducer.isAuth);
+  const location=useLocation();
   //console.log(location.state)
-
-
   const dispatch=useDispatch();
-
   const navigate = useNavigate();
   const toast = useToast();
-  const location = useLocation();
+  
+  // const location = useLocation();
 
   //  console.log('auth',isAuth)
 
-  const wrongEmail = () => {
-    toast({
-      title: "Wrong Email address or Password.",
-      description: "Please enter right email address or password!!!",
-      status: "error",
-      duration: 3000,
-      isClosable: true,
-      position: "top",
-    });
-  };
+  // const wrongEmail = () => {
+  //   toast({
+  //     title: "Wrong Email address or Password.",
+  //     description: "Please enter right email address or password!!!",
+  //     status: "error",
+  //     duration: 3000,
+  //     isClosable: true,
+  //     position: "top",
+  //   });
+  // };
 
   const loginSuccess = () => {
     toast({
@@ -68,6 +66,7 @@ const Signin=()=> {
      let UserDetails =   Mendata.find((item)=>{
         return item.email=== email&& item.password===password        
      })
+
       // let res = await axios("http://localhost:8080/UserDetails").then((resdata)=>{
       //     //  console.log(data.data);
       //     let userFilterData=resdata?.data?.map((el)=>{
@@ -89,7 +88,7 @@ const Signin=()=> {
       // })
       console.log(UserDetails)
       if(UserDetails&&UserDetails.email===email){
-        if(UserDetails.password!=password){
+        if(UserDetails.password!==password){
           toast({
             title: "Login Failed.",
             description: "Wrong Password",
@@ -143,7 +142,8 @@ const Signin=()=> {
     setemail("");
     setPassword("");
     // window.location.reload();
-  };
+  }
+
 
   return (
       <Flex

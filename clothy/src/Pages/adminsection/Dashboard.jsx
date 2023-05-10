@@ -37,7 +37,7 @@ const AdminsPage = ()=>{
             </DrawerContent>
           </Drawer>
         </Box>
-        {/* <Box w={"92%"}>
+        <Box w={"92%"}>
           <Box display={"flex"} justifyContent={"space-between"} pr={20} pl={20} alignItems={"center"} mt={3} >
             <p>fasdfaasd</p>
             <AddAdmin/>
@@ -46,7 +46,7 @@ const AdminsPage = ()=>{
           <Box border={"1px solid"} w={"92%"} margin={"auto"} mt={5} borderRadius={7}>
             <Heading color={"#718096"} py={3}>Dashboard</Heading>
           </Box>
-        </Box> */}
+        </Box>
       </Box>
     </Box>
     );
