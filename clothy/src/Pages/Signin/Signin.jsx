@@ -23,6 +23,9 @@ import style from '../OtherPages/style.module.css'
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
+  const {user}=useSelector((store)=>store.authReducer);
+
+  const isAuth=useSelector((store)=>store.authReducer.isAuth);
   const location=useLocation();
   //console.log(location.state)
   const dispatch=useDispatch();
@@ -63,7 +66,27 @@ const Signin=()=> {
      let UserDetails =   Mendata.find((item)=>{
         return item.email=== email&& item.password===password        
      })
-      
+
+      // let res = await axios("http://localhost:8080/UserDetails").then((resdata)=>{
+      //     //  console.log(data.data);
+      //     let userFilterData=resdata?.data?.map((el)=>{
+      //       if (el.email === email && el.password === password) {
+                  
+      //         console.log(el)
+      //         dispatch(patchUserData(el,el.id))
+      //         return el
+      //       }
+      //      })
+      //      console.log(userFilterData)
+      //     if(userFilterData.length ===0){
+      //       wrongEmail();
+      //     }else{
+      //       loginSuccess();
+      //       navigate(`${location.state}`);
+      //     }
+
+      // })
+      console.log(UserDetails)
       if(UserDetails&&UserDetails.email===email){
         if(UserDetails.password!==password){
           toast({

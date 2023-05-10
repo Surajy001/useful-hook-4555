@@ -39,7 +39,7 @@ const Signup=()=> {
   const dispatch = useDispatch();
 
   const [showPassword, setShowPassword] = useState(false);
-
+  const [confirmPassword,setConfirmPassword] = useState('');
   const navigate = useNavigate();
   const toast = useToast();
 
@@ -84,7 +84,8 @@ const Signup=()=> {
 
   const postdata = async (e) => {
     e.preventDefault();
-    setUserData(initialState);
+
+
     try {
       let res = await fetch("http://localhost:8080/UserDetails");
 
@@ -108,6 +109,17 @@ const Signup=()=> {
     } catch (error) {
       console.log(error);
     }
+    if(confirmPassword!==userData.password){
+        toast({
+          title:'Confirm password and password should be same',
+          description:'Please re-enter password and Confirm password',
+          status:'error',
+          isClosable:true,
+          duration:2000,
+          position:"top-left"
+        })
+        return
+    }
 
     if (
       !mailAuth &&
@@ -121,6 +133,8 @@ const Signup=()=> {
     } else {
       fillRequiredData();
     }
+    setUserData(initialState);
+    setConfirmPassword('');
   };
 
   return (
@@ -172,7 +186,7 @@ const Signup=()=> {
                   onChange={(e) => handleChange(e)}
                   name="gender"
                 >
-                  <option value=""></option>
+                  <option value="">Chose Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </Select>
@@ -221,12 +235,12 @@ const Signup=()=> {
               </FormControl>
 
               <FormControl id="re-password" isRequired>
-                <FormLabel>Re-Enter Password</FormLabel>
+                <FormLabel>Confirm Password</FormLabel>
                 <Input
                   type="password"
-                  onChange={(e) => handleChange(e)}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   name="password"
-                  value={userData.password}
+                  value={confirmPassword}
                 />
               </FormControl>
               <Stack spacing={10} pt={2}>

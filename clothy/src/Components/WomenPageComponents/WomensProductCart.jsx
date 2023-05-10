@@ -61,6 +61,18 @@ const WomensProductCart = ({
       mb="4"
       // className={style.productCard}
     >
+      
+      {/* {favStatus ? (
+        <FavoriteIcon
+          onClick={(e)=>AddTOFav(e,id)}
+          className={style.Favourite_icon_filled_product}
+        />
+      ) : (
+        <FavoriteBorderOutlinedIcon
+          onClick={AddTOFav}
+          className={style.Favourite_icon_outlined_product}
+        />
+      )} */}
       <Image
         src={images[currentImageIndex]}
         alt="none"

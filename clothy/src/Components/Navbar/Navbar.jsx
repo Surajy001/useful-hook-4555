@@ -32,13 +32,15 @@ import { ButtonLogout } from "./ButtonLogout";
 import { useDispatch, useSelector } from "react-redux";
 
 import { BiUser } from "react-icons/bi";
+
 import { HiShoppingCart } from "react-icons/hi";
 import Search from "../HomeComponents/SearchFunction";
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const {  user } = useSelector((store) => store.authReducer);
+  const {Cart} = useSelector((store)=>store.CartReducer)
+  // console.log(Cart?.length||user?.Cart.length)
   const {isAuth} = user;
   const toast = useToast();
   const logoutSuccess = () => {
@@ -169,7 +171,7 @@ export const Navbar = () => {
             padding=" 0 1rem"
           >
             {isAuth ? (
-              <>
+              <div>
                 {/* <ButtonLogout
                     style={{ marginRight: "10px" }}
                     logout={() => {
@@ -178,7 +180,7 @@ export const Navbar = () => {
                       window.location.reload();
                     }}
                   /> */}
-                <Menu>
+                <Menu >
                   <MenuButton
                     as={Button}
                     rounded={"full"}
@@ -216,7 +218,7 @@ export const Navbar = () => {
     </MenuGroup> */}
                   </MenuList>
                 </Menu>
-              </>
+              </div>
             ) : (
               <NavLink
                 style={({ isActive }) => ({
@@ -292,7 +294,7 @@ export const Navbar = () => {
                     borderRadius={"50%"}
                     position={'relative'}
                   >
-                    <span style={{ textAlign: "center",position:'sticky',top:'0rem' }}>0</span>
+                    <span style={{ textAlign: "center",position:'sticky',top:'0rem' }}>{0}</span>
                   </Text>
                 </Box>
               </Tooltip>
@@ -314,7 +316,7 @@ export const Navbar = () => {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} pt={4} display={{ md: "none" }}>
+          <Box pb={4} pt={4} display={{ md: "none" }} >
             <Stack as={"nav"} spacing={4}>
               {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
@@ -329,67 +331,71 @@ export const Navbar = () => {
                 </InputLeftElement>
                 <Input placeholder="Search..." border={"1px solid gray"} />
               </InputGroup>
-              <Link
-                px={2}
-                py={1}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                }}
-                href={"#"}
+              <NavLink
+              to="/menproducts"
+              style={({ isActive }) => ({
+                color: isActive ? "#fff" : "#545e6f",
+                background: isActive ? "#7600dc" : "white",
+                fontFamily:'cursive',
+                fontSize:'1.4rem',
+                borderRadius:'10px',
+                fontWeight:'bold'
+              })}
               >
                 Men
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                }}
-                href={"#"}
+              </NavLink>
+              <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "#fff" : "#545e6f",
+                background: isActive ? "#7600dc" : "white",
+                fontFamily:'cursive',
+                fontSize:'1.4rem',
+                borderRadius:'10px',
+                fontWeight:'bold'
+              })}
+                to={"/womenproducts"}
               >
                 Women
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                }}
-                href={"#"}
+              </NavLink>
+              <NavLink
+                 style={({ isActive }) => ({
+                  color: isActive ? "#fff" : "#545e6f",
+                  background: isActive ? "#7600dc" : "white",
+                  fontFamily:'cursive',
+                  fontSize:'1.4rem',
+                  borderRadius:'10px',
+                  fontWeight:'bold'
+                })}
+                to={"/About "}
               >
-                Accessories
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                }}
-                href={"#"}
+                About
+              </NavLink>
+              <NavLink
+                  style={({ isActive }) => ({
+                    color: isActive ? "#fff" : "#545e6f",
+                    background: isActive ? "#7600dc" : "white",
+                    fontFamily:'cursive',
+                    fontSize:'1.4rem',
+                    borderRadius:'10px',
+                    fontWeight:'bold'
+                  })}
+                to={"/winter"}
               >
                 Winter
-              </Link>
-              <Link
-                to={""}
-                px={2}
-                py={1}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                }}
-                href={"#"}
+              </NavLink>
+              <NavLink
+                  style={({ isActive }) => ({
+                    color: isActive ? "#fff" : "#545e6f",
+                    background: isActive ? "#7600dc" : "white",
+                    fontFamily:'cursive',
+                    fontSize:'1.4rem',
+                    borderRadius:'10px',
+                    fontWeight:'bold'
+                  })}
+                to={"/sale"}
               >
-                sale
-              </Link>
+                Sale
+              </NavLink>
             </Stack>
           </Box>
         ) : null}
@@ -397,3 +403,6 @@ export const Navbar = () => {
     </>
   );
 };
+
+
+// Dark Mode will
