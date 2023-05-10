@@ -15,7 +15,7 @@ const Card = () => {
     Year: "",
     cvv: "",
   });
-  console.log(show);
+  //console.log(show);
   // add all the previous and current data in array
 
   const [add, setAdd] = useState([]);

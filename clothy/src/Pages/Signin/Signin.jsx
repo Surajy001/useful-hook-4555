@@ -23,29 +23,13 @@ import style from '../OtherPages/style.module.css'
 const Signin=()=> {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
-  const {user}=useSelector((store)=>store.authReducer);
 
-  const isAuth=useSelector((store)=>store.authReducer.isAuth);
   const location=useLocation();
   //console.log(location.state)
   const dispatch=useDispatch();
   const navigate = useNavigate();
   const toast = useToast();
   
-  // const location = useLocation();
-
-  //  console.log('auth',isAuth)
-
-  // const wrongEmail = () => {
-  //   toast({
-  //     title: "Wrong Email address or Password.",
-  //     description: "Please enter right email address or password!!!",
-  //     status: "error",
-  //     duration: 3000,
-  //     isClosable: true,
-  //     position: "top",
-  //   });
-  // };
 
   const loginSuccess = () => {
     toast({
@@ -67,26 +51,7 @@ const Signin=()=> {
         return item.email=== email&& item.password===password        
      })
 
-      // let res = await axios("http://localhost:8080/UserDetails").then((resdata)=>{
-      //     //  console.log(data.data);
-      //     let userFilterData=resdata?.data?.map((el)=>{
-      //       if (el.email === email && el.password === password) {
-                  
-      //         console.log(el)
-      //         dispatch(patchUserData(el,el.id))
-      //         return el
-      //       }
-      //      })
-      //      console.log(userFilterData)
-      //     if(userFilterData.length ===0){
-      //       wrongEmail();
-      //     }else{
-      //       loginSuccess();
-      //       navigate(`${location.state}`);
-      //     }
-
-      // })
-      console.log(UserDetails)
+      //console.log(UserDetails)
       if(UserDetails&&UserDetails.email===email){
         if(UserDetails.password!==password){
           toast({
@@ -113,29 +78,7 @@ const Signin=()=> {
           position: "top",
         })
       }
-      // let Auth = false;
-      // for (let i in data) {
-      //   if (data[i].email === email && data[i].password === password) {
-      //     // Auth = true;
-      //     dispatch(patchUserData(data[i],data[i].id)).then(()=>{
-      //     })
-          // data[i].isAuth=true;
-
-          // localStorage.setItem("name", data[i].name);
-          // return
-        // }
-        // else{
-        //   wrongEmail();
-        // }
-          //}
-
-      // if (!isAuth) {
-      //   wrongEmail();
-      // } else {
-      //   loginSuccess();
-      //   navigate("/");
-      // }
-
+    
     } catch (error) {
       console.log(error);
     }

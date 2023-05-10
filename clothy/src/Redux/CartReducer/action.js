@@ -4,7 +4,7 @@ import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER, GET_CART_PRODUCTS_FOR_A
 export const AddtoCartData = (cartData)=>(dispatch)=>{
     try{
         return axios.patch('http://localhost:8080/TemporaryUserData',cartData).then((res)=>{
-            console.log(res.data);
+            //console.log(res.data);
             dispatch({type:ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER,payload:res.data})
         })
     }catch(error){
@@ -14,7 +14,7 @@ export const AddtoCartData = (cartData)=>(dispatch)=>{
 export const GetTemperaryCartData =(dispatch)=>{
     try{
         return axios('http://localhost:8080/TemporaryUserData').then((res)=>{
-            console.log(res.data.cart);
+            //console.log(res.data.cart);
             dispatch({type:GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER,payload:res.data.cart})
         })
     }catch(error){
@@ -28,7 +28,7 @@ export const PostTemporaryDataOfUser = async(Cart,dataCart)=>async(dispatch)=>{
                cart: [...Cart, dataCart],
              })
              .then((response) => {
-               console.log(response.data);
+               //console.log(response.data);
              })
              
          } catch(error) {

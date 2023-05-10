@@ -23,21 +23,21 @@ function CartItem() {
 
   const navigate = useNavigate();
   const CheckAuth = () => {
-    console.log(isAuth);
+    //console.log(isAuth);
     isAuth ? navigate("/payment") : navigate("/signin");
   };
   useEffect(() => {
-    console.log(CartTotal)  
+    //console.log(CartTotal)  
     if(isAuth){
       const {cart} = user;
       setMainCart(cart);
-      console.log(Cart);
+      //console.log(Cart);
     }else{
       axios
       .get("http://localhost:8080/TemporaryUserData")
       .then((data) => {
         let CartData = data.data.cart;
-        console.log(CartData);
+        //console.log(CartData);
         setMainCart(CartData);
         dispatch({type:GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER,payload:CartData})
       })
@@ -45,17 +45,17 @@ function CartItem() {
     setTimeout(() => {
       setLoading(true);
     }, 1500);
-    console.log(CartTotal)
+    //console.log(CartTotal)
     let total = MainCart.reduce((item,p)=>{
       return item+p.price
     },0)
-    console.log(total)
+    //console.log(total)
     dispatch({type:PATCH_TOTAL_PRICE,payload:total})
   }, []);
   return (
     <Box className={style.Cart_Main_Page}>
       {/* <h1>Welcome {email}</h1>   */}
-      {console.log(MainCart)}
+      {/* {console.log(MainCart)} */}
       <Box className={style.cart_item}>
         {MainCart?.map((item) => {
           return (
