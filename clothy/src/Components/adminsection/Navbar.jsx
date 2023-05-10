@@ -33,7 +33,7 @@ const Navbar = ({ onclick }) => {
                     icon={<FiMenu />}
                     size="sm"
                 />
-                <Flex display={{ base: "none", md: "flex" }} justifyContent={"center"} w={"93.1%"}>
+                <Flex display={{ base: "none", md: "flex" }} justifyContent={"center"} w={"91%"}>
                     <InputGroup display={{ base: "none", md: "flex" }} w={"40%"}>
                         <InputLeftElement color="gray.500" cursor="pointer" _hover={{ color: "blue" }}>
                             <FiSearch />
@@ -42,13 +42,13 @@ const Navbar = ({ onclick }) => {
                     </InputGroup>
                 </Flex>
 
-                <Flex align="center" justifyContent={"space-between"} w={"5.5%"}>
+                <Flex align="center" w={"9%"}>
                     <Avatar
                         size="sm"
-                        name={data[0]?.name}
+                        name={data?.name}
                         cursor="pointer"
                     />
-                    <Text fontWeight={"bold"} fontSize={"lg"}>{data[0]?.name}</Text>
+                    <Text fontWeight={"bold"}>{data?.name}</Text>
                 </Flex>
             </Flex>
         </Flex >
