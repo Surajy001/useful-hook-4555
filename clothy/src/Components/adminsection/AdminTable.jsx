@@ -26,8 +26,9 @@ const AdminTable = () => {
       useEffect(()=>{
         getData("http://localhost:8080/AdminDetail").then((res) => {
       setData(res);
+
     });
-      },[data]);
+      },[data?.length]);
    
 
     return (

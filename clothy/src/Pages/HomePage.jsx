@@ -27,12 +27,14 @@ export const HomePage = () => {
   return (
     <Container maxW={"95%"} marginBottom={"40px"}>
       <Stack
+      textAlign={'center'}
         align={"center"}
+        margin={'auto 13rem'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
         direction={{ base: "column", md: "row" }}
       >
-        <Stack spacing={{ base: 1, md: 5 }} w={"200px"}>
+        <Stack spacing={{ base: 1, md: 5 }} w={"200px"} >
           <Text>
             Fashion is a form of self-expression and autonomy at a particular
             period.
