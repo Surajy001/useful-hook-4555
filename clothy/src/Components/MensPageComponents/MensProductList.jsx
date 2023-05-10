@@ -98,7 +98,7 @@ const MensProductList = () => {
   const { isAuth, cart } = user;
   const { Cart } = useSelector((state) => state.CartReducer);
   const AddToCart =async (id) => {
-    console.log(id);
+    //console.log(id);
     if (isAuth) {
       let cartDetails = cart?.find((item) => item.id === id);
       if (cart.includes(cartDetails)) {
@@ -143,7 +143,7 @@ const MensProductList = () => {
               cart: [...Cart, dataCart],
             })
             .then((response) => {
-              console.log(response.data);
+              //console.log(response.data);
               toast({
                 title: "Congratulations, Product Added To Cart!!👍",
                 description: `🚀Go to the cart page to see the cart-details`,

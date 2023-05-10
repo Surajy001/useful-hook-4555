@@ -329,7 +329,8 @@ export const Navbar = () => {
                 >
                   <FiSearch />
                 </InputLeftElement>
-                <Input placeholder="Search..." border={"1px solid gray"} />
+                {/* <Input placeholder="Search..." border={"1px solid gray"} /> */}
+                <Search />
               </InputGroup>
               <NavLink
               to="/menproducts"

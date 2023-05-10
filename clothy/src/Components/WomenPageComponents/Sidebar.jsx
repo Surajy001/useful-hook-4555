@@ -42,7 +42,7 @@ setCategory(newCategory);
   }else{
    newBrand.push(value);
   }
-  console.log("newBrand", newBrand);
+  //console.log("newBrand", newBrand);
   setBrand(newBrand);
  };
 

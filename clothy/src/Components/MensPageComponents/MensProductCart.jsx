@@ -58,7 +58,7 @@ const MensProductCart = ({
   };
   const AddTOFav = () => {
     // console.log(favourite.find())
-    console.log(id,WishList)
+    //console.log(id,WishList)
     let WhishListData = WishList?.find(item=>item.id==id);
     setFavStatus(!favStatus);
     if (!favStatus&&!WhishListData) {

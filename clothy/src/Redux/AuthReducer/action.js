@@ -23,7 +23,7 @@ export const addUserData =
      return axios.patch(`http://localhost:8080/UserDetails/${id}`, {...newUserData,isAuth:true})
       .then((res) => {
         //  console.log(res.data.isAuth);
-         console.log("data",res.data);
+         //console.log("data",res.data);
 
           dispatch({ type: PATCH_SUCCESS, payload:res.data });
         })
