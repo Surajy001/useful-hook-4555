@@ -1,11 +1,10 @@
 {
   "AdminDetail": [
     {
-      "id": 1,
-      "name": "Ankit Choudhary",
-      "email": "ankit123@gmail.com",
-      "password": "1234567890",
-      "isLogin": false
+      
+      "email": "psaurabh574@gmail.com",
+      "password": "1234"
+      
     }
   ],
 
