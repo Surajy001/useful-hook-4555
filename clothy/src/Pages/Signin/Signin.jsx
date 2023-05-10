@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { patchUserData } from "../../Redux/AuthReducer/action";
 import axios from "axios";
 import style from '../OtherPages/style.module.css'
