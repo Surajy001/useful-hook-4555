@@ -17,7 +17,7 @@ const reducer =(state=initialState,{type,payload})=>{
                 Cart:[...state.Cart,payload]
             }
         case GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER:
-            console.log(payload)
+            //console.log(payload)
             return{
                 ...state,
                 Cart:[...payload]
@@ -28,7 +28,7 @@ const reducer =(state=initialState,{type,payload})=>{
                 CartTotal:payload
             }
         case ADD_PRODUCT_TO_WISH_LIST:
-            console.log(payload)
+            //console.log(payload)
             return{
                 ...state,
                 WishList:[...state.WishList,payload]

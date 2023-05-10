@@ -16,7 +16,7 @@
     export const womengetProducts =(paramObj)=> (dispatch)=>{
     dispatch({type:WOMENS_PRODUCT_REQUEST});
     axios.get(`http://localhost:8080/products`,paramObj).then((res)=>{
-        console.log("product-wow",res.data);
+        //console.log("product-wow",res.data);
         let womenFilterData=res.data.filter((item)=>{
     return item.gender === "women";
 

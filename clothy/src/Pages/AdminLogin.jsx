@@ -143,16 +143,10 @@ const AdminLogin = () => {
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    // if(isAuth){
-    //   navigate("/admin-dashboard")
-    //   return
-    // }
     dispatch(adminLoginAction(formState))
   
     
       if (data?.email === formState.email && data?.password === formState.password) {
-        // isAuth=true;
-        // localStorage.setItem("loginIsAuth",isAuth);
         navigate("/admin-dashboard")
         toast({
           title: "Login Success.",

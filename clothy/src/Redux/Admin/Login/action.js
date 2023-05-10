@@ -9,7 +9,7 @@ export const adminLoginAction =(newuser)=> (dispatch) => {
         axios.get(`http://localhost:8080/AdminDetail`).then(res => {
             const {email , password}=newuser;
             let newUser=res.data.find((item)=> item.email===email && item.password===password)
-            console.log(res.data);
+            //console.log(res.data);
             dispatch({ type: LOGIN_SUCCESS, payload: newUser})
         })
     } catch (error) {

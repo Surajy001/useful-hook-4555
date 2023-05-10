@@ -1,10 +1,6 @@
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
-
-
-
 import Sidebar from '../Components/WomenPageComponents/Sidebar';
-
 import WomensProductList from '../Components/WomenPageComponents/WomensProductList';
 
 export const WomensPage = () => {

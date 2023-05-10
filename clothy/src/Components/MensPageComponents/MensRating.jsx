@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 
 export default function HalfRating({rating}) {
 
-    console.log("ratttingpage",rating);
+    //console.log("ratttingpage",rating);
   return (
     <Stack spacing={1}>
       <Rating  defaultValue={rating} precision={0.1} />

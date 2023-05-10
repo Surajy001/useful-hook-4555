@@ -35,7 +35,7 @@ function CartItemCard({
         // console.log(favourite.find())
         setFavStatus(!favStatus)
         let isFavExist = favourite.find((item)=>item.title === title);
-        console.log(isFavExist);
+        //console.log(isFavExist);
   }
   const DecreaseQuantity =()=>{
         setQuantity(prev=>prev-1)
@@ -53,7 +53,7 @@ const IncreaseQuantity = () =>{
             <FavoriteBorderOutlinedIcon onClick={AddTOFav} className={style.Favourite_icon_outlined} />
         }
       <div className={style.ImageButton}>
-        {console.log(images)}
+        {/* {console.log(images)} */}
         <Image src={image||images[0]} alt={title} />
         <Button onClick={IncreaseQuantity}  disabled={quantity===5} className={style.Inc}>+</Button>
         <Button 

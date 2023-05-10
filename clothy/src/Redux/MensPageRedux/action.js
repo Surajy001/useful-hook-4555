@@ -16,12 +16,12 @@ export const menaddProduct = (newProduct)=>(dispatch)=>{
 export const mengetProducts =(paramObj)=> (dispatch)=>{
 dispatch({type:MENS_PRODUCT_REQUEST});
 axios.get(`http://localhost:8080/products`,paramObj).then((res)=>{
-    console.log("product-wow",res.data);
+    //console.log("product-wow",res.data);
     let menFilterData=res.data.filter((item)=>{
 return item.gender === "men";
 
     })
-    console.log(menFilterData);
+    //console.log(menFilterData);
     dispatch({type:MENS_GET_PRODUCT_SUCCESS,payload:menFilterData});
 }).catch((err)=>{
     console.error(err);
