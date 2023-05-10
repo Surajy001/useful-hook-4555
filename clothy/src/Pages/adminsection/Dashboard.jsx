@@ -3,18 +3,13 @@ import Sidebar from "../../Components/adminsection/Sidebar";
 import Navbar from "../../Components/adminsection/Navbar";
 import { useEffect } from "react";
 import AddAdmin from "../../Components/adminsection/AddAdmin";
+import Statistics from "../../Components/adminsection/Statistics";
+import AdminTable from "../../Components/adminsection/AdminTable";
 
 
 
 const AdminsPage = ()=>{
     const sidebar = useDisclosure();
-  
-
-    useEffect(()=>{
-    //   dispatcher(getMenProduct)
-    },[])
-
-    
 
     return (
       <Box>
@@ -38,13 +33,17 @@ const AdminsPage = ()=>{
           </Drawer>
         </Box>
         <Box w={"92%"}>
-          <Box display={"flex"} justifyContent={"space-between"} pr={20} pl={20} alignItems={"center"} mt={3} >
-            <p>fasdfaasd</p>
+          <Box display={"flex"} justifyContent={"flex-end"} pr={20} pl={20} alignItems={"center"} mt={3} >
             <AddAdmin/>
           </Box>
 
-          <Box border={"1px solid"} w={"92%"} margin={"auto"} mt={5} borderRadius={7}>
+          <Box boxShadow={"xl"} w={"92%"} margin={"auto"} mt={5} pb={3}borderRadius={7} border={"1px solid #CBD5E0"}>
             <Heading color={"#718096"} py={3}>Dashboard</Heading>
+            <Statistics/>
+          </Box>
+          <Box border={"1px solid"} w={"92%"} margin={"auto"} mt={5} borderRadius={7}>
+            <Heading color={"#718096"} py={3}>Admin Details</Heading>
+            <AdminTable/>
           </Box>
         </Box>
       </Box>
