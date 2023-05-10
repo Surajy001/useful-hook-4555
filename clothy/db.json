@@ -1062,7 +1062,7 @@
           "isFavourite": false
         }
       ],
-      "orderPlaced": [
+      "placedOrder": [
         {
           "id": 2,
           "title": "Soho Heritage Harrington Jacket",
