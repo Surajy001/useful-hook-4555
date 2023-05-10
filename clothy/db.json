@@ -1,11 +1,28 @@
 {
   "AdminDetail": [
     {
-      "id": 1,
       "name": "Ankit Choudhary",
       "email": "ankit123@gmail.com",
-      "password": "1234567890",
-      "isLogin": false
+      "password": "123456",
+      "gender": "male",
+      "mobile": "45682355",
+      "id": 1
+    },
+    {
+      "name": "Saurabh Pandey",
+      "email": "saurabh@gmail.com",
+      "password": "123123",
+      "gender": "male",
+      "mobile": "72355201",
+      "id": 2
+    },
+    {
+      "name": "Vikas Suresh",
+      "email": "vikas@gmail.com",
+      "password": "789789",
+      "gender": "male",
+      "mobile": "789652354",
+      "id": 3
     }
   ],
   "products": [
@@ -998,7 +1015,7 @@
           "isFavourite": true
         }
       ],
-      "orderPlaced": [
+      "placedOrder": [
         {
           "id": 2,
           "title": "Soho Heritage Harrington Jacket",
@@ -1054,7 +1071,7 @@
           "isFavourite": false
         }
       ],
-      "orderPlaced": [
+      "placedOrder": [
         {
           "id": 2,
           "title": "Soho Heritage Harrington Jacket",
@@ -1130,6 +1147,24 @@
           "https://m.media-amazon.com/images/I/612jvQDIwtL._UL1500_.jpg",
           "https://m.media-amazon.com/images/I/61EW1va4vbL._UL1500_.jpg",
           "https://m.media-amazon.com/images/I/61AOgXFMlkL._UL1500_.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "HEORA Kurta Pyjama Set for men Ethnic & Designer Wear (LE079)",
+        "description": "Full Sleeve Kurta with Knee Length",
+        "mrp_price": 4999,
+        "discount_percentage": 64,
+        "category": "Kurta",
+        "brand": "HEORA",
+        "price": 1799,
+        "rating": 2,
+        "gender": "men",
+        "images": [
+          "https://m.media-amazon.com/images/I/31sYt1bkYuL.jpg",
+          "https://m.media-amazon.com/images/I/61mFI8liaxL._UL1205_.jpg",
+          "https://m.media-amazon.com/images/I/71C4j4iF9FL._UL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71otndHEC1L._UL1280_.jpg"
         ]
       }
     ]
