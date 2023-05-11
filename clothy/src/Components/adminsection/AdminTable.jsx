@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect,useState } from 'react';
 import axios from 'axios';
+import { URl } from '../../Redux/WomensPageRedux/action';
 
 
 const AdminTable = () => {
@@ -24,7 +25,7 @@ const AdminTable = () => {
       };
 
       useEffect(()=>{
-        getData("http://localhost:8080/AdminDetail").then((res) => {
+        getData(`${URl}/AdminDetail`).then((res) => {
       setData(res);
 
     });

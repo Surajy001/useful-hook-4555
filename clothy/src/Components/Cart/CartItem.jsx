@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {MdCurrencyRupee} from 'react-icons/md'
 import { GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER, PATCH_TOTAL_PRICE } from "../../Redux/actionType";
+import { URl } from "../../Redux/WomensPageRedux/action";
 function CartItem() {
   const [loading, setLoading] = useState(false);
   const [MainCart, setMainCart] = useState([]);
@@ -32,7 +33,7 @@ function CartItem() {
       setMainCart(cart);
     }else{
       axios
-      .get("http://localhost:8080/TemporaryUserData")
+      .get(`${URl}/TemporaryUserData`)
       .then((data) => {
         let CartData = data.data.cart;
         setMainCart(CartData);

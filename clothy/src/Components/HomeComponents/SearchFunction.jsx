@@ -13,6 +13,7 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import style from "../Navbar/Navbar.module.css";
+import { URl } from '../../Redux/WomensPageRedux/action';
 
  const Search = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,7 +22,7 @@ import style from "../Navbar/Navbar.module.css";
     
 
     const getData = () => {
-        axios.get('http://localhost:8080/products')
+        axios.get(`${URl}/products`)
         .then((res)=>{
           //console.log(res.data);
             setData(res.data)
