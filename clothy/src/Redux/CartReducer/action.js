@@ -1,9 +1,9 @@
 import axios from "axios";
 import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER, GET_CART_PRODUCTS_FOR_AUTHENTICATE_USER, GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER } from "../actionType";
-
+import { URl } from "../WomensPageRedux/action";
 export const AddtoCartData = (cartData)=>(dispatch)=>{
     try{
-        return axios.patch('http://localhost:8080/TemporaryUserData',cartData).then((res)=>{
+        return axios.patch(`${URl}/TemporaryUserData`,cartData).then((res)=>{
             //console.log(res.data);
             dispatch({type:ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER,payload:res.data})
         })
@@ -13,7 +13,7 @@ export const AddtoCartData = (cartData)=>(dispatch)=>{
 }
 export const GetTemperaryCartData =(dispatch)=>{
     try{
-        return axios('http://localhost:8080/TemporaryUserData').then((res)=>{
+        return axios(`${URl}/TemporaryUserData`).then((res)=>{
             //console.log(res.data.cart);
             dispatch({type:GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER,payload:res.data.cart})
         })
@@ -24,7 +24,7 @@ export const GetTemperaryCartData =(dispatch)=>{
 
 export const PostTemporaryDataOfUser = async(Cart,dataCart)=>async(dispatch)=>{
     try {
-        return await axios.post("http://localhost:8080/TemporaryUserData", {
+        return await axios.post(`${URl}/TemporaryUserData`, {
                cart: [...Cart, dataCart],
              })
              .then((response) => {

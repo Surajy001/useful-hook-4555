@@ -21,6 +21,7 @@ import { useDispatch } from "react-redux";
 import { addUserData } from "../../Redux/AuthReducer/action";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import style from '../OtherPages/style.module.css'
+import { URl } from "../../Redux/WomensPageRedux/action";
 const initialState = {
   name: "",
   email: "",
@@ -87,12 +88,9 @@ const Signup=()=> {
 
 
     try {
-      let res = await fetch("http://localhost:8080/UserDetails");
-
-      // console.log(res);
-      
+      let res = await fetch(`${URl}/UserDetails`);
       let data = await res.json();
-      // console.log(data);
+      console.log(data);
       var mailAuth = false;
       for (let i in data) {
         if (data[i].email === userData.email) {
@@ -101,7 +99,6 @@ const Signup=()=> {
           break;
         }
       }
-
       if (mailAuth === true) {
         emailExist();
         return;
@@ -135,7 +132,7 @@ const Signup=()=> {
     }
     setUserData(initialState);
     setConfirmPassword('');
-  };
+  }
 
   return (
       <Flex

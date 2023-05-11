@@ -21,6 +21,7 @@ import {
 import axios, { Axios } from "axios";
 import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER } from "../../Redux/actionType";
 import { getMenProduct } from "../../Redux/Admin/action";
+import { URl } from "../../Redux/WomensPageRedux/action";
 
 const MensProductList = () => {
   const [searchParams] = useSearchParams();
@@ -139,7 +140,7 @@ const MensProductList = () => {
           // I am deepak i am not able to apply this in actions js and it is giving me erorr of please link it with thunk 
           // there must be some error need to be fixed but for now it is fine
        return await  axios
-            .post("http://localhost:8080/TemporaryUserData", {
+            .post(`${URl}/TemporaryUserData`, {
               cart: [...Cart, dataCart],
             })
             .then((response) => {

@@ -23,6 +23,7 @@ import {
    
   } from "@chakra-ui/react";
   import { TbReplace, TbTruckDelivery } from "react-icons/tb";
+import { URl } from '../Redux/WomensPageRedux/action';
 
 const SingleProductPage = () => {
     const [data, setData] = useState({});
@@ -31,7 +32,7 @@ const SingleProductPage = () => {
 
     const singlePage = async() => {
         setLoading(true)
-       let data=await axios.get(`http://localhost:8080/products/${id}`).then(res => {
+       let data=await axios.get(`${URl}/products/${id}`).then(res => {
             //console.log(res.data)
             setData(res.data)
         }).catch(err => {

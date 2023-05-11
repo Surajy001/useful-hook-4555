@@ -11,6 +11,7 @@ import { BsPerson } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { TfiShoppingCartFull } from "react-icons/tfi";
 import axios from "axios";
+import { URl } from "../../Redux/WomensPageRedux/action";
 
 export const getData = (url) => {
   return axios
@@ -61,15 +62,15 @@ export const Statistics = () => {
 
   useEffect(() => {
 
-    getData("http://localhost:8080/products").then((res) => {
+    getData(`${URl}/products`).then((res) => {
       setData(res?.length);
     });
 
-    getData("http://localhost:8080/UserDetails").then((res) => {
+    getData(`${URl}/UserDetails`).then((res) => {
       setUser(res?.length);
     });
 
-    getData("http://localhost:8080/UserDetails").then((res) => {
+    getData(`${URl}/UserDetails`).then((res) => {
       setUserData(res);
     });
 
