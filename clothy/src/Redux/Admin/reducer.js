@@ -1,4 +1,4 @@
-import { DELETE_PRODUCT_SUCCESS, PRODUCT_TOTAL_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, GET_MEN_PRODUCT_SUCCESS, GET_WOMEN_PRODUCT_SUCCESS, GET_ORDERED_PRODUCT_SUCCESS, SIGNUP_LOADING, SIGNUP_SUCCESS, SIGNUP_ERROR, GET_USER_DETAIL_SUCCESS } from "../actionType";
+import { DELETE_PRODUCT_SUCCESS, PRODUCT_TOTAL_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, GET_MEN_PRODUCT_SUCCESS, GET_WOMEN_PRODUCT_SUCCESS, GET_ORDERED_PRODUCT_SUCCESS, SIGNUP_LOADING, SIGNUP_SUCCESS, SIGNUP_ERROR, GET_USER_DETAIL_SUCCESS, GET_ADMIN_DETAIL_SUCCESS } from "../actionType";
 
 
 const initialState = {
@@ -9,6 +9,7 @@ const initialState = {
   womensProducts: [],
   orderedProducts: [],
   userDetails: [],
+  adminDetails:[],
 };
 
 export const reducer = (state = initialState, { payload, type }) => {
@@ -52,6 +53,13 @@ export const reducer = (state = initialState, { payload, type }) => {
         ...state,
         isLoading: false,
         userDetails: payload,
+      };
+    }
+    case GET_ADMIN_DETAIL_SUCCESS: {
+      return {
+        ...state,
+        isLoading: false,
+        adminDetails: payload,
       };
     }
     case POST_PRODUCT_SUCCESS: {

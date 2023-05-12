@@ -55,5 +55,7 @@
   "description": "https://github.com/mui/material-ui/blob/v5.12.3/docs/data/material/components/rating/HalfRating.js",
   "devDependencies": {
     "react-scripts": "latest"
-  }
+  },
+  "homepage": "."
 }
+
