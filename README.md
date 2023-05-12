@@ -1,12 +1,16 @@
 # Welcome to Clothy
-<h3>Clothy is a ecommerce website where we can buy different categories of products, the principle that clothing should be designed to protect people from the British weather.</h3>
+<h3>Clothy is a E-Commerce WebSite Where We Can Buy Different Categories of Products.</h3>
 
-## [Deployed URL](https://testy-throne-7976.vercel.app/)
+## [Deployed URL]()
 
 ## Our Team Members
 
 - Suraj Yadav (My Linkedin profile :- https://www.linkedin.com/in/suraj-yadav-003626236/)
-
+- Vikas Suresh (My Linkedin profile :- )
+- Deepak Mahesh Yadav (My Linkedin profile :- )
+- Ankit Choudhary (My Linkedin profile :- )
+- Saurabh Pandey (My Linkedin profile :- )
+- 
 <br/>
 
 <h4 align="center">💻 Tech Stack</h4>
