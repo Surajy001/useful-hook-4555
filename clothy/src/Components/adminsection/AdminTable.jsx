@@ -32,7 +32,14 @@ const AdminTable = () => {
 
     });
       },[data?.length]);
-   
+
+import { useDispatch } from 'react-redux';
+import { deleteAdmin, getAdminDetails } from '../../Redux/Admin/action';
+import { DeleteIcon } from "@chakra-ui/icons";
+
+
+const AdminTable = ({data}) => {
+    const dispatcher=useDispatch();
 
     return (
         <Table>
@@ -45,6 +52,7 @@ const AdminTable = () => {
                     <Th>PHONE NO.</Th>
                     <Th>GENDER</Th>
                     <Th>isActive</Th>
+                    <Th>DELETE</Th>
                 </Tr>
             </Thead>
             <Tbody >
@@ -57,6 +65,13 @@ const AdminTable = () => {
                         <Td>{el.mobile}</Td>
                         <Td>{el.gender}</Td>
                         <Td >{el.isAuth?'Active':'Not Active'}</Td>
+                        <Td>
+                        <button onClick={()=>{dispatcher(deleteAdmin(el.id)).then((res)=>{
+                            dispatcher(getAdminDetails());
+                        })}}>
+                            <DeleteIcon boxSize={6} />
+                        </button>
+                    </Td>
                     </Tr>
                 ))}
             </Tbody>

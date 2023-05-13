@@ -1,12 +1,15 @@
 # Welcome to Clothy
-<h3>Clothy is a ecommerce website where we can buy different categories of products, the principle that clothing should be designed to protect people from the British weather.</h3>
+<h3>Clothy is a E-Commerce WebSite Where We Can Buy Different Categories of Products.</h3>
 
-## [Deployed URL](https://testy-throne-7976.vercel.app/)
+## [Deployed URL]()
 
 ## Our Team Members
 
 - Suraj Yadav (My Linkedin profile :- https://www.linkedin.com/in/suraj-yadav-003626236/)
-
+- Vikas Suresh (My Linkedin profile :- )
+- Deepak Mahesh Yadav (My Linkedin profile :- )
+- Ankit Choudhary (My Linkedin profile :- )
+- Saurabh Pandey (My Linkedin profile :- )
 <br/>
 
 <h4 align="center">💻 Tech Stack</h4>
@@ -35,60 +38,49 @@
 ## Let's Dive into What we have made
 
 ## HomePage :
-![image](https://user-images.githubusercontent.com/106387298/229422717-abaf51c5-89c0-48ec-b573-c592f0bf4ac9.png)
+![Screenshot (1254)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/2a407834-e39b-4371-9aa2-2f923399bd10)
 <br/>
+![Screenshot (1255)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/3402a7b5-1165-4b53-ac7e-8e8e45233bfa)
+<br/>
+![Screenshot (1256)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/c8de99c1-ed36-4aad-81a6-403f3705b592)
+<br/>
+![Screenshot (1257)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/5ae597dd-517e-4cba-b9a5-4b6826624ac6)
+<br/>
+![Screenshot (1266)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/c9b217c4-6df1-4f44-a2c9-4259c99243cd)
 
-![image](https://user-images.githubusercontent.com/106387298/229422930-fe27dfeb-c3a3-4c17-93a6-c437f273c026.png)
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229423013-71fe6a2b-42bf-4f2b-b89c-d1518c6fb6f4.png)
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229423119-2e5a14c0-e70b-4a9b-83c2-18bc9e9a6f8a.png)
-<br/>
 ## Signup Page: 
-![image](https://user-images.githubusercontent.com/106387298/229423203-1c87dc49-f254-4ba1-aa4e-6f54c42ac889.png)
+![Screenshot (1259)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/d3a811d2-0435-48ea-9bf5-51ce0d7c9184)
+
 <br/>
 
 ## Signin Page:
+![Screenshot (1260)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/365e0c42-1cd5-4379-a4fd-b5ff7d3829c3)
 
-![image](https://user-images.githubusercontent.com/106387298/229423270-ac958faf-9328-40eb-84fd-6580404f58a4.png)
-<br/>
-
-## Women Page:
-![image](https://user-images.githubusercontent.com/106387298/229423404-ea301d93-4aca-4559-9dfa-5409b34cee1f.png)
 <br/>
 
 ## Men Page:
-![image](https://user-images.githubusercontent.com/106387298/229423459-7a50eea5-11d3-4bdf-a6f0-10ea4f59f8f5.png)
+![Screenshot (1261)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/10ae4108-0840-4a10-9dcb-acb1b6877a9c)
+<br/>
+![Screenshot (1263)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/09affcd9-af76-4fb7-b296-540ffbe906c8)
+<br/>
+
+## Women Page:
+![Screenshot (1262)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/4cd3ef50-49c0-43ac-98ed-eb7b5731e210)
+<br/>
+![Screenshot (1264)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/814ce492-6477-4450-a818-b5c4dbb4c23f)
 <br/>
 
 ## Cart Page:
-![image](https://user-images.githubusercontent.com/106387298/229423643-5feced09-9b0e-4f4f-8263-708b71ea8bd9.png)
+![Screenshot (1265)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/c1b15b9d-f2f1-4315-81a7-d7533a7fd4e8)
+
 <br/>
 
 ## Checkout Page:
-![image](https://user-images.githubusercontent.com/106387298/229423717-343d6f31-3ddd-4893-8378-fcf23ac2c81f.png)
+
 <br/>
 
 ## Admin Section:
 
-![image](https://user-images.githubusercontent.com/106387298/229423901-53b41bde-f247-4442-9e2b-4c093a1d0402.png)
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229423985-1ba4fe14-2a11-48d6-8c95-52def3a834a4.png)
-
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229424021-47925d6e-8cd8-4a21-8f4a-8e8378d9e511.png)
-
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229424071-654d62aa-74be-4114-a8ea-124c2fb1298b.png)
-
-<br/>
-
-![image](https://user-images.githubusercontent.com/106387298/229424144-673f145d-1d50-496b-997b-3993f820216e.png)
 
 <br/>
 
