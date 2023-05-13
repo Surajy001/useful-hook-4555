@@ -30,19 +30,32 @@ import style from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { ButtonLogout } from "./ButtonLogout";
 import { useDispatch, useSelector } from "react-redux";
-
-import { BiUser } from "react-icons/bi";
-
 import { HiShoppingCart } from "react-icons/hi";
 import Search from "../HomeComponents/SearchFunction";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const {  user } = useSelector((store) => store.authReducer);
-  const {Cart} = useSelector((store)=>store.CartReducer)
-  // console.log(Cart?.length||user?.Cart.length)
   const {isAuth} = user;
+  console.log(user)
+  const {Cart} = useSelector((store)=>store.CartReducer)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [cartLength,setCartLength] = useState(isAuth?user?.Cart?.length:Cart?.length)
+  // console.log(Cart?.length||user?.Cart.length)
   const toast = useToast();
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    setTimeout(()=>{
+    // if(isAuth){
+    //   setCartLength(user?.Cart?.length)
+    // } else{
+    //   setCartLength(Cart?.length)
+    // }
+    setCartLength(Cart?.length)
+    },100)
+    console.log()
+  },[Cart.length])
+
   const logoutSuccess = () => {
     toast({
       title: "Logout Successful.",
@@ -276,7 +289,7 @@ export const Navbar = () => {
               })}
             >
               <Tooltip
-                label={`You have 0 items in the cart`}
+                label={`You have ${cartLength} items in the cart`}
                 fontSize="lg"
                 background="lightgrey"
                 color={"black"}
@@ -294,7 +307,7 @@ export const Navbar = () => {
                     borderRadius={"50%"}
                     position={'relative'}
                   >
-                    <span style={{ textAlign: "center",position:'sticky',top:'0rem' }}>{0}</span>
+                    <span style={{ textAlign: "center",position:'sticky',top:'0rem' }}>{cartLength}</span>
                   </Text>
                 </Box>
               </Tooltip>

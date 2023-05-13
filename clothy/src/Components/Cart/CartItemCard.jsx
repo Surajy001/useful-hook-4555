@@ -24,25 +24,27 @@ function CartItemCard({
   loading,
   favourite,
   setFavrourite,
-  rating
+  rating,
+  DeleteCart
 }) {
   const [quantity, setQuantity] = useState(1);
   const [favStatus,setFavStatus] = useState(false);
   const dispatch = useDispatch();
-
-  const CartTotal = useSelector(store=>store.CartReducer.CartTotal)
+  const {CartTotal,Cart} = useSelector(store=>store.CartReducer)
   const AddTOFav = (Title) =>{
         // console.log(favourite.find())
         setFavStatus(!favStatus)
         let isFavExist = favourite.find((item)=>item.title === title);
         //console.log(isFavExist);
   }
+  
   const DecreaseQuantity =()=>{
         setQuantity(prev=>prev-1)
       }
 const IncreaseQuantity = () =>{
       setQuantity(prev=>prev+1)
 }
+
   return !loading ? (
     <SkeletonCart />
   ) : (
@@ -53,9 +55,9 @@ const IncreaseQuantity = () =>{
             <FavoriteBorderOutlinedIcon onClick={AddTOFav} className={style.Favourite_icon_outlined} />
         }
       <div className={style.ImageButton}>
-        {/* {console.log(images)} */}
-        <Image src={image||images[0]} alt={title} />
-        <Button onClick={IncreaseQuantity}  disabled={quantity===5} className={style.Inc}>+</Button>
+        <Image src={!images?.length?images[0]:images} alt={title} />  
+        {/*  */}
+        <Button onClick={IncreaseQuantity}  disabled className={style.Inc}>+</Button>
         <Button 
           style={{  padding: "0 2vw" }}
         >
@@ -72,6 +74,7 @@ const IncreaseQuantity = () =>{
           <span>{color}</span>
           <span>{size}</span>
           <span>{lable}</span>
+
         </div>
         <p className={style.discount} >{discount||25}% off 🤯.🚀Hurry up!! 🛒 Offer ending soon... </p>
       </div>
@@ -79,11 +82,10 @@ const IncreaseQuantity = () =>{
       <Flex color={'#757575'} fontWeight={'bolder'} padding={'auto 1rem '} fontSize={'1.2rem'} alignItems={'center'}><MdCurrencyRupee/> <Text fontSize={'1.3rem'} >{price}</Text></Flex>
       </div>
       <div className={style.product_button}>
-        <Button>Delete</Button>
+        <Button onClick={(e)=>DeleteCart(e,id)}>Delete</Button>
       </div>
     </Box>
     </>
   );
 }
-
 export default CartItemCard;

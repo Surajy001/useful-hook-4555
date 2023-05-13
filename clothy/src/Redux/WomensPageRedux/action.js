@@ -1,7 +1,7 @@
     import axios from "axios";
 
     import { WOMENS_DELETE_PRODUCT_SUCCESS, WOMENS_GET_PRODUCT_SUCCESS, WOMENS_POST_PRODUCT_SUCCESS, WOMENS_PRODUCT_FAILURE, WOMENS_PRODUCT_REQUEST } from "../actionType";
-export const URl = `https://teal-perfect-crow.cyclic.app`;
+export const URl = `http://localhost:8080`;
     export const womenaddProduct = (newProduct)=>(dispatch)=>{
         dispatch({type:WOMENS_PRODUCT_REQUEST});
         axios.post(`${URl}/products`,newProduct).then((res)=>{

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import CreditCard from "./CreditCard.css";
-import { Button, Modal, ModalContent, ModalBody, ModalCloseButton, ModalFooter, ModalHeader, ModalOverlay, Text, background, useDisclosure } from "@chakra-ui/react";
+import { Button, Modal, ModalContent, ModalBody, ModalCloseButton, ModalFooter, ModalHeader, ModalOverlay, Text, background, useDisclosure, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { EmptyCart } from "./EmptyCart";
+import { useSelector } from "react-redux";
 
 
 const Card = () => {
@@ -19,10 +20,11 @@ const Card = () => {
   // add all the previous and current data in array
 
   const [add, setAdd] = useState([]);
+  const toast = useToast();
 
   // flip the ATM when CVV get focused
   const [flip, setFlip] = useState(true);
-
+  const total = useSelector(store=>store.CartReducer.CartTotal);
   const [cartData, setCartData] = useState([])
   const navigate = useNavigate();
 
@@ -46,7 +48,15 @@ const Card = () => {
     setData({ ...data, [name]: value })
 
     if (data.cardNumber.length > 16) {
-      alert("Card Number Can't Be More Than 16 Digit");
+      // alert("Card Number Can't Be More Than 16 Digit");
+      toast({
+        title:"Cart Number Can't ne more than 16 digit",
+        status:'error',
+        description:'Please enter only 16digits',
+        position:"top",
+        isClosable:true,          
+        duration:1500
+      })
       setData({ ...data, cardNumber: data.cardNumber.slice(0, -1) });
     }
   };
@@ -95,6 +105,14 @@ const Card = () => {
     ) {
       Submit();
         alert("Payment Successfull");
+        toast({
+          title:"Congratulatios!!, Payments Succesfull",
+          status:'success',
+          description:'Happy Shoping !!😊😊',
+          position:"top",
+          isClosable:true,          
+          duration:1500
+        })
         // setCartData([])
         localStorage.setItem("cart", JSON.stringify([]));
         setTimeout(() => {
@@ -303,7 +321,7 @@ const Card = () => {
                 <img src="https://cdn.dribbble.com/users/329319/screenshots/2140009/day-004---credit-card-payment.gif" alt="" />
             </div>
             <div className="lastCont">
-            <p><span>Price to pay:</span> ₹{totalPrice()}</p>
+            <p><span>Price to pay:</span> ₹{total}</p>
             </div>
           </div>
       </div>

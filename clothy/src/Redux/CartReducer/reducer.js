@@ -1,12 +1,12 @@
-import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER, ADD_PRODUCT_TO_WISH_LIST, GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER, PATCH_TOTAL_PRICE } from "../actionType";
-import { DECREASE_QUANTITY } from "./action";
+import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER, ADD_PRODUCT_TO_WISH_LIST, DELETE_PRODUCT_FROM_CART_FOR_UNAUTHENTICATED_USER, GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER, PATCH_TOTAL_PRICE } from "../actionType";
+import { DECREASE_QUANTITY, DeleteProductFromCart } from "./action";
 
 const initialState = {
     isLoading:false,
     CartQuantity:1,
     CartTotal:0,
     Cart:[],
-    WishList:[],
+    WishList:[]
 }
 const reducer =(state=initialState,{type,payload})=>{
 
@@ -14,7 +14,7 @@ const reducer =(state=initialState,{type,payload})=>{
         case ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER:
             return  {
                 ...state,
-                Cart:[...state.Cart,payload]
+                Cart:[...payload]
             }
         case GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER:
             //console.log(payload)
@@ -32,6 +32,11 @@ const reducer =(state=initialState,{type,payload})=>{
             return{
                 ...state,
                 WishList:[...state.WishList,payload]
+            }
+        case DELETE_PRODUCT_FROM_CART_FOR_UNAUTHENTICATED_USER:
+            return{
+                ...state,
+                Cart:[...payload]
             }
         default:
             return initialState

@@ -51,8 +51,6 @@ const Signin=()=> {
      let UserDetails =   Mendata.find((item)=>{
         return item.email=== email&& item.password===password        
      })
-
-      // console.log(UserDetails)
       if(UserDetails&&UserDetails?.email===email){
         if(UserDetails?.password!==password){
           toast({
@@ -65,10 +63,9 @@ const Signin=()=> {
           })
         }else{
           loginSuccess();
-          console.log(location.state)
           dispatch(patchUserData(UserDetails,UserDetails.id)).then(()=>{
-            navigate(`${location.state?location.state:'/'}`);
           })
+          navigate(`${location.state?location.state:'/'}`);
         }
       }else{
         toast({

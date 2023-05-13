@@ -6,6 +6,33 @@ import {
     Thead,
     Tr
 } from '@chakra-ui/react';
+import { useEffect,useState } from 'react';
+import axios from 'axios';
+import { URl } from '../../Redux/WomensPageRedux/action';
+import { useSelector } from 'react-redux';
+
+
+const AdminTable = () => {
+
+ const [data,setData]=useState([]);
+ const {isAuth} = useSelector(store=>store.adminLoginReducer)
+// console.log(isAuth)
+    const getData = async(url) => {
+        return await axios
+          .get(url)
+          .then((res) => res.data)
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+
+      useEffect(()=>{
+        getData(`${URl}/AdminDetail`).then((res) => {
+      setData(res);
+
+    });
+      },[data?.length]);
+
 import { useDispatch } from 'react-redux';
 import { deleteAdmin, getAdminDetails } from '../../Redux/Admin/action';
 import { DeleteIcon } from "@chakra-ui/icons";
@@ -24,6 +51,7 @@ const AdminTable = ({data}) => {
                     <Th>ADMIN EMAIL</Th>
                     <Th>PHONE NO.</Th>
                     <Th>GENDER</Th>
+                    <Th>isActive</Th>
                     <Th>DELETE</Th>
                 </Tr>
             </Thead>
@@ -36,6 +64,7 @@ const AdminTable = ({data}) => {
                         <Td>{el.email}</Td>
                         <Td>{el.mobile}</Td>
                         <Td>{el.gender}</Td>
+                        <Td >{el.isAuth?'Active':'Not Active'}</Td>
                         <Td>
                         <button onClick={()=>{dispatcher(deleteAdmin(el.id)).then((res)=>{
                             dispatcher(getAdminDetails());

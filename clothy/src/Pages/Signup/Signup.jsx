@@ -86,7 +86,7 @@ const Signup=()=> {
   const postdata = async (e) => {
     e.preventDefault();
 
-
+    console.log('hii i am done')
     try {
       let res = await fetch(`${URl}/UserDetails`);
       let data = await res.json();

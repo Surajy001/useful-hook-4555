@@ -19,8 +19,6 @@ export const reducer= (state = initialState, { type, payload }) => {
         return {...state,isLoading:false,products:payload}   
       case MENS_DELETE_PRODUCT_SUCCESS:
         return {...state,isLoading:false}
-
-
   default:
     return state
   }

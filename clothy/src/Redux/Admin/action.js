@@ -1,6 +1,9 @@
 import axios from "axios";
+
+import { ADMIN_DATA, DELETE_PRODUCT_SUCCESS, GET_MEN_PRODUCT_SUCCESS, GET_ORDERED_PRODUCT_SUCCESS, GET_USER_DETAIL_SUCCESS, GET_WOMEN_PRODUCT_SUCCESS, LOGIN_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, PRODUCT_TOTAL_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS, } from "../actionType";
 import { DELETE_PRODUCT_SUCCESS, GET_ADMIN_DETAIL_SUCCESS, GET_MEN_PRODUCT_SUCCESS, GET_ORDERED_PRODUCT_SUCCESS, GET_USER_DETAIL_SUCCESS, GET_WOMEN_PRODUCT_SUCCESS, PATCH_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, PRODUCT_TOTAL_SUCCESS, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS, } from "../actionType";
 import { URl } from "../WomensPageRedux/action";
+import AdminLogin from "../../Pages/AdminLogin";
 
 export const addProduct = (productData) => async (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
@@ -112,6 +115,26 @@ export const addAdmin = (adminData) => async (dispatch) => {
       dispatch({ type: SIGNUP_ERROR });
     });
 };
+
+export const getAdminData = async(dispatch)=>{
+  return await axios(`${URl}/AdminDetail`).then((res)=>{
+    console.log(res.data)
+    dispatch({type:LOGIN_SUCCESS,payload:res.data})
+  }).catch((err)=>{
+    console.log(err.message)
+  })
+} 
+export const logoutadmin = (adminDetail)=>async(dispatch)=>{
+    return axios.patch(`${URl}/AdminDetail/${adminDetail?.id}`,{
+          ...adminDetail,
+          isAuth:false
+    }).then((res)=>{
+      console.log(res.data)
+      dispatch({type:ADMIN_DATA,payload:res.data});
+    }).catch((err)=>{
+      console.log(err);
+    })
+}
 export const getAdminDetails = (pgno) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
