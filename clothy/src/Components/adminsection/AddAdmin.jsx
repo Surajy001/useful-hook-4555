@@ -27,6 +27,7 @@ const initialState = {
     password: "",
     gender: "",
     mobile: "",
+    isAuth:false
 };
 
 const reducer = (state, action) => {

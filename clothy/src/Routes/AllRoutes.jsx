@@ -21,84 +21,129 @@ import Sales from "../Pages/OtherPages/Sale";
 import WishList from "../Pages/OtherPages/WhishLIst";
 import OrderPage from "../Pages/adminsection/OrderPage";
 import UserPage from "../Pages/adminsection/UserPage";
-
-
-
+import AdminPrivateRoute from "./AdminPrivateRoute";
 
 const AllRoutes = () => {
-  
-const PageRoutes=[
-  {
-    path: "/",
-    element: <HomePage/>,
-  },
-  {
-    path: "/signin",
-    element: <Signin/>,
-  },
-  {
-    path: "/signup",
-    element: <Signup/>,
-  },
-  {
-    path: "/product/:id",
-    element: <SingleProductPage/>,
-  },
-  {
-    path: "/menproducts",
-    element: <MensPage/>,
-  },
-  {
-    path: "/womenproducts",
-    element: <WomensPage />,
-  },
-  {
-    path: "/winter",
-    element: <Winter />,
-  },
-  {
-    path: "/About",
-    element: <About />,
-  },
-  {
-    path: "/sale",
-    element: <Sales />,
-  },
-  {
-    path: "/wishList",
-    element: <WishList />,
-  },
-  {
-    path: "/add-to-cart",
-    element: <AddToCartPage />,
-  },
-  {
-    path: "*",
-    element: <h1>404 Page Not Found</h1>,
-  },
-  
-]
+  const PageRoutes = [
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/signin",
+      element: <Signin />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
+    },
+    {
+      path: "/product/:id",
+      element: <SingleProductPage />,
+    },
+    {
+      path: "/menproducts",
+      element: <MensPage />,
+    },
+    {
+      path: "/womenproducts",
+      element: <WomensPage />,
+    },
+    {
+      path: "/winter",
+      element: <Winter />,
+    },
+    {
+      path: "/About",
+      element: <About />,
+    },
+    {
+      path: "/sale",
+      element: <Sales />,
+    },
+    {
+      path: "/wishList",
+      element: <WishList />,
+    },
+    {
+      path: "/add-to-cart",
+      element: <AddToCartPage />,
+    },
+    {
+      path: "*",
+      element: <h1>404 Page Not Found</h1>,
+    },
+  ];
+  const AdminPath = [
+    {
+      path: "/admin-dashboard",
+      element: <Dashboard />,
+    },
+    {
+      path: "/admin-admins",
+      element: <UserPage />,
+    },
+    {
+      path: "/admin-men-products",
+      element: <MenProductPage />,
+    },
+    {
+      path: "/admin-women-products",
+      element: <WomenProductPage />,
+    },
+    {},
+    {
+      path: "/admin-order-products",
+      element: <OrderPage />,
+    },
+  ];
 
   return (
     <>
-    <Routes> 
-      
-      {PageRoutes.map((ele, key) => (
-          <Route key={key} path={ele.path} element={<> <Navbar/> {ele.element} <Footer /> </>  } />
+      <Routes>
+        {PageRoutes.map((ele, key) => (
+          <Route
+            key={key}
+            path={ele.path}
+            element={
+              <>
+                {" "}
+                <Navbar /> {ele.element} <Footer />{" "}
+              </>
+            }
+          />
         ))}
 
-      <Route path="/payment" element={<PrivateRoute> <Navbar /> <Payment/> <Footer /> </PrivateRoute> } />
+        <Route
+          path="/payment"
+          element={
+            <PrivateRoute>
+              {" "}
+              <Navbar /> <Payment /> <Footer />{" "}
+            </PrivateRoute>
+          }
+        />
 
-      <Route path="/admin-dashboard" element={<Dashboard/>}/>
-      <Route path="/admin-login" element={<AdminLogin/>}/>
-      <Route path="/admin-admins" element={<UserPage/>} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+
+        {AdminPath.map((ele, key) => (
+          <Route
+            key={key}
+            path={ele.path}
+            element={
+              <>
+                <AdminPrivateRoute>{ele.element}</AdminPrivateRoute>
+              </>
+            }
+          />
+        ))}
+
+        {/* <Route path="/admin-admins" element={<UserPage/>} />
       <Route path="/admin-men-products" element={<MenProductPage/>}/>
       <Route path="/admin-women-products" element={<WomenProductPage/>}/>
-      <Route path="/admin-order-products" element={<OrderPage/>}/>
-
-    </Routes>
-</>
-
+      <Route path="/admin-order-products" element={<OrderPage/>}/> */}
+      </Routes>
+    </>
   );
 };
 

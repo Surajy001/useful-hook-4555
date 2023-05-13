@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { StarIcon } from '@chakra-ui/icons';
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import {
   Badge,
   Box,
@@ -10,9 +11,11 @@ import {
   Heading,
   Image,
   Text,
+  useToast,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-
+import style from '../Cart/Cart.module.css'
+import { useSelector } from 'react-redux';
 const ProductCard = styled(Box)`
   transition: box-shadow 0.2s ease-in-out;
   &:hover {
@@ -32,12 +35,15 @@ const WomensProductCart = ({
   rating,
   gender,
   images,
+  AddToCart
 }) => {
   const truncatedTitle =
     title.length > 30 ? title.substring(0, 30) + '...' : title;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const navigate=useNavigate();
-
+  const [favStatus, setFavStatus] = useState(false);
+  const {WishList} = useSelector(store=>store.CartReducer)
+  const toast = useToast();
   const handleMouseEnter = () => {
     setCurrentImageIndex(1);
   };
@@ -50,7 +56,31 @@ const WomensProductCart = ({
     navigate(`/product/${id}`)
   };
 
+  const AddTOFav = () => {
+    let WhishListData = WishList?.find(item=>item.id==id);
+    setFavStatus(!favStatus);
+    if (!favStatus&&!WhishListData) {
+      let data  = [...WishList,WhishListData]
+      // dispatch({type:ADD_PRODUCT_TO_WISH_LIST,payload:data})
+      toast({
+        title: "Product Added To WishList!!💓",
+        description: `🚀Go to the wishList page to see the WishList-details`,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+        position: "top",
+      });
 
+      return
+    }
+    toast({
+      title: "Product Removed from WishList!!💔",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position: "top",
+    });
+  };
   return (
     <ProductCard
       borderWidth="1px"
@@ -59,10 +89,9 @@ const WomensProductCart = ({
       textAlign="left" 
       p="4"
       mb="4"
-      // className={style.productCard}
     >
       
-      {/* {favStatus ? (
+      {favStatus ? (
         <FavoriteIcon
           onClick={(e)=>AddTOFav(e,id)}
           className={style.Favourite_icon_filled_product}
@@ -72,7 +101,7 @@ const WomensProductCart = ({
           onClick={AddTOFav}
           className={style.Favourite_icon_outlined_product}
         />
-      )} */}
+      )}
       <Image
         src={images[currentImageIndex]}
         alt="none"
@@ -135,7 +164,7 @@ const WomensProductCart = ({
       </Box>
 
 <Box d="flex" mt="2" style={{display:"flex",justifyContent:"space-between"}}>
-        <Button colorScheme="blue" size="sm">
+      <Button colorScheme="blue" size="sm" onClick={(e) => AddToCart(e,id)}>
           Add to Cart
         </Button>
         <Button colorScheme="green" size="sm" >

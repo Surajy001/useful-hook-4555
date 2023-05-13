@@ -29,13 +29,14 @@ export const HomePage = () => {
       <Stack
       textAlign={'center'}
         align={"center"}
-        margin={'auto 13rem'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
         direction={{ base: "column", md: "row" }}
+        maxWidth={'80vw'}
+        margin={'auto'}
       >
-        <Stack spacing={{ base: 1, md: 5 }} w={"200px"} >
-          <Text>
+        <Stack spacing={{ base: 1, md: 5 }} width={'20%'}>
+          <Text >
             Fashion is a form of self-expression and autonomy at a particular
             period.
         <Text display={"flex"} fontWeight={600}>
@@ -49,7 +50,8 @@ export const HomePage = () => {
           // border={"2px solid green"}
           lineHeight={0.9}
           fontWeight={600}
-          fontSize={{ base: "3xl", sm: "4xl", lg: "8xl" }}
+          fontSize={{ base: "1xl", sm: "4xl", lg: "8xl" }}
+          // fontSize={"4.2rem"}
           className={style.header}
         >
           <Text>CLOTHES ARE</Text>

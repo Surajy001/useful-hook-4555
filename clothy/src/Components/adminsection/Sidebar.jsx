@@ -1,12 +1,18 @@
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Text, background } from "@chakra-ui/react";
 import { FaUserCircle } from "react-icons/fa";
 import { AiFillGift } from "react-icons/ai";
 import { HiCollection } from "react-icons/hi";
 import { MdHome } from "react-icons/md";
 import { CgLogOut } from "react-icons/cg";
-import { Link,NavLink } from 'react-router-dom';
+import { Link,NavLink, useNavigate } from 'react-router-dom';
+import { Logout } from "@mui/icons-material";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutadmin } from "../../Redux/Admin/action";
 
 const Sidebar = (props) => {
+    const {admindata,admin} = useSelector((store) => store.adminLoginReducer);
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const NavItem = (props) => {
         const { icon, children } = props;
@@ -39,6 +45,10 @@ const Sidebar = (props) => {
         );
     };
 
+    const LogoutAdmin = ()=>{
+        dispatch(logoutadmin(admin));
+        navigate('/admin-login')
+    }
     return (
         <Box
             zIndex="sticky"
@@ -68,7 +78,7 @@ const Sidebar = (props) => {
                 <NavItem icon={HiCollection}><Link to={"/admin-women-products"}>Women Products</Link></NavItem>
                 <NavItem icon={AiFillGift}><Link to={"/admin-order-products"}>Orders</Link></NavItem>
                 <NavItem icon={CgLogOut}>
-                   <NavLink to={"/"}>Logout</NavLink> 
+                   <Button bg={'whiteAlpha.300'} _hover={{background:'#c62828',color:"white"}} padding={'0px 3px 0px 5px'} onClick={LogoutAdmin}>Logout</Button> 
                     </NavItem>
             </Flex>
         </Box >

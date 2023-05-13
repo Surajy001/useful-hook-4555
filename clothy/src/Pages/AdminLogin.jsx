@@ -1,90 +1,3 @@
-
-// import React, { useState } from 'react'
-// import styled from 'styled-components'
-// import {useDispatch} from 'react-redux'
-// import { AdminLoginAction } from '../Redux/Admin/Login/action'
-
-// const init = {
-//     email:'',
-//     password:''
-// }
-
-// const AdminLogin = () => {
-//   const dispatch = useDispatch()
-//     const [formState,setFormState] = useState(init)
-
-//     const handleChange = (e)=> {
-//        const {name,value} = e.target
-//        let newObj ={
-//         ...formState,
-//         [name]:value,
-//        }
-
-//        setFormState(newObj)
-//     }
-
-//    const handleSubmit =(e)=> {
-//     e.preventDefault()
-//         dispatch(AdminLoginAction())
-//    }
-
-//   return (
-//     <DIV>
-//       <form onSubmit={handleSubmit} >
-//         <input type="text"   placeholder='Enter Email Id' name='email' value={formState.email} onChange={handleChange} />
-//         <input type="text" placeholder='Enter Password' name='password' value={formState.password} onChange={handleChange} />
-//         <input type="submit" value="LOGIN"  />
-//       </form>
-//     </DIV>
-//   )
-// }
-
-// export default AdminLogin
-// const DIV = styled.div`
-
-//         height: 500px;
-//         border: 1px solid gray;
-//         display: flex;
-//         flex-direction:column;
-//         justify-content: center;
-//         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
-//     form{
-//         width: 50%;
-//         height: 350px;
-//         border: 1px solid gray;
-//         margin: 20px auto;
-//         display: flex;
-//         flex-direction:column;
-//         align-items: center;
-
-//         align-content:center;
-//         justify-content:space-evenly;
-//         padding: 20px;
-//         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
-
-//     }
-//     input[type=text]{
-//         width: 70%;
-//         height: 40px;
-//         border: 1px solid gray;
-//         padding: 5px;
-//         text-align: left;
-//         border-radius:0px;
-
-//     }
-//     input[type=submit]{
-//         width: 20%;
-//         height: 40px;
-//         border: 1px solid gray;
-//         border-radius:0px;
-
-//     }
-
-
-// `
-
 import { useEffect, useState } from "react";
 import {
   Flex,
@@ -101,12 +14,14 @@ import {
   FormControl,
   FormHelperText,
   InputRightElement,
-  useToast
+  useToast,
+  Spinner
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { adminLoginAction } from "../Redux/Admin/Login/action";
-import { useNavigate } from "react-router-dom";
+import { AdminLoginPatch, adminLoginAction } from "../Redux/Admin/Login/action";
+import { NavLink, useNavigate } from "react-router-dom";
+import { URl } from "../Redux/WomensPageRedux/action";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -120,6 +35,7 @@ const AdminLogin = () => {
 
   const data = useSelector((store) => store.adminLoginReducer.admindata)
   // const isAuth=useSelector((store)=>store.adminLoginReducer.isAuth)
+  const [loadingButton,setLoadingButton] = useState(false);
 
   const dispatch = useDispatch()
 
@@ -140,21 +56,27 @@ const AdminLogin = () => {
     setFormState(newObj)
   }
 
+  useEffect(()=>{
+    dispatch(adminLoginAction);
+  },[])
   const handleSubmit = (e) => {
-
+    setLoadingButton(true);
+    // console.log(loadingButton)
     e.preventDefault();
-    dispatch(adminLoginAction(formState))
-  
-      if (data?.email === formState.email && data?.password === formState.password) {
-        navigate("/admin-dashboard")
-        toast({
-          title: "Login Success.",
-          description: "Welcome to Clothy.",
-          status: "success",
-          duration: 2000,
-          isClosable: true,
-          position: "top",
-        })
+      let User = data?.find(admin=>admin.email===formState.email&&admin.password===formState.password);
+      if (User) {
+        dispatch(AdminLoginPatch(User));
+        setTimeout(()=>{
+          navigate("/admin-dashboard")
+          toast({
+            title: "Login Success.",
+            description: "Welcome to Clothy.",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+            position: "top",
+          },100)
+        },[])
       } else {
         toast({
           title: "Login Failed.",
@@ -165,9 +87,23 @@ const AdminLogin = () => {
           position: "top",
         })
       }
-  }
+      setLoadingButton(false)
+    // try{
+    // let data = axios.get(`${URl}/AdminDetail`).then((res)=>{
+    //     console.log(res);
+    //     res.data.find(item=>item.email===formState.email&&item.password===formState.password);
+    //     // dispatch()
+    //   })
 
-  return (
+    // }catch(err){
+
+    // }
+  
+       }
+
+  return loadingButton?<Stack direction='row' spacing={4} >
+  <Spinner size='xl' />
+</Stack>:(
     <Flex
       flexDirection="column"
       width="100wh"
@@ -226,17 +162,18 @@ const AdminLogin = () => {
                 </FormHelperText>
               </FormControl>
               <Button
-                borderRadius={0}
+                borderRadius={'.5rem'}
                 type="submit"
                 variant="solid"
                 colorScheme="teal"
                 width="full"
               >
-                Login
+                Login 🔒
               </Button>
             </Stack>
           </form>
         </Box>
+        <NavLink to="/" style={{color:'blueviolet',padding:'.7rem 1.3rem',background:"#6a1b9a",borderRadius:'10px',color:'white',fontWeight:'bold',fontSize:'1.1rem'}}>⬅ Back to Home 🏠</NavLink>
       </Stack>
       {/* <Box>
         New to us?{" "}

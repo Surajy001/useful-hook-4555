@@ -1,11 +1,28 @@
 import { Avatar, Flex, IconButton, Input, InputGroup, InputLeftElement, Text, } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { FiMenu, FiSearch } from "react-icons/fi";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAdminData } from '../../Redux/Admin/action';
+import { ADMIN_DATA } from '../../Redux/actionType';
 
 const Navbar = ({ onclick }) => {
-
-    const data = useSelector((store) => store.adminLoginReducer.admindata);
-
+    const [activeAdmin,setActiveAdmin] = useState({});
+    const [reload,setReload] = useState(false)
+    const {admindata,admin} = useSelector((store) => store.adminLoginReducer);
+    const dispatcher = useDispatch();
+    useEffect(()=>{
+        dispatcher(getAdminData);
+        let admin = admindata.find(item=>item?.isAuth===true);
+        let Admin = {...admin};
+        setActiveAdmin(Admin?.isAuth);
+        dispatcher({type:ADMIN_DATA,payload:admin});
+        setActiveAdmin(Admin)
+    },[reload])
+    useEffect(()=>{
+       window.addEventListener('load',(event)=>{
+        setReload(!reload);
+       }) 
+    },[])
     return (
         <Flex
             align="center"
@@ -45,10 +62,10 @@ const Navbar = ({ onclick }) => {
                 <Flex align="center" w={"9%"}>
                     <Avatar
                         size="sm"
-                        name={data?.name}
+                        name={admin?.name}
                         cursor="pointer"
                     />
-                    <Text fontWeight={"bold"}>{data?.name}</Text>
+                    <Text fontWeight={"bold"}>{admin?.name}</Text>
                 </Flex>
             </Flex>
         </Flex >

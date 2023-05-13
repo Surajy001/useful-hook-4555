@@ -4,7 +4,9 @@ import CreditCard from '../Components/Payment-Components/CreditCard'
 const Payment = () => {
   return (
     <div>
-<CreditCard></CreditCard>
+<CreditCard>
+  
+</CreditCard>
         
 
     </div>

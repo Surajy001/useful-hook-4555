@@ -17,6 +17,7 @@ import {
 import {
   AddtoCartData,
   GetTemperaryCartData,
+  PostTemporaryDataOfUser,
 } from "../../Redux/CartReducer/action";
 import axios, { Axios } from "axios";
 import { ADD_PRODUCT_TO_CART_FOR_NOT_AUTHENTICATED_USER } from "../../Redux/actionType";
@@ -28,7 +29,13 @@ const MensProductList = () => {
   const dispatch = useDispatch();
   const menproducts = useSelector((store) => store.menproductReducer.products);
   const location = useLocation();
+  const [toreload,setToreload] = useState(false);
 
+  const toast = useToast();
+  const { user } = useSelector((store) => store.authReducer);
+  const { isAuth, cart } = user;
+  const { Cart } = useSelector((state) => state.CartReducer);
+  const [isAddToCart,setIsAddtoCart] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(9);
 
@@ -45,6 +52,10 @@ const MensProductList = () => {
     dispatch(mengetProducts(obj));
   }, [location.search]);
 
+  useEffect(()=>{
+    dispatch(GetTemperaryCartData)
+    console.log(Cart)
+},[toreload])
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = menproducts.slice(
@@ -94,15 +105,13 @@ const MensProductList = () => {
       </>
     );
   };
-  const toast = useToast();
-  const { user } = useSelector((store) => store.authReducer);
-  const { isAuth, cart } = user;
-  const { Cart } = useSelector((state) => state.CartReducer);
-  const AddToCart =async (id) => {
-    //console.log(id);
+
+  const AddToCart = async (e,id) => {
+    setToreload(!toreload);
     if (isAuth) {
       let cartDetails = cart?.find((item) => item.id === id);
       if (cart.includes(cartDetails)) {
+        setIsAddtoCart(true)
         toast({
           title: "Product, Already In the Cart!",
           description: `🚀Go to the cart page to see the cart-details`,
@@ -112,6 +121,7 @@ const MensProductList = () => {
           position: "top",
         });
       } else {
+        setIsAddtoCart(false);
         toast({
           title: "Congratulations, Product Added To Cart!!👍",
           description: `🚀Go to the cart page to see the cart-details`,
@@ -123,9 +133,13 @@ const MensProductList = () => {
       }
     } else {
       let dataCart = currentProducts.find((item) => item.id == id);
-      dispatch(GetTemperaryCartData);
+      // dispatch(GetTemperaryCartData);
       let actualCartDataToPost = Cart?.find((item) => item?.id == dataCart.id);
+      // console.log(dataCart)
+      // console.log(actualCartDataToPost)
+      // Change Add to cart to View in cart
       if (actualCartDataToPost) {
+        setIsAddtoCart(true)
         toast({
           title: "Product, Already In the Cart!",
           description: `🚀Go to the cart page to see the cart-details`,
@@ -135,33 +149,24 @@ const MensProductList = () => {
           position: "top",
         });
         return 
-      }else{
-        try {
+      }else{         
           // I am deepak i am not able to apply this in actions js and it is giving me erorr of please link it with thunk 
           // there must be some error need to be fixed but for now it is fine
-       return await  axios
-            .post(`${URl}/TemporaryUserData`, {
-              cart: [...Cart, dataCart],
-            })
-            .then((response) => {
-              //console.log(response.data);
-              toast({
-                title: "Congratulations, Product Added To Cart!!👍",
-                description: `🚀Go to the cart page to see the cart-details`,
-                status: "success",
-                duration: 3000,
-                isClosable: true,
-                position: "top",
-              });
-            })
-            
-        } catch(error) {
-          console.log(error);
-        }
-      
+          Cart.push(dataCart);
+          dispatch(PostTemporaryDataOfUser(Cart))
+            setIsAddtoCart(false);
+            toast({
+              title: "Congratulations, Product Added To Cart!!👍",
+              description: `🚀Go to the cart page to see the cart-details`,
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+              position: "top",
+            });
       }
     }
   };
+
 
   return (
     <Box p={4}>
@@ -176,7 +181,7 @@ const MensProductList = () => {
         {currentProducts.length > 0 ? (
           currentProducts.map((el) => (
             <GridItem key={el.id}>
-              <MensProductCart {...el} AddToCart={AddToCart} />
+              <MensProductCart {...el} AddToCart={AddToCart} isAddToCart={isAddToCart} />
             </GridItem>
           ))
         ) : (
@@ -185,7 +190,7 @@ const MensProductList = () => {
           </VStack>
         )}
       </Grid>
-      <div
+      <div  
         style={{
           margin: "auto",
           width: "100%",

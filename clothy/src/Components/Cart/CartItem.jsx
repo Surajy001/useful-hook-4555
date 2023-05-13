@@ -6,8 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {MdCurrencyRupee} from 'react-icons/md'
-import { GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER, PATCH_TOTAL_PRICE } from "../../Redux/actionType";
+import { DELETE_PRODUCT_FROM_CART_FOR_UNAUTHENTICATED_USER, GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER, PATCH_TOTAL_PRICE } from "../../Redux/actionType";
 import { URl } from "../../Redux/WomensPageRedux/action";
+import { DeleteProductFromCart, GetTemperaryCartData, PostTemporaryDataOfUser } from "../../Redux/CartReducer/action";
 function CartItem() {
   const [loading, setLoading] = useState(false);
   const [MainCart, setMainCart] = useState([]);
@@ -15,7 +16,6 @@ function CartItem() {
   const [favourite, setFavourite] = useState([]);
 
   let {Cart,CartTotal} = useSelector(state=>state.CartReducer);
-
   const {user} = useSelector((store) => store.authReducer);
 
   const {isAuth} = user;
@@ -28,10 +28,10 @@ function CartItem() {
     isAuth ? navigate("/payment") : navigate("/signin");
   };
   useEffect(() => {
-    if(isAuth){
-      const {cart} = user;
-      setMainCart(cart);
-    }else{
+    // if(isAuth){
+    //   const {cart} = user;
+    //   setMainCart(cart);
+    // }else{
       axios
       .get(`${URl}/TemporaryUserData`)
       .then((data) => {
@@ -39,22 +39,28 @@ function CartItem() {
         setMainCart(CartData);
         dispatch({type:GET_CART_PRODUCTS_FOR_NOT_AUTHENTICATE_USER,payload:CartData})
       })
-    }
+    // }
     setTimeout(() => {
       setLoading(true);
-    }, 1500);
-    let total = MainCart.reduce((item,p)=>{
-      return item+p.price
-    },0)
-    dispatch({type:PATCH_TOTAL_PRICE,payload:total})
-  }, []);
+    }, 1000);
+    // console.log(Cart)
+  }, [loading]);
 
+  const DeleteCart = (e,id)=>{
+    setLoading(true)
+    let filterData = Cart?.filter((item)=>item?.id!==id);
+    dispatch(DeleteProductFromCart(filterData)).finally(()=>{
+      setLoading(false)
+    })
+    // dispatch(GetTemperaryCartData);
+    // dispatch(PostTemporaryDataOfUser(filterData));
+  }
   useEffect(()=>{
     let total = MainCart.reduce((item,p)=>{
       return item+p.price
     },0)
     dispatch({type:PATCH_TOTAL_PRICE,payload:total})
-  },[MainCart])
+  },[loading])
   return (
     <Box className={style.Cart_Main_Page}>
       {/* <h1>Welcome {email}</h1>   */}
@@ -68,6 +74,7 @@ function CartItem() {
               loading={loading}
               favourite={favourite}
               setFavourite={setFavourite}
+              DeleteCart={DeleteCart}
             />
           );
         })}
@@ -95,7 +102,7 @@ function CartItem() {
           </div>
           <div className={style.cart_total_details}>
             <Text className="totalAmount">Total Amount </Text>{" "}
-            <Text>{CartTotal-Math.round(CartTotal * 0.4) || 120 }</Text>
+            <Text>{CartTotal-Math.round(CartTotal * 0.4) || 0 }</Text>
           </div>
           <div className={style.cart_total_details}>
             <Center style={{ color: "green", fontWeight: "bold",margin:'auto'}}>

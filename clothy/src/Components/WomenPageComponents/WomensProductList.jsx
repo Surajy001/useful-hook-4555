@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {womengetProducts} from '../../Redux/WomensPageRedux/action';
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
 // import WomensProductCart from './WomensProductCart';
 import styled from 'styled-components';
 import { useLocation, useSearchParams } from 'react-router-dom';
@@ -14,8 +14,10 @@ import {
   VStack,
   Button,
   HStack,
+  useToast,
 } from '@chakra-ui/react';
 import WomensProductCart from './WomensProductCart';
+import { GetTemperaryCartData, PostTemporaryDataOfUser } from '../../Redux/CartReducer/action';
 
 const WomensProductList = () => {
   const [searchParams] = useSearchParams();
@@ -23,11 +25,15 @@ const WomensProductList = () => {
   const womenproducts = useSelector(
     (store) => store.womenproductReducer.products
   );
+  const { user } = useSelector((store) => store.authReducer);
+  const { isAuth, cart } = user;
+  const { Cart } = useSelector((state) => state.CartReducer);
   const location = useLocation();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(9);
-
+  const toast = useToast();
+  const [toreload,setToreload] = useState(false); 
   let obj = {
     params: {
       category: searchParams.getAll('category'),
@@ -36,10 +42,72 @@ const WomensProductList = () => {
       _order: searchParams.get('order'),
     },
   };
-
+  const AddToCart = async (e,id) => {
+    setToreload(!toreload)
+    if (isAuth) {
+      let cartDetails = cart?.find((item) => item.id === id);
+      if (cart.includes(cartDetails)) {
+        // setIsAddtoCart(true)
+        toast({
+          title: "Product, Already In the Cart!",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "info",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+      } else {
+        // setIsAddtoCart(false);
+        toast({
+          title: "Congratulations, Product Added To Cart!!👍",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+      }
+    } else {
+      let dataCart = currentProducts.find((item) => item.id == id);
+      // dispatch(GetTemperaryCartData);
+      let actualCartDataToPost = Cart?.find((item) => item?.id == dataCart.id);
+      // console.log(dataCart)
+      // console.log(actualCartDataToPost)
+      // Change Add to cart to View in cart
+      if (actualCartDataToPost) {
+        // setIsAddtoCart(true)
+        toast({
+          title: "Product, Already In the Cart!",
+          description: `🚀Go to the cart page to see the cart-details`,
+          status: "info",
+          duration: 3000,
+          isClosable: true,
+          position: "top",
+        });
+        return 
+      }else{         
+          // I am deepak i am not able to apply this in actions js and it is giving me erorr of please link it with thunk 
+          // there must be some error need to be fixed but for now it is fine
+          Cart.push(dataCart);
+          dispatch(PostTemporaryDataOfUser(Cart))
+            toast({
+              title: "Congratulations, Product Added To Cart!!👍",
+              description: `🚀Go to the cart page to see the cart-details`,
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+              position: "top",
+            });
+      }
+    }
+  };
   useEffect(() => {
     dispatch(womengetProducts(obj));
   }, [location.search]);
+
+  useEffect(()=>{
+    dispatch(GetTemperaryCartData)
+},[toreload])
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -106,7 +174,7 @@ const WomensProductList = () => {
           currentProducts.map((el) => (
             <GridItem key={el.id}>
               {/* <WomensProductCart {...el} /> */}
-              <WomensProductCart {...el} />
+              <WomensProductCart {...el} AddToCart={AddToCart} />
             </GridItem>
           ))
         ) : (

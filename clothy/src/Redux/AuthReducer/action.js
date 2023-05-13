@@ -21,7 +21,7 @@ export const addUserData = (userData, success, navigate, emailExist) => (dispatc
   export const patchUserData =(newUserData,id) => (dispatch) => {
     dispatch({ type: SIGNUP_LOADING }) 
     try{
-     return axios.patch(`https://teal-perfect-crow.cyclic.app/UserDetails/${id}`, {...newUserData,isAuth:true})
+     return axios.patch(`${URl}/UserDetails/${id}`, {...newUserData,isAuth:true})
       .then((res) => {
         //  console.log(res.data.isAuth);
          //console.log("data",res.data);

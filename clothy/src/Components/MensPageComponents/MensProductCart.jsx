@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { StarIcon } from "@chakra-ui/icons";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -14,14 +14,10 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { NavLink, useNavigate } from "react-router-dom";
-import AddToCartPage from "../../Pages/AddToCartPage";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-import { addProduct } from "../../Redux/Admin/action";
 import style from "../Cart/Cart.module.css";
-import { FaVestPatches } from "react-icons/fa";
-import { UpdateDisabled } from "@mui/icons-material";
-import { ADD_PRODUCT_TO_WISH_LIST } from "../../Redux/actionType";
+import { FiShoppingCart } from "react-icons/fi";
+
 const ProductCard = styled(Box)`
   transition: box-shadow 0.2s ease-in-out;
   &:hover {
@@ -42,6 +38,7 @@ const MensProductCart = ({
   gender,
   images,
   AddToCart,
+  isAddToCart
 }) => {
   const truncatedTitle =
     title.length > 30 ? title.substring(0, 30) + "..." : title;
@@ -52,13 +49,13 @@ const MensProductCart = ({
   const dispatch = useDispatch();
   const { user } = useSelector((store) => store.authReducer);
   const { isAuth, cart } = user;
+
+  // const [isAddToCart,setIsAddtoCart] = useState(false);
   const [favStatus, setFavStatus] = useState(false);
   const handleMouseEnter = () => {
     setCurrentImageIndex(1);
   };
   const AddTOFav = () => {
-    // console.log(favourite.find())
-    //console.log(id,WishList)
     let WhishListData = WishList?.find(item=>item.id==id);
     setFavStatus(!favStatus);
     if (!favStatus&&!WhishListData) {
@@ -97,43 +94,9 @@ const MensProductCart = ({
     navigate(`/product/${id}`);
   };
 
-  // const AddToCart = (id)=>{
-  //   if(isAuth){
-  //     let cartDetails = cart?.find(item=>item.id===id);
-  //     if(cart.includes(cartDetails)){
-  //       toast({
-  //         title: "Product, Already In the Cart!",
-  //         description: `🚀Go to the cart page to see the cart-details`,
-  //         status: "info",
-  //         duration: 3000,
-  //         isClosable: true,
-  //         position: "top",
-  //       })
-  //     }else{
-  //       toast({
-  //         title: "Congratulations, Product Added To Cart!!👍",
-  //         description: `🚀Go to the cart page to see the cart-details`,
-  //         status: "success",
-  //         duration: 3000,
-  //         isClosable: true,
-  //         position: "top",
-  //         })
-  //     }
-  //   }else{
-  //     dispatch(AddtoCartData)
-  //     console.log("user is not authenicated",user)
-  //   }
-  //     // toast({
-  //     //   title: "Congratulations, Product Added To Cart!!👍",
-  //     //   description: `🚀Go to the cart page to see the cart-details`,
-  //     //   status: "success",
-  //     //   duration: 3000,
-  //     //   isClosable: true,
-  //     //   position: "top",
-  //     //   })
-
-  // }
-
+ const ViewCart = ()=>{
+    navigate('/add-to-cart')
+ }
   return (
     <ProductCard
       borderWidth="1px"
@@ -146,7 +109,7 @@ const MensProductCart = ({
     >
       {favStatus ? (
         <FavoriteIcon
-          onClick={(e)=>AddTOFav(e,id)}
+          onClick={AddTOFav}
           className={style.Favourite_icon_filled_product}
         />
       ) : (
@@ -218,7 +181,14 @@ const MensProductCart = ({
         mt="2"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Button colorScheme="blue" size="sm" onClick={(e) => AddToCart(id)}>
+       {/* { isAddToCart?<Button style={{background:'#311b92',color:'white'}} size="sm" onClick={(e) => ViewCart(e,id)}>
+          View Cart <FiShoppingCart/>
+        </Button>:
+        <Button colorScheme="blue" size="sm" onClick={(e) => AddToCart(e,id)}>
+          Add to Cart
+        </Button>
+        } */}
+         <Button colorScheme="blue" size="sm" onClick={(e) => AddToCart(e,id)}>
           Add to Cart
         </Button>
         <Button colorScheme="green" size="sm">

@@ -9,14 +9,16 @@ import {
 import { useEffect,useState } from 'react';
 import axios from 'axios';
 import { URl } from '../../Redux/WomensPageRedux/action';
+import { useSelector } from 'react-redux';
 
 
 const AdminTable = () => {
 
  const [data,setData]=useState([]);
-
-    const getData = (url) => {
-        return axios
+ const {isAuth} = useSelector(store=>store.adminLoginReducer)
+// console.log(isAuth)
+    const getData = async(url) => {
+        return await axios
           .get(url)
           .then((res) => res.data)
           .catch((error) => {
@@ -42,6 +44,7 @@ const AdminTable = () => {
                     <Th>ADMIN EMAIL</Th>
                     <Th>PHONE NO.</Th>
                     <Th>GENDER</Th>
+                    <Th>isActive</Th>
                 </Tr>
             </Thead>
             <Tbody >
@@ -53,6 +56,7 @@ const AdminTable = () => {
                         <Td>{el.email}</Td>
                         <Td>{el.mobile}</Td>
                         <Td>{el.gender}</Td>
+                        <Td >{el.isAuth?'Active':'Not Active'}</Td>
                     </Tr>
                 ))}
             </Tbody>
