@@ -10,10 +10,14 @@ import { useEffect,useState } from 'react';
 import axios from 'axios';
 import { URl } from '../../Redux/WomensPageRedux/action';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { deleteAdmin, getAdminDetails } from '../../Redux/Admin/action';
+import { DeleteIcon } from "@chakra-ui/icons";
 
 
 const AdminTable = () => {
-
+    
+    const dispatcher=useDispatch();
  const [data,setData]=useState([]);
  const {isAuth} = useSelector(store=>store.adminLoginReducer)
 // console.log(isAuth)
@@ -33,13 +37,9 @@ const AdminTable = () => {
     });
       },[data?.length]);
 
-import { useDispatch } from 'react-redux';
-import { deleteAdmin, getAdminDetails } from '../../Redux/Admin/action';
-import { DeleteIcon } from "@chakra-ui/icons";
 
 
-const AdminTable = ({data}) => {
-    const dispatcher=useDispatch();
+// const AdminTable = ({data}) => {
 
     return (
         <Table>
@@ -79,4 +79,4 @@ const AdminTable = ({data}) => {
     )
 }
 
-export default AdminTable;
+export default AdminTable

@@ -7,7 +7,6 @@ function AdminPrivateRoute({children}) {
 
     const {admin} = useSelector(store=>store.adminLoginReducer);
     const {isAuth} = admin;
-    console.log(admin);
   return !isAuth?<Navigate to="/admin-login"/>:children;
 }
 
