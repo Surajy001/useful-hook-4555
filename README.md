@@ -1,15 +1,15 @@
 # Welcome to Clothy
 <h3>Clothy is a E-Commerce WebSite Where We Can Buy Different Categories of Products.</h3>
 
-## [Deployed URL]()
+## [Deployed URL] (https://clothy-amazing-shoping-website.netlify.app/)
 
 ## Our Team Members
 
-- Suraj Yadav (My Linkedin profile :- https://www.linkedin.com/in/suraj-yadav-003626236/)
+- Suraj Yadav (My Linkedin profile:- https://www.linkedin.com/in/suraj-yadav-003626236/)
 - Vikas Suresh (My Linkedin profile :- )
-- Deepak Mahesh Yadav (My Linkedin profile :- )
-- Ankit Choudhary (My Linkedin profile :- )
-- Saurabh Pandey (My Linkedin profile :- )
+- Deepak Mahesh Yadav (My Linkedin profile:- )
+- Ankit Choudhary (My Linkedin profile:- )
+- Saurabh Pandey (My Linkedin profile:- )
 <br/>
 
 <h4 align="center">💻 Tech Stack</h4>
