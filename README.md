@@ -42,7 +42,7 @@ https://clothy-amazing-shoping-website.netlify.app/
 ## Let's Dive into What we have made
 
 ## HomePage :
-![Screenshot (1254)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/2a407834-e39b-4371-9aa2-2f923399bd10)
+![image](https://github.com/Surajy001/useful-hook-4555/assets/108220666/bd964660-90e7-4637-a38b-4266ecad28f6)
 <br/>
 ![Screenshot (1255)](https://github.com/Surajy001/useful-hook-4555/assets/107634975/3402a7b5-1165-4b53-ac7e-8e8e45233bfa)
 <br/>
